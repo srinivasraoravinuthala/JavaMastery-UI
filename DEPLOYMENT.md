@@ -8,33 +8,36 @@ This guide covers deploying JavaMastery-UI to **Cloudflare Pages**.
 - A Cloudflare account
 - Git repository with this project
 
-## Cloudflare Pages (Recommended)
+## Cloudflare Workers (Git Integration)
 
-### Option A: Git Integration
+This project is deployed as a **Worker with static assets** (not legacy Pages).
 
 1. Push `JavaMastery-UI` to your GitHub/GitLab repository
 2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages**
-3. Click **Create application** → **Pages** → **Connect to Git**
-4. Select your repository
+3. Create or open the Worker named **`javamastery`** (must match `name` in `wrangler.toml`)
+4. Connect the Git repository under **Settings → Builds**
 5. Configure build settings:
 
 | Setting | Value |
 |---------|-------|
-| Framework preset | None (or Vite) |
 | Build command | `npm run build` |
-| Build output directory | `dist` |
-| Root directory | `JavaMastery-UI` (if monorepo) |
+| Deploy command | `npx wrangler deploy` |
+| Non-production branch deploy command | `npx wrangler versions upload` |
+| Root directory | `/` |
 
-6. Add environment variables:
+> **Important:** Do **not** use `npx wrangler pages deploy` — that is for Cloudflare Pages. Workers Git builds use `npx wrangler deploy` and `npx wrangler versions upload` for preview branches.
+
+6. Add environment variables under **Variables and secrets** (build + runtime):
 
 | Variable | Value |
 |----------|-------|
-| `NODE_VERSION` | `20` |
 | `VITE_CONTENT_MODE` | `github` |
 
-7. Click **Save and Deploy**
+7. Click **Save** and retry the deployment
 
-### Option B: Direct Upload (Wrangler CLI)
+## Cloudflare Pages (Legacy / CLI only)
+
+For manual CLI upload to Pages (optional):
 
 ```bash
 cd JavaMastery-UI
@@ -115,6 +118,15 @@ Visit `http://localhost:4173` and verify:
 - Use local mode for fastest initial search index build
 
 ## Troubleshooting
+
+### `Missing entry-point to Worker script or to assets directory`
+
+Your Worker project needs `[assets]` in `wrangler.toml` and deploy commands for **Workers**, not Pages:
+
+- Deploy command: `npx wrangler deploy`
+- Non-production: `npx wrangler versions upload`
+
+Also ensure the Worker name in the dashboard matches `name` in `wrangler.toml` (e.g. `javamastery`).
 
 ### 404 on direct URL access
 Ensure `_redirects` is in `public/` and copied to `dist/`.

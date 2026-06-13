@@ -1,15 +1,16 @@
-# Cloudflare Pages configuration
-# Docs: https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+# Cloudflare Workers static assets (Vite SPA)
+# Docs: https://developers.cloudflare.com/workers/static-assets/get-started/
 #
-# Build settings (also set these in the Cloudflare dashboard):
-#   Build command:          npm run build
-#   Build output directory: dist
-#   Deploy command:         (leave empty — Pages publishes dist automatically)
+# Dashboard build settings (Workers → Builds):
+#   Build command:                          npm run build
+#   Deploy command:                         npx wrangler deploy
+#   Non-production branch deploy command:   npx wrangler versions upload
 #
-# Build-time env vars (set in dashboard → Settings → Environment variables):
-#   NODE_VERSION=20
-#   VITE_CONTENT_MODE=github
+# Build-time env vars (Workers → Settings → Variables and secrets):
+#   VITE_CONTENT_MODE = github
 
-name = "javamastery-ui"
-pages_build_output_dir = "./dist"
+name = "javamastery"
 compatibility_date = "2026-06-13"
+
+[assets]
+directory = "./dist"

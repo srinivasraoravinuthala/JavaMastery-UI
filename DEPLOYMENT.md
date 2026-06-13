@@ -8,36 +8,36 @@ This guide covers deploying JavaMastery-UI to **Cloudflare Pages**.
 - A Cloudflare account
 - Git repository with this project
 
-## Cloudflare Pages (Recommended)
+## Cloudflare Workers (Git Integration)
 
-### Option A: Git Integration
+This project is deployed as a **Worker with static assets** (not legacy Pages).
 
 1. Push `JavaMastery-UI` to your GitHub/GitLab repository
 2. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages**
-3. Click **Create application** → **Pages** → **Connect to Git**
-4. Select your repository
+3. Create or open the Worker named **`javamastery`** (must match `name` in `wrangler.toml`)
+4. Connect the Git repository under **Settings → Builds**
 5. Configure build settings:
 
 | Setting | Value |
 |---------|-------|
-| Framework preset | None (or Vite) |
 | Build command | `npm run build` |
-| Build output directory | `dist` |
-| Deploy command | *(leave empty)* |
-| Root directory | `JavaMastery-UI` (if monorepo) |
+| Deploy command | `npx wrangler deploy` |
+| Non-production branch deploy command | `npx wrangler versions upload` |
+| Root directory | `/` |
 
-> **Important:** Do **not** set a deploy command to `npx wrangler deploy`. That command is for Cloudflare Workers, not Pages. Pages automatically publishes the `dist` folder after the build succeeds.
+> **Important:** Do **not** use `npx wrangler pages deploy` — that is for Cloudflare Pages. Workers Git builds use `npx wrangler deploy` and `npx wrangler versions upload` for preview branches.
 
-6. Add environment variables:
+6. Add environment variables under **Variables and secrets** (build + runtime):
 
 | Variable | Value |
 |----------|-------|
-| `NODE_VERSION` | `20` |
 | `VITE_CONTENT_MODE` | `github` |
 
-7. Click **Save and Deploy**
+7. Click **Save** and retry the deployment
 
-### Option B: Direct Upload (Wrangler CLI)
+## Cloudflare Pages (Legacy / CLI only)
+
+For manual CLI upload to Pages (optional):
 
 ```bash
 cd JavaMastery-UI
@@ -121,14 +121,12 @@ Visit `http://localhost:4173` and verify:
 
 ### `Missing entry-point to Worker script or to assets directory`
 
-This happens when the **Deploy command** is set to `npx wrangler deploy` in Cloudflare Pages settings. That deploys a Worker, not a static Vite site.
+Your Worker project needs `[assets]` in `wrangler.toml` and deploy commands for **Workers**, not Pages:
 
-**Fix:** Cloudflare Dashboard → your Pages project → **Settings** → **Builds & deployments** → clear the **Deploy command** field (leave it empty). Keep:
+- Deploy command: `npx wrangler deploy`
+- Non-production: `npx wrangler versions upload`
 
-- Build command: `npm run build`
-- Build output directory: `dist`
-
-Then retry the deployment.
+Also ensure the Worker name in the dashboard matches `name` in `wrangler.toml` (e.g. `javamastery`).
 
 ### 404 on direct URL access
 Ensure `_redirects` is in `public/` and copied to `dist/`.

@@ -23,7 +23,10 @@ This guide covers deploying JavaMastery-UI to **Cloudflare Pages**.
 | Framework preset | None (or Vite) |
 | Build command | `npm run build` |
 | Build output directory | `dist` |
+| Deploy command | *(leave empty)* |
 | Root directory | `JavaMastery-UI` (if monorepo) |
+
+> **Important:** Do **not** set a deploy command to `npx wrangler deploy`. That command is for Cloudflare Workers, not Pages. Pages automatically publishes the `dist` folder after the build succeeds.
 
 6. Add environment variables:
 
@@ -115,6 +118,17 @@ Visit `http://localhost:4173` and verify:
 - Use local mode for fastest initial search index build
 
 ## Troubleshooting
+
+### `Missing entry-point to Worker script or to assets directory`
+
+This happens when the **Deploy command** is set to `npx wrangler deploy` in Cloudflare Pages settings. That deploys a Worker, not a static Vite site.
+
+**Fix:** Cloudflare Dashboard → your Pages project → **Settings** → **Builds & deployments** → clear the **Deploy command** field (leave it empty). Keep:
+
+- Build command: `npm run build`
+- Build output directory: `dist`
+
+Then retry the deployment.
 
 ### 404 on direct URL access
 Ensure `_redirects` is in `public/` and copied to `dist/`.

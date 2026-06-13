@@ -1,11 +1,15 @@
 # Cloudflare Pages configuration
-# Build command: npm run build
-# Output directory: dist
+# Docs: https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+#
+# Build settings (also set these in the Cloudflare dashboard):
+#   Build command:          npm run build
+#   Build output directory: dist
+#   Deploy command:         (leave empty — Pages publishes dist automatically)
+#
+# Build-time env vars (set in dashboard → Settings → Environment variables):
+#   NODE_VERSION=20
+#   VITE_CONTENT_MODE=github
 
-[build]
-command = "npm run build"
-publish = "dist"
-
-[build.environment]
-NODE_VERSION = "20"
-VITE_CONTENT_MODE = "github"
+name = "javamastery-ui"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-06-13"

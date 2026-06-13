@@ -1,0 +1,367 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-background: oklch(0.99 0.002 250);
+  --color-foreground: oklch(0.15 0.02 250);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.15 0.02 250);
+  --color-popover: oklch(1 0 0);
+  --color-popover-foreground: oklch(0.15 0.02 250);
+  --color-primary: oklch(0.55 0.18 250);
+  --color-primary-foreground: oklch(0.99 0 0);
+  --color-secondary: oklch(0.96 0.01 250);
+  --color-secondary-foreground: oklch(0.25 0.02 250);
+  --color-muted: oklch(0.96 0.005 250);
+  --color-muted-foreground: oklch(0.5 0.02 250);
+  --color-accent: oklch(0.94 0.02 250);
+  --color-accent-foreground: oklch(0.25 0.02 250);
+  --color-destructive: oklch(0.55 0.2 25);
+  --color-border: oklch(0.9 0.01 250);
+  --color-input: oklch(0.9 0.01 250);
+  --color-ring: oklch(0.55 0.18 250);
+  --color-sidebar: oklch(0.98 0.005 250);
+  --color-sidebar-foreground: oklch(0.3 0.02 250);
+  --color-java: oklch(0.55 0.15 45);
+  --color-java-light: oklch(0.75 0.12 45);
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+.dark {
+  --color-background: oklch(0.13 0.02 250);
+  --color-foreground: oklch(0.95 0.01 250);
+  --color-card: oklch(0.17 0.02 250);
+  --color-card-foreground: oklch(0.95 0.01 250);
+  --color-popover: oklch(0.17 0.02 250);
+  --color-popover-foreground: oklch(0.95 0.01 250);
+  --color-primary: oklch(0.65 0.18 250);
+  --color-primary-foreground: oklch(0.13 0.02 250);
+  --color-secondary: oklch(0.22 0.02 250);
+  --color-secondary-foreground: oklch(0.9 0.01 250);
+  --color-muted: oklch(0.22 0.02 250);
+  --color-muted-foreground: oklch(0.65 0.02 250);
+  --color-accent: oklch(0.25 0.03 250);
+  --color-accent-foreground: oklch(0.9 0.01 250);
+  --color-destructive: oklch(0.6 0.2 25);
+  --color-border: oklch(0.28 0.02 250);
+  --color-input: oklch(0.28 0.02 250);
+  --color-ring: oklch(0.65 0.18 250);
+  --color-sidebar: oklch(0.15 0.02 250);
+  --color-sidebar-foreground: oklch(0.85 0.01 250);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+}
+
+/* Markdown prose styles */
+.prose {
+  @apply max-w-none text-foreground;
+}
+
+.prose h1 {
+  @apply text-3xl font-bold tracking-tight mb-6 mt-8 scroll-mt-24;
+}
+
+.prose h2 {
+  @apply text-2xl font-semibold tracking-tight mb-4 mt-8 pb-2 border-b border-border scroll-mt-24;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mb-3 mt-6 scroll-mt-24;
+}
+
+.prose h4 {
+  @apply text-lg font-medium mb-2 mt-4 scroll-mt-24;
+}
+
+.prose p {
+  @apply leading-7 mb-4 text-muted-foreground;
+}
+
+.prose a {
+  @apply text-primary underline-offset-4 hover:underline font-medium;
+}
+
+.prose strong {
+  @apply font-semibold text-foreground;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-4 space-y-1 text-muted-foreground;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 mb-4 space-y-1 text-muted-foreground;
+}
+
+.prose li {
+  @apply leading-7;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-primary/50 pl-4 italic my-4 text-muted-foreground;
+}
+
+.prose table {
+  @apply w-full border-collapse my-6 text-sm;
+}
+
+.prose th {
+  @apply border border-border bg-muted px-4 py-2 text-left font-semibold text-foreground;
+}
+
+.prose td {
+  @apply border border-border px-4 py-2 text-muted-foreground;
+}
+
+.prose hr {
+  @apply my-8 border-border;
+}
+
+.prose img {
+  @apply rounded-lg max-w-full h-auto my-4;
+}
+
+.prose pre:not(.code-block-pre) {
+  @apply my-0 p-0 bg-transparent border-0 shadow-none;
+}
+
+.prose pre:not(.code-block-pre) code {
+  background: transparent;
+  padding: 0;
+}
+
+.prose :not(pre) > code {
+  @apply bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-primary;
+}
+
+.prose .anchor-link {
+  @apply opacity-0 ml-2 text-muted-foreground no-underline transition-opacity;
+}
+
+.prose h1:hover .anchor-link,
+.prose h2:hover .anchor-link,
+.prose h3:hover .anchor-link,
+.prose h4:hover .anchor-link {
+  @apply opacity-100;
+}
+
+/* Reading progress */
+.reading-progress {
+  @apply fixed top-0 left-0 right-0 h-0.5 bg-primary z-50 origin-left transition-transform;
+}
+
+/* Callout styles */
+.callout {
+  @apply rounded-lg border p-4 my-4;
+}
+
+.callout-info {
+  @apply bg-primary/5 border-primary/20;
+}
+
+.callout-warning {
+  @apply bg-yellow-500/10 border-yellow-500/30;
+}
+
+.callout-tip {
+  @apply bg-green-500/10 border-green-500/30;
+}
+
+.callout-danger {
+  @apply bg-destructive/10 border-destructive/30;
+}
+
+/* Code block — isolated from prose styles */
+.code-block {
+  @apply rounded-xl border border-border overflow-hidden shadow-sm;
+}
+
+.code-block-header {
+  @apply flex items-center justify-between px-4 py-2.5 border-b border-border;
+  background: var(--code-header-bg);
+}
+
+.code-block-lang {
+  @apply text-xs font-mono font-semibold uppercase tracking-wider;
+  color: var(--code-header-fg);
+}
+
+.code-block-copy {
+  color: var(--code-header-fg) !important;
+  opacity: 0.8;
+}
+
+.code-block-copy:hover {
+  opacity: 1;
+  background: var(--code-header-hover) !important;
+}
+
+.code-block-pre {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  tab-size: 2;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+  background: var(--code-bg);
+  color: var(--code-fg);
+}
+
+.code-block-pre code {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  white-space: inherit;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* Light theme code colors */
+:root {
+  --code-bg: #f6f8fa;
+  --code-fg: #1f2328;
+  --code-header-bg: #eaeef2;
+  --code-header-fg: #57606a;
+  --code-header-hover: #d0d7de;
+  --code-comment: #6e7781;
+  --code-punctuation: #1f2328;
+  --code-keyword: #8250df;
+  --code-string: #0a3069;
+  --code-function: #8250df;
+  --code-number: #0550ae;
+  --code-variable: #953800;
+  --code-operator: #1f2328;
+}
+
+/* Dark theme code colors */
+.dark {
+  --code-bg: #0d1117;
+  --code-fg: #e6edf3;
+  --code-header-bg: #161b22;
+  --code-header-fg: #8b949e;
+  --code-header-hover: #21262d;
+  --code-comment: #8b949e;
+  --code-punctuation: #e6edf3;
+  --code-keyword: #ff7b72;
+  --code-string: #a5d6ff;
+  --code-function: #d2a8ff;
+  --code-number: #79c0ff;
+  --code-variable: #ffa657;
+  --code-operator: #e6edf3;
+}
+
+/* Prism token colors */
+.code-block-pre .token.comment,
+.code-block-pre .token.prolog,
+.code-block-pre .token.doctype,
+.code-block-pre .token.cdata,
+.code-block-pre .token.shebang {
+  color: var(--code-comment);
+  font-style: italic;
+}
+
+.code-block-pre .token.punctuation {
+  color: var(--code-punctuation);
+}
+
+.code-block-pre .token.keyword,
+.code-block-pre .token.atrule {
+  color: var(--code-keyword);
+}
+
+.code-block-pre .token.string,
+.code-block-pre .token.char,
+.code-block-pre .token.attr-value,
+.code-block-pre .token.regex {
+  color: var(--code-string);
+}
+
+.code-block-pre .token.function,
+.code-block-pre .token.class-name,
+.code-block-pre .token.builtin {
+  color: var(--code-function);
+}
+
+.code-block-pre .token.number,
+.code-block-pre .token.boolean,
+.code-block-pre .token.constant,
+.code-block-pre .token.symbol,
+.code-block-pre .token.property {
+  color: var(--code-number);
+}
+
+.code-block-pre .token.variable,
+.code-block-pre .token.parameter,
+.code-block-pre .token.entity,
+.code-block-pre .token.url {
+  color: var(--code-variable);
+}
+
+.code-block-pre .token.operator {
+  color: var(--code-operator);
+}
+
+.code-block-pre .token.selector,
+.code-block-pre .token.attr-name,
+.code-block-pre .token.tag {
+  color: var(--code-keyword);
+}
+
+/* Responsive tables */
+.table-wrapper {
+  @apply overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0;
+}

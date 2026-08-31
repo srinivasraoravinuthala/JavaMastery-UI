@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom'
 import { CodeBlock } from './CodeBlock'
 import { MermaidDiagram } from './MermaidDiagram'
 import { Callout, parseCalloutType } from './Callout'
-import { InlineRunCommand, isRunCommand } from './InlineRunCommand'
+import { RunnableExampleChip, isRunCommand } from '@/components/examples/RunnableExampleChip'
+import { ExampleChipsRow, parseExampleChipsLine } from '@/components/examples/ExampleChipsRow'
 import { extractTextFromChildren } from '@/utils/extractText'
 import { resolveMdLink, resolveRepoLink } from '@/utils/slugify'
 
@@ -19,7 +20,7 @@ interface MarkdownRendererProps {
 
 export function MarkdownRenderer({ content, currentDocPath }: MarkdownRendererProps) {
   const processedContent = useMemo(() => {
-    return content
+    let result = content
       .replace(/:::(\w+)\n([\s\S]*?):::/g, (_, type, body) => {
         return `<div class="callout-${type}">${body.trim()}</div>`
       })
@@ -30,6 +31,19 @@ export function MarkdownRenderer({ content, currentDocPath }: MarkdownRendererPr
           : src
         return `![${alt}](${resolved})`
       })
+
+    result = result
+      .split('\n')
+      .map((line) => {
+        const chipsData = parseExampleChipsLine(line)
+        if (chipsData) {
+          return `<div class="example-chips-row" data-refs="${chipsData.replace(/"/g, '&quot;')}"></div>`
+        }
+        return line
+      })
+      .join('\n')
+
+    return result
   }, [content])
 
   return (
@@ -104,7 +118,7 @@ export function MarkdownRenderer({ content, currentDocPath }: MarkdownRendererPr
 
             const text = String(children).trim()
             if (isRunCommand(text)) {
-              return <InlineRunCommand command={text} />
+              return <RunnableExampleChip refText={text} />
             }
 
             return (
@@ -127,10 +141,14 @@ export function MarkdownRenderer({ content, currentDocPath }: MarkdownRendererPr
             }
             return <blockquote>{children}</blockquote>
           },
-          div: ({ className, children }) => {
+          div: ({ className, children, ...props }) => {
             if (className?.startsWith('callout-')) {
               const type = parseCalloutType(className)
               return <Callout type={type}>{children}</Callout>
+            }
+            if (className === 'example-chips-row') {
+              const refs = (props as { 'data-refs'?: string })['data-refs']
+              if (refs) return <ExampleChipsRow refs={refs} />
             }
             return <div className={className}>{children}</div>
           },

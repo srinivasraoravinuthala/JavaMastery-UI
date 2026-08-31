@@ -6,6 +6,7 @@ import {
   Menu,
   X,
   Bookmark,
+  Play,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTheme } from '@/hooks/useTheme'
@@ -52,6 +53,19 @@ export function Header({ onMenuToggle, onSearchOpen, sidebarOpen }: HeaderProps)
         </button>
 
         <div className="flex items-center gap-1 shrink-0">
+          <Button variant="ghost" size="sm" asChild className="hidden md:inline-flex">
+            <Link to="/examples">
+              <Play className="h-4 w-4" />
+              Examples
+            </Link>
+          </Button>
+
+          <Button variant="ghost" size="icon" asChild className="md:hidden">
+            <Link to="/examples" aria-label="Examples">
+              <Play className="h-4 w-4" />
+            </Link>
+          </Button>
+
           <Button variant="ghost" size="icon" asChild>
             <Link to="/bookmarks" aria-label="Bookmarks">
               <Bookmark className="h-4 w-4" />

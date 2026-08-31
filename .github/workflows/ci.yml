@@ -12,13 +12,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Checkout JavaMastery docs
+      - name: Checkout JavaMastery content
         uses: actions/checkout@v4
         with:
           repository: srinivasraoravinuthala/JavaMastery
           path: JavaMastery
           sparse-checkout: |
             docs
+            pkg0intro
+            pkg1core
+            pkg2versions
+            pkg3datastructures
+            pkg4algorithms
+            pkg5leetcode
+            pkg6jvm
+            pkg7concurrency
+            pkg8patterns
+            pkg9io
+            pkg10networking
+            pkg11jdbc
+            pkg12restapi
+            pkg13libs
+            pkg14testing
+            pkg16advconcurrency
+            pkg17metaprogramming
+            pkg19performance
+            pkg20serialization
 
       - uses: actions/setup-node@v4
         with:

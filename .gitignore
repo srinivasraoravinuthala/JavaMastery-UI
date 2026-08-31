@@ -13,6 +13,8 @@ dist
 dist-ssr
 *.local
 public/docs/
+public/examples/
+public/examples-index.json
 public/search-index.json
 public/sitemap.xml
 

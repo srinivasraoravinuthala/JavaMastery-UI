@@ -13,10 +13,12 @@
     "build:search-index": "node scripts/build-search-index.js",
     "build:sitemap": "node scripts/generate-sitemap.js",
     "prepare-local-docs": "node scripts/prepare-local-docs.js",
-    "build:prod": "node scripts/sync-docs.js && node scripts/build-search-index.js && node scripts/generate-sitemap.js && npm run build",
-    "build:ci": "node scripts/prepare-local-docs.js ./JavaMastery/docs && node scripts/build-search-index.js && node scripts/generate-sitemap.js && npm run build",
+    "build:prod": "node scripts/sync-docs.js && node scripts/sync-examples.js && node scripts/build-search-index.js && node scripts/generate-sitemap.js && npm run build",
+    "build:ci": "node scripts/prepare-local-docs.js ./JavaMastery/docs && node scripts/prepare-local-examples.js ./JavaMastery && node scripts/build-search-index.js && node scripts/generate-sitemap.js && npm run build",
     "preview": "vite preview",
-    "sync-docs": "node scripts/sync-docs.js"
+    "sync-docs": "node scripts/sync-docs.js",
+    "sync-examples": "node scripts/sync-examples.js",
+    "prepare-local-examples": "node scripts/prepare-local-examples.js"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.13",

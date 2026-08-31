@@ -5,6 +5,7 @@ import { MarkdownRenderer } from '@/components/markdown/MarkdownRenderer'
 import { TableOfContents } from '@/components/markdown/TableOfContents'
 import { DocNavigation } from '@/components/doc/DocNavigation'
 import { DocNotFound } from '@/components/doc/DocNotFound'
+import { ChapterExamplesPanel } from '@/components/examples/ChapterExamplesPanel'
 import { InterviewMode } from '@/components/interview/InterviewMode'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -144,6 +145,8 @@ export function DocPage() {
               </Button>
             </div>
           </header>
+
+          {showProgress && <ChapterExamplesPanel content={doc.content} />}
 
           {doc.isInterview && interviewQuestions.length > 0 && (
             <InterviewMode

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { MainLayout } from '@/layouts/MainLayout'
 import { HomePage } from '@/pages/HomePage'
 import { BookmarksPage } from '@/pages/BookmarksPage'
+import { ExamplesPage } from '@/pages/ExamplesPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 import { Loader2 } from 'lucide-react'
 
@@ -31,6 +32,8 @@ export default function App() {
             }
           />
           <Route path="bookmarks" element={<BookmarksPage />} />
+          <Route path="examples" element={<ExamplesPage />} />
+          <Route path="examples/:package" element={<ExamplesPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

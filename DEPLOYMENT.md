@@ -14,8 +14,9 @@ npm run build:prod
 This will:
 
 1. Sync docs from JavaMastery `main` via `scripts/sync-docs.js`
-2. Build `public/search-index.json` and `public/sitemap.xml`
-3. Run Vite build with `VITE_CONTENT_MODE=local` (from `.env.production`)
+2. Sync Java examples to `public/examples/` and `public/examples-index.json` via `scripts/sync-examples.js`
+3. Build `public/search-index.json` and `public/sitemap.xml`
+4. Run Vite build with `VITE_CONTENT_MODE=local` (from `.env.production`)
 
 Set Cloudflare build command to **`npm run build:prod`**.
 
@@ -48,7 +49,9 @@ GitHub Actions (`.github/workflows/ci.yml`):
 npm ci → test → validate-links → lint → build:ci
 ```
 
-PR builds copy sibling JavaMastery docs via `prepare-local-docs.js`.
+PR builds copy sibling JavaMastery docs via `prepare-local-docs.js` and Java examples via `prepare-local-examples.js`.
+
+Generated at build time (gitignored): `public/docs/`, `public/examples/`, `public/examples-index.json`.
 
 ## Auto-rebuild on content changes
 

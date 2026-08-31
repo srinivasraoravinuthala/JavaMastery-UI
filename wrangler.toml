@@ -7,13 +7,10 @@
 #   Non-production branch deploy command:   npx wrangler versions upload
 #
 # Build-time env vars (Workers → Settings → Variables and secrets):
-#   (optional — .env.production sets VITE_CONTENT_MODE=local)
-#
-# Production build: npm run build:prod
+#   VITE_CONTENT_MODE = github
 
 name = "javamastery"
 compatibility_date = "2026-06-13"
 
 [assets]
 directory = "./dist"
-not_found_handling = "single-page-application"

@@ -14,7 +14,7 @@ export function extractHeadings(content: string): HeadingItem[] {
     const match = line.match(/^(#{1,4})\s+(.+)$/)
     if (match) {
       const level = match[1].length
-      const text = match[2].replace(/[*_`#[\]]/g, '').trim()
+      const text = match[2].replace(/[*_`#\[\]]/g, '').trim()
       headings.push({
         id: text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-'),
         text,

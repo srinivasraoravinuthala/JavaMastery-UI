@@ -83,26 +83,6 @@ export function useProgress() {
     getStorageItem('progress', {})
   )
 
-  const toggleComplete = useCallback((sectionId: string, path: string, total: number) => {
-    setProgress((prev) => {
-      const section = prev[sectionId] || { sectionId, completed: [], total, percentage: 0 }
-      const completed = section.completed.includes(path)
-        ? section.completed.filter((p) => p !== path)
-        : [...section.completed, path]
-
-      const updated: TopicProgress = {
-        sectionId,
-        completed,
-        total,
-        percentage: Math.round((completed.length / total) * 100),
-      }
-
-      const next = { ...prev, [sectionId]: updated }
-      setStorageItem('progress', next)
-      return next
-    })
-  }, [])
-
   const markComplete = useCallback((sectionId: string, path: string, total: number) => {
     setProgress((prev) => {
       const section = prev[sectionId] || { sectionId, completed: [], total, percentage: 0 }
@@ -122,16 +102,10 @@ export function useProgress() {
     })
   }, [])
 
-  const isComplete = useCallback(
-    (sectionId: string, path: string) =>
-      progress[sectionId]?.completed.includes(path) ?? false,
-    [progress]
-  )
-
   const getSectionProgress = useCallback(
     (sectionId: string) => progress[sectionId],
     [progress]
   )
 
-  return { progress, markComplete, toggleComplete, isComplete, getSectionProgress }
+  return { progress, markComplete, getSectionProgress }
 }

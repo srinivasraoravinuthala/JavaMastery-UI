@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { CONTENT_MODE } from '@/config/site'
 import { getContentProvider } from '@/services/content'
-import { slugToPath } from '@/utils/slugify'
 import type { DocContent, DocNode } from '@/types'
 
 export function useContentTree() {
@@ -48,6 +47,13 @@ export function useDocContent(slug: string | undefined) {
   }, [load])
 
   return { doc, loading, error, reload: load }
+}
+
+function slugToPath(slug: string): string {
+  const parts = slug.split('--')
+  const file = parts[parts.length - 1]
+  const dirs = parts.slice(0, -1)
+  return `docs/${dirs.join('/')}/${file}.md`
 }
 
 export function flattenTree(nodes: DocNode[]): DocNode[] {

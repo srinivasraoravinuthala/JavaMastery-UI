@@ -20,16 +20,18 @@ This project is deployed as a **Worker with static assets** (not legacy Pages).
 
 | Setting | Value |
 |---------|-------|
-| Build command | `npm run build:prod` |
+| Build command | `npm run build` |
 | Deploy command | `npx wrangler deploy` |
 | Non-production branch deploy command | `npx wrangler versions upload` |
 | Root directory | `/` |
 
-> **Recommended:** Use `npm run build:prod` for production. This syncs docs from GitHub, builds a static search index and sitemap, and bundles everything in **local mode** (no runtime GitHub API calls).
-
 > **Important:** Do **not** use `npx wrangler pages deploy` — that is for Cloudflare Pages. Workers Git builds use `npx wrangler deploy` and `npx wrangler versions upload` for preview branches.
 
-6. Environment variables are optional — `.env.production` sets `VITE_CONTENT_MODE=local` automatically for production builds.
+6. Add environment variables under **Variables and secrets** (build + runtime):
+
+| Variable | Value |
+|----------|-------|
+| `VITE_CONTENT_MODE` | `github` |
 
 7. Click **Save** and retry the deployment
 
@@ -46,52 +48,34 @@ npx wrangler pages deploy dist --project-name=javamastery-ui
 
 ## SPA Routing
 
-For **Cloudflare Workers** (current deployment), SPA fallback is configured in `wrangler.toml`:
-
-```toml
-[assets]
-directory = "./dist"
-not_found_handling = "single-page-application"
-```
-
-This ensures direct URL access and page refreshes on `/docs/*` routes serve `index.html` instead of a CDN 404.
-
-The `public/_redirects` file is a legacy fallback for Cloudflare Pages / Netlify:
+The `public/_redirects` file ensures client-side routing works:
 
 ```
 /*    /index.html   200
 ```
 
+Cloudflare Pages reads this automatically from the `dist` folder.
+
 ## Content Modes in Production
 
-### Local Mode (recommended for production)
+### GitHub Mode (default)
 
-Production builds use **local mode** via `.env.production`:
+- Content fetched from GitHub API at runtime
+- No build-time content sync needed
+- Respects GitHub API rate limits (60 req/hr unauthenticated)
+- Content cached in localStorage for 1 hour
 
-```bash
-npm run build:prod
-```
+For higher rate limits, users can authenticate via GitHub token (future enhancement).
 
-This command:
+### Local Mode
 
-1. Syncs all markdown from GitHub (`scripts/sync-docs.js`)
-2. Builds a static search index (`public/search-index.json`)
-3. Generates `public/sitemap.xml`
-4. Bundles docs in `public/docs/` — no runtime GitHub API calls
-
-Benefits: faster page loads, no API rate limits, instant search, works offline.
-
-### GitHub Mode (development)
-
-For local dev while iterating on UI without re-syncing docs:
+For fully static deployment without GitHub API calls:
 
 ```bash
-# .env.local
-VITE_CONTENT_MODE=github
-npm run dev
+npm run sync-docs
 ```
 
-Content is fetched from GitHub API at runtime and cached in localStorage for 1 hour.
+Set `VITE_CONTENT_MODE=local` before building. All markdown is bundled in `public/docs/`.
 
 ## Custom Domain
 
@@ -104,41 +88,18 @@ Content is fetched from GitHub API at runtime and cached in localStorage for 1 h
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `VITE_CONTENT_MODE` | `github` (dev) / `local` (prod) | Content loading mode |
-| `VITE_CF_ANALYTICS_TOKEN` | _(empty)_ | Optional Cloudflare Web Analytics beacon token |
-| `DOCS_BRANCH` | `main` | Branch to sync in `npm run sync-docs` |
+| `VITE_CONTENT_MODE` | `github` | `github` or `local` |
 
-`.env.production` sets `VITE_CONTENT_MODE=local` automatically for production builds.
+Create `.env.production`:
 
-### Cloudflare Web Analytics
-
-1. Cloudflare Dashboard → **Analytics** → **Web Analytics** → add your site
-2. Copy the beacon token
-3. Add `VITE_CF_ANALYTICS_TOKEN` to Cloudflare Workers build environment variables
-
-Or enable Web Analytics for your zone in the dashboard — traffic is tracked automatically without a token.
-
-## CI / CD
-
-| Workflow | Trigger | Purpose |
-|----------|---------|---------|
-| `ci.yml` | Push/PR to `main` or `develop` | Test, validate links, build |
-| `deploy-on-content.yml` | Content dispatch, daily cron, manual | `build:prod` + optional Cloudflare deploy |
-| `docs-links.yml` (JavaMastery) | Docs changes | Validate markdown links |
-
-### GitHub secrets (JavaMastery → UI auto-rebuild)
-
-| Repo | Secret / Variable | Purpose |
-|------|-------------------|---------|
-| JavaMastery | `UI_REPO_DISPATCH_TOKEN` | PAT to trigger UI rebuild on doc push to `main` |
-| JavaMastery-UI | `CLOUDFLARE_API_TOKEN` | Wrangler deploy |
-| JavaMastery-UI | `CLOUDFLARE_ACCOUNT_ID` | Wrangler deploy |
-| JavaMastery-UI | `ENABLE_AUTO_DEPLOY` (variable) | Set to `true` to enable deploy job |
+```env
+VITE_CONTENT_MODE=github
+```
 
 ## Build Verification
 
 ```bash
-npm run build:prod
+npm run build
 npm run preview
 ```
 
@@ -171,9 +132,9 @@ Also ensure the Worker name in the dashboard matches `name` in `wrangler.toml` (
 Ensure `_redirects` is in `public/` and copied to `dist/`.
 
 ### Content not loading
-- Production uses **local mode** — run `npm run build:prod` to re-sync docs
-- For dev with GitHub API: set `VITE_CONTENT_MODE=github` in `.env.local`
-- GitHub API rate limit in dev mode: wait or use `npm run sync-docs` + local mode
+- Check browser console for GitHub API errors
+- Verify `VITE_CONTENT_MODE=github` is set
+- GitHub API rate limit: wait or switch to local mode
 
 ### Build fails
 ```bash

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ChevronRight, ChevronDown, FileText, Play, Bookmark } from 'lucide-react'
+import { ChevronRight, ChevronDown, FileText, Play, Bookmark, FolderKanban } from 'lucide-react'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { TOPIC_SECTIONS } from '@/config/site'
@@ -59,6 +59,20 @@ export function Sidebar({ tree, open, onClose }: SidebarProps) {
             >
               <Play className="h-4 w-4 shrink-0" />
               Examples
+            </Link>
+
+            <Link
+              to="/projects"
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                location.pathname.startsWith('/projects')
+                  ? 'bg-primary/10 text-primary'
+                  : 'text-sidebar-foreground hover:bg-accent'
+              )}
+            >
+              <FolderKanban className="h-4 w-4 shrink-0" />
+              Projects
             </Link>
 
             <Link

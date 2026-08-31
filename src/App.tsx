@@ -4,6 +4,7 @@ import { MainLayout } from '@/layouts/MainLayout'
 import { HomePage } from '@/pages/HomePage'
 import { BookmarksPage } from '@/pages/BookmarksPage'
 import { ExamplesPage } from '@/pages/ExamplesPage'
+import { ProjectsPage } from '@/pages/ProjectsPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 import { Loader2 } from 'lucide-react'
 
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="bookmarks" element={<BookmarksPage />} />
           <Route path="examples" element={<ExamplesPage />} />
           <Route path="examples/:package" element={<ExamplesPage />} />
+          <Route path="projects" element={<ProjectsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

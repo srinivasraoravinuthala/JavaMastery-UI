@@ -10,6 +10,7 @@ const DOCS_DIR = join(ROOT, 'public', 'docs')
 const MANIFEST = join(DOCS_DIR, 'manifest.json')
 const OUTPUT = join(ROOT, 'public', 'sitemap.xml')
 const SITE_URL = 'https://javamastery.srinivasrao.co.in'
+const today = new Date().toISOString().slice(0, 10)
 
 function main() {
   let paths = []
@@ -19,6 +20,9 @@ function main() {
 
   const urls = [
     { loc: SITE_URL, priority: '1.0' },
+    { loc: `${SITE_URL}/examples`, priority: '0.7' },
+    { loc: `${SITE_URL}/projects`, priority: '0.7' },
+    { loc: `${SITE_URL}/bookmarks`, priority: '0.3' },
     ...paths.map((path) => ({
       loc: `${SITE_URL}/docs/${pathToSlug(path)}`,
       priority: '0.8',
@@ -27,7 +31,12 @@ function main() {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((u) => `  <url><loc>${u.loc}</loc><priority>${u.priority}</priority></url>`).join('\n')}
+${urls
+  .map(
+    (u) =>
+      `  <url><loc>${u.loc}</loc><lastmod>${today}</lastmod><priority>${u.priority}</priority></url>`
+  )
+  .join('\n')}
 </urlset>
 `
 

@@ -2,8 +2,9 @@ export const SITE_CONFIG = {
   name: 'JavaMastery',
   title: 'JavaMastery — Learn Java from Basics to Senior Level',
   description:
-    'Learn Java from basics to senior level. Tutorials, 1000+ interview questions, and reference guides — all in one place.',
+    'Learn Java from basics to senior level. Tutorials, interview Q&A, runnable examples, and hands-on projects — all in one place.',
   url: 'https://javamastery.srinivasrao.co.in',
+  ogImage: 'https://javamastery.srinivasrao.co.in/og-default.svg',
   github: {
     owner: 'srinivasraoravinuthala',
     repo: 'JavaMastery',
@@ -14,7 +15,7 @@ export const SITE_CONFIG = {
     interviewQuestions: '1000+',
     javaExamples: '500+',
     majorTopics: 19,
-    learnChapters: 37,
+    learnChapters: 41,
   },
 } as const
 
@@ -42,7 +43,7 @@ export const TOPIC_SECTIONS = [
     title: 'Learn',
     path: '02-learn',
     icon: 'GraduationCap',
-    description: '37 tutorial chapters from basics to advanced',
+    description: '41 tutorial chapters from basics to advanced',
   },
   {
     id: 'interview',

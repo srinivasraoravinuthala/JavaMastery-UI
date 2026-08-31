@@ -96,6 +96,15 @@ export const ROADMAP_PHASES = [
     path: '02-learn--33-Testing',
     topics: 'Testing, Modules, Performance, Metaprogramming, Spring',
   },
+  {
+    phase: 'Projects & Full-stack',
+    chapters: '41 + labs',
+    paths: [
+      'docs/02-learn/41-RestAndFrontend.md',
+    ],
+    path: '02-learn--41-RestAndFrontend',
+    topics: 'CORS, browser fetch, Spring API + HTML UI',
+  },
 ] as const
 
 export function isPhaseComplete(phaseIndex: number, completedPaths: string[]): boolean {

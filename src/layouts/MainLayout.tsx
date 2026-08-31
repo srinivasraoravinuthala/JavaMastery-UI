@@ -6,6 +6,7 @@ import { SearchDialog } from '@/components/search/SearchDialog'
 import { ReadingProgress } from '@/components/layout/ReadingProgress'
 import { BackToTop } from '@/components/doc/BackToTop'
 import { useContentTree } from '@/hooks/useContent'
+import { useKeyboardShortcut } from '@/hooks/useKeyboardShortcut'
 import { SearchProvider, useSearchContext } from '@/contexts/SearchContext'
 import { Analytics } from '@/components/Analytics'
 

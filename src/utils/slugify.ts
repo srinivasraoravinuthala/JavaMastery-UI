@@ -33,7 +33,7 @@ function normalizeDocPath(path: string): string {
 /** Resolve a relative href against the current markdown file path. */
 export function resolveRelativePath(href: string, currentDocPath: string): string {
   const [pathPart] = href.split('#')
-  let path = pathPart.replace(/^\.\//, '')
+  const path = pathPart.replace(/^\.\//, '')
 
   if (path.startsWith('docs/')) {
     return path
@@ -108,7 +108,7 @@ const BUILD_PATH_RE = /(?:^|\/|\.\.\/)(build\/?)/
 
 /** Rewrite repo source links (pkg*, build/, README.md) to GitHub URLs. */
 export function resolveRepoLink(href: string, _currentDocPath: string): string | null {
-  if (href.startsWith('http') || href.startsWith('/') || href.endsWith('.md')) {
+  if (href.startsWith('http') || href.startsWith('/')) {
     return null
   }
 
@@ -118,6 +118,10 @@ export function resolveRepoLink(href: string, _currentDocPath: string): string |
 
   if (href.includes('README.md')) {
     return `${blobBase}/README.md`
+  }
+
+  if (href.endsWith('.md')) {
+    return null
   }
 
   const pkgMatch = href.match(PKG_PATH_RE)

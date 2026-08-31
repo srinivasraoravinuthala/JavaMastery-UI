@@ -39,7 +39,9 @@ export function InlineRunCommand({ command }: InlineRunCommandProps) {
   )
 }
 
-const RUN_COMMAND_RE = /^java\s+pkg[\w/.-]+\.java$|^java\s+pkg[\w/]+(?:/[\w.-]+\.java)?$/
+const RUN_COMMAND_RE = new RegExp(
+  '^java\\s+pkg[\\w/.-]+\\.java$|^java\\s+pkg[\\w/]+(?:/[\\w.-]+\\.java)?$'
+)
 
 export function isRunCommand(text: string): boolean {
   return RUN_COMMAND_RE.test(text.trim())

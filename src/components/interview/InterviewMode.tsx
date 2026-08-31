@@ -14,7 +14,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
-import { MarkdownRenderer } from '@/components/markdown/MarkdownRenderer'
+import { InterviewAnswer } from '@/components/interview/InterviewAnswer'
 import type { InterviewQuestion } from '@/types'
 import { cn } from '@/utils/cn'
 
@@ -252,9 +252,7 @@ export function InterviewMode({
               </div>
 
               {(showAnswers || revealed.has(current.id) || flipped) ? (
-                <div className="text-muted-foreground">
-                  <MarkdownRenderer content={current.answer} />
-                </div>
+                <InterviewAnswer content={current.answer} />
               ) : (
                 <Button onClick={() => revealAnswer(current.id)} className="w-full sm:w-auto">
                   <Eye className="h-4 w-4" />

@@ -90,15 +90,17 @@ export function DocPage() {
     if (!doc || loading) return
 
     const hash = location.hash
-    if (!hash) return
+    if (hash) {
+      const id = hash.slice(1)
+      const timer = window.setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 100)
+      return () => window.clearTimeout(timer)
+    }
 
-    const id = hash.slice(1)
-    const timer = window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }, 100)
-
-    return () => window.clearTimeout(timer)
-  }, [doc, loading, location.hash])
+    // New doc without a hash should start at the top (not mid-page from previous scroll).
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [doc, loading, location.hash, location.pathname])
 
   if (loading) {
     return (

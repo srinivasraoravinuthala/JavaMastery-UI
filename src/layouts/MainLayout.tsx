@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom'
 import { useState } from 'react'
 import { Header } from '@/components/layout/Header'
 import { Sidebar } from '@/components/layout/Sidebar'
+import { ScrollToTop } from '@/components/layout/ScrollToTop'
 import { SearchDialog } from '@/components/search/SearchDialog'
 import { ReadingProgress } from '@/components/layout/ReadingProgress'
 import { BackToTop } from '@/components/doc/BackToTop'
@@ -19,6 +20,7 @@ function LayoutContent() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Analytics />
       <ReadingProgress />
       <Header

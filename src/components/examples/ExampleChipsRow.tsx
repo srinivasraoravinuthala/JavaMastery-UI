@@ -1,5 +1,5 @@
 import { RunnableExampleChip } from './RunnableExampleChip'
-import { splitExampleLine } from '@/utils/examplePath'
+import { isExampleRunLine, splitExampleLine } from '@/utils/examplePath'
 
 interface ExampleChipsRowProps {
   refs: string
@@ -22,7 +22,7 @@ export function ExampleChipsRow({ refs }: ExampleChipsRowProps) {
 }
 
 export function parseExampleChipsLine(line: string): string | null {
-  if (!line.includes('▶')) return null
+  if (!isExampleRunLine(line)) return null
   const refs = splitExampleLine(line)
   if (refs.length === 0) return null
   return refs.join('|')

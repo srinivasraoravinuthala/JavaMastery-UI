@@ -1,6 +1,7 @@
 import {
   extractExampleRefs,
   expandExampleRefs,
+  isExampleRunLine,
   normalizeExamplePath,
   splitExampleLine,
 } from '@/utils/examplePath'
@@ -16,7 +17,7 @@ export async function extractChapterExamples(content: string): Promise<string[]>
   const paths = new Set<string>()
 
   for (const line of content.split('\n')) {
-    if (line.includes('▶')) {
+    if (isExampleRunLine(line)) {
       for (const part of splitExampleLine(line)) {
         const arrowParts = part.split(/\s*→\s*/)
         if (arrowParts.length === 2) {

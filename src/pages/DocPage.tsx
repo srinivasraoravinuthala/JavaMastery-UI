@@ -175,7 +175,7 @@ export function DocPage() {
             />
           )}
 
-          <MarkdownRenderer content={doc.content} currentDocPath={doc.path} />
+          <MarkdownRenderer content={doc.content} currentDocPath={doc.path} stripTitle />
           <DocNavigation prev={adjacent.prev} next={adjacent.next} />
         </article>
 

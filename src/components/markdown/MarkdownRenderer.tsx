@@ -11,16 +11,23 @@ import { Callout, parseCalloutType } from './Callout'
 import { RunnableExampleChip, isRunCommand } from '@/components/examples/RunnableExampleChip'
 import { ExampleChipsRow, parseExampleChipsLine } from '@/components/examples/ExampleChipsRow'
 import { extractTextFromChildren } from '@/utils/extractText'
+import { normalizeCorruptedMarkdown, stripLeadingH1 } from '@/utils/normalizeDocMarkdown'
 import { resolveMdLink, resolveRepoLink } from '@/utils/slugify'
 
 interface MarkdownRendererProps {
   content: string
   currentDocPath?: string
+  stripTitle?: boolean
 }
 
-export function MarkdownRenderer({ content, currentDocPath }: MarkdownRendererProps) {
+export function MarkdownRenderer({ content, currentDocPath, stripTitle = false }: MarkdownRendererProps) {
   const processedContent = useMemo(() => {
-    let result = content
+    let result = normalizeCorruptedMarkdown(content)
+    if (stripTitle) {
+      result = stripLeadingH1(result)
+    }
+
+    result = result
       .replace(/:::(\w+)\n([\s\S]*?):::/g, (_, type, body) => {
         return `<div class="callout-${type}">${body.trim()}</div>`
       })
@@ -44,7 +51,7 @@ export function MarkdownRenderer({ content, currentDocPath }: MarkdownRendererPr
       .join('\n')
 
     return result
-  }, [content])
+  }, [content, stripTitle])
 
   return (
     <div className="prose">

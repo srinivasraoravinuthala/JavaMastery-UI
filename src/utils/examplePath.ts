@@ -2,7 +2,7 @@
 
 const JAVA_CMD_RE = /^java\s+(.+)$/i
 const PKG_PATH_RE = /^pkg[\w]+(?:\/[\w./-]+)?$/i
-const BARE_CLASS_RE = /^(core|intro|leetcode|concurrency|networking|jdbc|restapi|libs|io|datastructures|algorithms|jvm|patterns|versions|performance|serialization|advconcurrency|metaprogramming)[\w]+$/i
+const BARE_CLASS_RE = /^(core|intro|leetcode|concurrency|networking|jdbc|restapi|libs|io|datastructures|algorithms|jvm|patterns|versions|performance|serialization|advconcurrency|metaprogramming|modules)[\w]+$/i
 
 const PREFIX_TO_PACKAGE: Record<string, string> = {
   intro: 'pkg0intro',
@@ -17,6 +17,7 @@ const PREFIX_TO_PACKAGE: Record<string, string> = {
   io: 'pkg9io',
   networking: 'pkg10networking',
   jdbc: 'pkg11jdbc',
+  modules: 'pkg15modules',
   restapi: 'pkg12restapi',
   libs: 'pkg13libs',
   advconcurrency: 'pkg16advconcurrency',
@@ -42,8 +43,19 @@ export function isExampleReference(text: string): boolean {
   if (!t) return false
   if (JAVA_CMD_RE.test(t)) return true
   if (PKG_PATH_RE.test(t)) return true
-  if (BARE_CLASS_RE.test(t)) return true
+  const base = t.replace(/\.java$/i, '')
+  if (BARE_CLASS_RE.test(base)) return true
   if (t.startsWith('pkg') && t.endsWith('/')) return false
+  return false
+}
+
+/** Whether a markdown line introduces runnable example refs (▶️ or corrupted ?? prefix). */
+export function isExampleRunLine(line: string): boolean {
+  const trimmed = line.trim()
+  if (trimmed.includes('▶')) return true
+  if (/^\?\?\s+`/.test(trimmed)) {
+    return splitExampleLine(trimmed).some(isExampleReference)
+  }
   return false
 }
 
@@ -158,9 +170,18 @@ export function expandExampleRefs(
 
 /** Split ▶️ line into individual ref strings */
 export function splitExampleLine(line: string): string[] {
-  return line
-    .replace(/^▶️?\s*/, '')
-    .split(/[·•]/)
+  const text = line
+    .trim()
+    .replace(/^▶️?\s*/u, '')
+    .replace(/^\?\?\s*/, '')
+
+  const backtickRefs = [...text.matchAll(/`([^`]+)`/g)].map((m) => stripRefDecorators(m[1]))
+  if (backtickRefs.length > 0) {
+    return backtickRefs
+  }
+
+  return text
+    .split(/[·•]|\s+\?\s+/)
     .map((s) => stripRefDecorators(s))
     .filter(Boolean)
 }

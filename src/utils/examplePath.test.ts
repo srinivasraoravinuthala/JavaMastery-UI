@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
   isExampleReference,
+  isExampleRunLine,
   parseRunCommand,
   normalizeExamplePath,
   toRunCommand,
@@ -19,8 +20,20 @@ describe('isExampleReference', () => {
     expect(isExampleReference('core26ConstructorsDemo')).toBe(true)
   })
 
-  it('rejects plain text', () => {
-    expect(isExampleReference('hello world')).toBe(false)
+  it('recognizes bare class names with .java suffix', () => {
+    expect(isExampleReference('networking5HttpClient.java')).toBe(true)
+  })
+})
+
+describe('isExampleRunLine', () => {
+  it('recognizes corrupted ?? example lines', () => {
+    expect(
+      isExampleRunLine('?? `pkg10networking/networking1InetAddress.java` ? `networking5HttpClient.java`')
+    ).toBe(true)
+  })
+
+  it('rejects corrupted ?? callout lines', () => {
+    expect(isExampleRunLine('?? **Dynamic dispatch:** JVM calls')).toBe(false)
   })
 })
 

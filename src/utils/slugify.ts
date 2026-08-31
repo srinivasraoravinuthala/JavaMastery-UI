@@ -149,7 +149,12 @@ export function extractTitleFromPath(path: string): string {
 export function extractTitleFromContent(content: string): string | null {
   const match = content.match(/^#\s+(.+)$/m)
   if (match) {
-    return match[1].replace(/[*_`]/g, '').trim()
+    return match[1]
+      .replace(/[*_`]/g, '')
+      .replace(/\uFFFD/g, '—')
+      .replace(/^(\d+)\s+\?\s+/, '$1 — ')
+      .replace(/^(\d+)\s+—\s+/, (_, n) => `${n} — `)
+      .trim()
   }
   return null
 }

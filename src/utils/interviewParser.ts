@@ -64,7 +64,7 @@ export function parseInterviewQuestions(content: string, topic?: string): Interv
 
     const isQuestion =
       heading.includes('?') ||
-      /^(q\d+|question|puzzle|what|how|why|when|where|explain|describe|compare|difference|\d+[\).])/i.test(
+      /^(q\d+|question|puzzle|what|how|why|when|where|explain|describe|compare|difference|\d+[).])/i.test(
         heading
       )
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://javamastery.srinivasrao.co.in/sitemap.xml

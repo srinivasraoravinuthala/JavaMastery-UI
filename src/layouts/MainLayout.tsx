@@ -7,7 +7,7 @@ import { ReadingProgress } from '@/components/layout/ReadingProgress'
 import { BackToTop } from '@/components/doc/BackToTop'
 import { useContentTree } from '@/hooks/useContent'
 import { SearchProvider, useSearchContext } from '@/contexts/SearchContext'
-import { useKeyboardShortcut } from '@/hooks/useKeyboardShortcut'
+import { Analytics } from '@/components/Analytics'
 
 function LayoutContent() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -18,6 +18,7 @@ function LayoutContent() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Analytics />
       <ReadingProgress />
       <Header
         onMenuToggle={() => setSidebarOpen(!sidebarOpen)}

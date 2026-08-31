@@ -12,10 +12,11 @@ const ROOT = join(__dirname, '..')
 const DOCS_DIR = join(ROOT, 'public', 'docs')
 
 const GITHUB_API = 'https://api.github.com/repos/srinivasraoravinuthala/JavaMastery'
-const GITHUB_RAW = 'https://raw.githubusercontent.com/srinivasraoravinuthala/JavaMastery/main'
+const BRANCH = process.env.DOCS_BRANCH || process.argv[2] || 'main'
+const GITHUB_RAW = `https://raw.githubusercontent.com/srinivasraoravinuthala/JavaMastery/${BRANCH}`
 
 async function fetchTree() {
-  const branchRes = await fetch(`${GITHUB_API}/branches/main`)
+  const branchRes = await fetch(`${GITHUB_API}/branches/${BRANCH}`)
   const branch = await branchRes.json()
   const treeRes = await fetch(`${GITHUB_API}/git/trees/${branch.commit.sha}?recursive=1`)
   const tree = await treeRes.json()

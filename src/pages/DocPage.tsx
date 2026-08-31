@@ -1,23 +1,33 @@
-import { useEffect, useMemo } from 'react'
-import { useParams } from 'react-router-dom'
-import { Clock, Bookmark, BookmarkCheck, Loader2 } from 'lucide-react'
+import { useEffect, useMemo, useState } from 'react'
+import { useParams, useLocation } from 'react-router-dom'
+import { Clock, Bookmark, BookmarkCheck, Loader2, CheckCircle2 } from 'lucide-react'
 import { MarkdownRenderer } from '@/components/markdown/MarkdownRenderer'
 import { TableOfContents } from '@/components/markdown/TableOfContents'
 import { DocNavigation } from '@/components/doc/DocNavigation'
+import { DocNotFound } from '@/components/doc/DocNotFound'
 import { InterviewMode } from '@/components/interview/InterviewMode'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { useDocContent, useContentTree, getAdjacentDocs } from '@/hooks/useContent'
-import { useBookmarks, useFavorites, useRecentPages } from '@/hooks/useBookmarks'
+import { useDocContent, useContentTree, getAdjacentDocs, flattenTree } from '@/hooks/useContent'
+import { useBookmarks, useFavorites, useRecentPages, useProgress } from '@/hooks/useBookmarks'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { useSearchContext } from '@/contexts/SearchContext'
 import { parseInterviewQuestions } from '@/utils/interviewParser'
+import { suggestSlugs } from '@/utils/slugSuggestions'
+import { getSearchService } from '@/services/searchService'
+import { isLearnChapter, LEARN_CHAPTER_COUNT, LEARN_SECTION_ID } from '@/config/learn'
 
 export function DocPage() {
   const { slug } = useParams<{ slug: string }>()
+  const location = useLocation()
   const { doc, loading, error } = useDocContent(slug)
   const { tree } = useContentTree()
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarks()
   const { addFavorite, isFavorite } = useFavorites()
   const { addRecent } = useRecentPages()
+  const { toggleComplete, isComplete } = useProgress()
+  const { openSearch } = useSearchContext()
+  const [slugSuggestions, setSlugSuggestions] = useState<string[]>([])
 
   const adjacent = useMemo(
     () => (slug ? getAdjacentDocs(tree, slug) : { prev: null, next: null }),
@@ -28,6 +38,12 @@ export function DocPage() {
     if (!doc?.isInterview || !doc.content) return []
     return parseInterviewQuestions(doc.content, doc.title)
   }, [doc])
+
+  usePageMeta({
+    title: doc?.title,
+    description: doc ? `${doc.title} — ${doc.sectionTitle || 'JavaMastery documentation'}` : undefined,
+    slug: doc?.slug,
+  })
 
   useEffect(() => {
     if (doc) {
@@ -40,6 +56,35 @@ export function DocPage() {
     }
   }, [doc, addRecent])
 
+  useEffect(() => {
+    if (!slug || doc || loading) return
+
+    const flatSlugs = flattenTree(tree).map((n) => n.slug)
+    if (flatSlugs.length > 0) {
+      setSlugSuggestions(suggestSlugs(slug, flatSlugs))
+      return
+    }
+
+    getSearchService()
+      .getAllSlugs()
+      .then((slugs) => setSlugSuggestions(suggestSlugs(slug, slugs)))
+      .catch(() => setSlugSuggestions([]))
+  }, [slug, doc, loading, tree])
+
+  useEffect(() => {
+    if (!doc || loading) return
+
+    const hash = location.hash
+    if (!hash) return
+
+    const id = hash.slice(1)
+    const timer = window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 100)
+
+    return () => window.clearTimeout(timer)
+  }, [doc, loading, location.hash])
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[50vh]">
@@ -50,14 +95,18 @@ export function DocPage() {
 
   if (error || !doc) {
     return (
-      <div className="container mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold mb-2">Document Not Found</h1>
-        <p className="text-muted-foreground">{error || 'The requested page could not be loaded.'}</p>
-      </div>
+      <DocNotFound
+        slug={slug}
+        error={error}
+        suggestions={slugSuggestions}
+        onSearchOpen={openSearch}
+      />
     )
   }
 
   const bookmarked = isBookmarked(doc.path)
+  const showProgress = isLearnChapter(doc.path)
+  const chapterComplete = showProgress && isComplete(LEARN_SECTION_ID, doc.path)
 
   const handleBookmark = () => {
     if (bookmarked) {
@@ -84,6 +133,16 @@ export function DocPage() {
               {doc.tags?.map((tag) => (
                 <Badge key={tag} variant="outline" className="text-xs">{tag}</Badge>
               ))}
+              {showProgress && (
+                <Button
+                  variant={chapterComplete ? 'secondary' : 'outline'}
+                  size="sm"
+                  onClick={() => toggleComplete(LEARN_SECTION_ID, doc.path, LEARN_CHAPTER_COUNT)}
+                >
+                  <CheckCircle2 className={`h-4 w-4 ${chapterComplete ? 'text-primary' : ''}`} />
+                  {chapterComplete ? 'Completed' : 'Mark complete'}
+                </Button>
+              )}
               <Button variant="ghost" size="sm" onClick={handleBookmark} className="ml-auto">
                 {bookmarked ? (
                   <BookmarkCheck className="h-4 w-4 text-primary" />
@@ -122,7 +181,7 @@ export function DocPage() {
             />
           )}
 
-          <MarkdownRenderer content={doc.content} currentSlug={doc.slug} />
+          <MarkdownRenderer content={doc.content} currentDocPath={doc.path} />
           <DocNavigation prev={adjacent.prev} next={adjacent.next} />
         </article>
 

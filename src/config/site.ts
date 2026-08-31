@@ -13,7 +13,7 @@ export const SITE_CONFIG = {
   stats: {
     interviewQuestions: '1000+',
     javaExamples: '500+',
-    majorTopics: 18,
+    majorTopics: 19,
     learnChapters: 37,
   },
 } as const
@@ -69,6 +69,7 @@ export const TOPIC_SECTIONS = [
       { id: 'jpa-hibernate', title: 'JPA & Hibernate', file: '16-JdbcJpaHibernate.md' },
       { id: 'interview-puzzles', title: 'Interview Puzzles', file: '17-PrintPuzzles.md' },
       { id: 'system-design', title: 'System Design', file: '18-SystemDesign.md' },
+      { id: 'performance', title: 'Performance', file: '19-Performance.md' },
     ],
   },
   {

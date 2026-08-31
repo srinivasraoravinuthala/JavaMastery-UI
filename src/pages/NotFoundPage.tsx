@@ -1,27 +1,42 @@
-import { Link } from 'react-router-dom'
-import { Home, ArrowLeft } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import { DocNotFound } from '@/components/doc/DocNotFound'
+import { useSearchContext } from '@/contexts/SearchContext'
+import { usePageMeta } from '@/hooks/usePageMeta'
+import { getSearchService } from '@/services/searchService'
+import { suggestSlugs } from '@/utils/slugSuggestions'
 
 export function NotFoundPage() {
+  const location = useLocation()
+  const { openSearch } = useSearchContext()
+  const [suggestions, setSuggestions] = useState<string[]>([])
+
+  usePageMeta({ title: 'Page Not Found' })
+
+  useEffect(() => {
+    const match = location.pathname.match(/^\/docs\/(.+)$/)
+    if (!match) return
+
+    const attempted = match[1]
+    getSearchService()
+      .getAllSlugs()
+      .then((slugs) => setSuggestions(suggestSlugs(attempted, slugs)))
+      .catch(() => setSuggestions([]))
+  }, [location.pathname])
+
+  const docMatch = location.pathname.match(/^\/docs\/(.+)$/)
+
+  if (docMatch) {
+    return (
+      <DocNotFound
+        slug={docMatch[1]}
+        suggestions={suggestions}
+        onSearchOpen={openSearch}
+      />
+    )
+  }
+
   return (
-    <div className="container mx-auto px-4 py-24 text-center">
-      <p className="text-8xl font-bold text-primary/20 mb-4">404</p>
-      <h1 className="text-3xl font-bold mb-2">Page Not Found</h1>
-      <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-        The page you&apos;re looking for doesn&apos;t exist or hasn&apos;t been loaded yet.
-      </p>
-      <div className="flex items-center justify-center gap-4">
-        <Button variant="outline" onClick={() => window.history.back()}>
-          <ArrowLeft className="h-4 w-4" />
-          Go Back
-        </Button>
-        <Button asChild>
-          <Link to="/">
-            <Home className="h-4 w-4" />
-            Home
-          </Link>
-        </Button>
-      </div>
-    </div>
+    <DocNotFound onSearchOpen={openSearch} />
   )
 }

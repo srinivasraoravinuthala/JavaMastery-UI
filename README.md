@@ -2,56 +2,36 @@
 
 **Live site:** [javamastery.srinivasrao.co.in](https://javamastery.srinivasrao.co.in)
 
-> Learn Java from basics to senior level. Tutorials, 1000+ interview questions, and reference guides — all in one place.
-
-The reading website for the [JavaMastery](https://github.com/srinivasraoravinuthala/JavaMastery) GitHub repository. Content lives on GitHub; this project is the UI that turns it into a clean docs site — no GitHub browsing needed.
-
-## What it does
-
-- Loads all markdown docs from [JavaMastery](https://github.com/srinivasraoravinuthala/JavaMastery) at runtime
-- 37 tutorial chapters, 18 interview topics, reference guides
-- Search, dark mode, syntax-highlighted code, interview prep mode
-- Works on mobile, tablet, and desktop
+Reading website for [JavaMastery](https://github.com/srinivasraoravinuthala/JavaMastery) — tutorials, 1000+ interview questions, and reference guides.
 
 ## Quick start
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # output → dist/
+npm run dev          # http://localhost:5173 (github mode)
+npm run build:prod   # sync docs + local mode production build
 ```
 
-## Content source
+## Branch strategy
 
-| | |
-|---|---|
-| **Website** | [javamastery.srinivasrao.co.in](https://javamastery.srinivasrao.co.in) |
-| **Content repo** | [github.com/srinivasraoravinuthala/JavaMastery](https://github.com/srinivasraoravinuthala/JavaMastery) |
-| **Default mode** | Fetches docs from GitHub API (`VITE_CONTENT_MODE=github`) |
+| Branch | Purpose |
+|--------|---------|
+| `main` | Production — Cloudflare deploys from here |
+| `develop` | Active development — open PRs to `main` |
 
-Update docs in the GitHub repo → the website shows new content automatically.
+Content source of truth: **JavaMastery `main`**. Production uses `npm run build:prod` to sync docs at build time.
+
+## Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run sync-docs` | Pull docs from GitHub into `public/docs/` |
+| `npm run validate-links` | Check internal markdown links |
+| `npm run test` | Vitest (link resolver unit tests) |
+| `npm run build:ci` | CI build with checked-out JavaMastery docs |
 
 ## Tech stack
 
-React 19 · TypeScript · Vite · Tailwind CSS · React Router · React Markdown · Prism · Fuse.js
+React 19 · TypeScript · Vite · Tailwind CSS · React Router · Fuse.js
 
-## Deploy
-
-Build command: `npm run build`  
-Output folder: `dist`  
-Platform: Cloudflare Pages (see [DEPLOYMENT.md](./DEPLOYMENT.md))
-
-## Project structure
-
-```
-src/
-├── components/   # UI, layout, markdown, search
-├── pages/        # Home, docs, bookmarks
-├── services/     # GitHub + local content loading
-├── hooks/        # Theme, search, bookmarks
-└── config/       # Site settings
-```
-
-## License
-
-MIT
+See [DEPLOYMENT.md](DEPLOYMENT.md) for Cloudflare Workers setup.

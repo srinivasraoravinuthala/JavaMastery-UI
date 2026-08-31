@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Sync docs from GitHub repository to public/docs for local mode.
- * Usage: node scripts/sync-docs.js
+ * Usage: node scripts/sync-docs.js [branch]
+ * Branch can also be set via DOCS_BRANCH env var (default: main).
  */
 import { writeFileSync, mkdirSync, existsSync } from 'fs'
 import { join, dirname } from 'path'
@@ -11,11 +12,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
 const DOCS_DIR = join(ROOT, 'public', 'docs')
 
-const GITHUB_API = 'https://api.github.com/repos/srinivasraoravinuthala/JavaMastery'
-const GITHUB_RAW = 'https://raw.githubusercontent.com/srinivasraoravinuthala/JavaMastery/main'
+const REPO = 'srinivasraoravinuthala/JavaMastery'
+const BRANCH = process.argv[2] || process.env.DOCS_BRANCH || 'main'
+const GITHUB_API = `https://api.github.com/repos/${REPO}`
+const GITHUB_RAW = `https://raw.githubusercontent.com/${REPO}/${BRANCH}`
 
 async function fetchTree() {
-  const branchRes = await fetch(`${GITHUB_API}/branches/main`)
+  const branchRes = await fetch(`${GITHUB_API}/branches/${BRANCH}`)
+  if (!branchRes.ok) throw new Error(`Branch not found: ${BRANCH}`)
   const branch = await branchRes.json()
   const treeRes = await fetch(`${GITHUB_API}/git/trees/${branch.commit.sha}?recursive=1`)
   const tree = await treeRes.json()
@@ -32,7 +36,7 @@ async function downloadFile(path) {
 }
 
 async function main() {
-  console.log('Fetching file tree from GitHub...')
+  console.log(`Fetching file tree from GitHub (${BRANCH})...`)
   const paths = await fetchTree()
   console.log(`Found ${paths.length} markdown files`)
 

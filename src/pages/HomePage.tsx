@@ -6,10 +6,13 @@ import { FeaturedInterview } from '@/components/home/FeaturedInterview'
 import { ContinueReading } from '@/components/home/ContinueReading'
 import { useRecentPages } from '@/hooks/useBookmarks'
 import { useSearchContext } from '@/contexts/SearchContext'
+import { usePageMeta } from '@/hooks/usePageMeta'
 
 export function HomePage() {
   const { recent } = useRecentPages()
   const { openSearch } = useSearchContext()
+
+  usePageMeta({})
 
   return (
     <div>

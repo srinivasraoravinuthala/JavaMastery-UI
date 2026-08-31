@@ -2,6 +2,7 @@
 
 interface ImportMetaEnv {
   readonly VITE_CONTENT_MODE: 'github' | 'local'
+  readonly VITE_CF_ANALYTICS_TOKEN?: string
 }
 
 interface ImportMeta {

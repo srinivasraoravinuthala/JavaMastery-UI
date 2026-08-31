@@ -2,7 +2,7 @@
 # Docs: https://developers.cloudflare.com/workers/static-assets/get-started/
 #
 # Dashboard build settings (Workers → Builds):
-#   Build command:                          npm run build
+# Build command:                          npm run build:prod
 #   Deploy command:                         npx wrangler deploy
 #   Non-production branch deploy command:   npx wrangler versions upload
 #
@@ -14,3 +14,4 @@ compatibility_date = "2026-06-13"
 
 [assets]
 directory = "./dist"
+not_found_handling = "single-page-application"

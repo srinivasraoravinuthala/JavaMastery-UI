@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import { CheckCircle2, Circle, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { useProgress } from '@/hooks/useBookmarks'
+import { LEARN_CHAPTER_COUNT, LEARN_SECTION_ID } from '@/config/learn'
 
 const roadmapSteps = [
   { phase: 'Foundation', chapters: '01–09', topics: 'Syntax, Types, Loops, Methods, Arrays, Strings', path: '02-learn--01-GettingStarted' },
@@ -13,6 +15,11 @@ const roadmapSteps = [
 ]
 
 export function Roadmap() {
+  const { getSectionProgress } = useProgress()
+  const learnProgress = getSectionProgress(LEARN_SECTION_ID)
+  const completedCount = learnProgress?.completed.length ?? 0
+  const progressPct = learnProgress?.percentage ?? 0
+
   return (
     <section className="py-16 bg-muted/20">
       <div className="container mx-auto px-4">
@@ -21,6 +28,19 @@ export function Roadmap() {
           <p className="text-muted-foreground max-w-xl mx-auto">
             37 sequenced chapters from beginner to principal engineer. Follow the path or jump to any topic.
           </p>
+          {completedCount > 0 && (
+            <div className="mt-4 max-w-xs mx-auto">
+              <p className="text-sm font-medium mb-2">
+                {completedCount}/{LEARN_CHAPTER_COUNT} chapters complete ({progressPct}%)
+              </p>
+              <div className="h-2 bg-muted rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-primary transition-all"
+                  style={{ width: `${progressPct}%` }}
+                />
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">

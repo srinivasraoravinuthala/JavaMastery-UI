@@ -1,6 +1,17 @@
 import Fuse from 'fuse.js'
+import { CONTENT_MODE } from '@/config/site'
 import type { SearchResult } from '@/types'
 import { getContentProvider } from '@/services/content'
+
+interface SearchIndexItem {
+  path: string
+  slug: string
+  title: string
+  section?: string
+  content: string
+  headings: string
+  tags: string
+}
 
 export class SearchService {
   private fuse: Fuse<SearchIndexItem> | null = null
@@ -9,6 +20,20 @@ export class SearchService {
 
   async initialize(): Promise<void> {
     if (this.initialized) return
+
+    if (CONTENT_MODE === 'local') {
+      try {
+        const res = await fetch('/search-index.json')
+        if (res.ok) {
+          this.index = await res.json()
+          this.buildFuse()
+          this.initialized = true
+          return
+        }
+      } catch {
+        // fall through to runtime index
+      }
+    }
 
     const provider = getContentProvider()
     const contents = await provider.getAllContents()
@@ -23,6 +48,11 @@ export class SearchService {
       tags: (doc.tags || []).join(' '),
     }))
 
+    this.buildFuse()
+    this.initialized = true
+  }
+
+  private buildFuse() {
     this.fuse = new Fuse(this.index, {
       keys: [
         { name: 'title', weight: 0.4 },
@@ -35,8 +65,11 @@ export class SearchService {
       minMatchCharLength: 2,
       ignoreLocation: true,
     })
+  }
 
-    this.initialized = true
+  async getAllSlugs(): Promise<string[]> {
+    await this.initialize()
+    return this.index.map((item) => item.slug)
   }
 
   async search(query: string, limit = 20): Promise<SearchResult[]> {
@@ -55,16 +88,6 @@ export class SearchService {
       headings: result.item.headings.split(' ').filter(Boolean).slice(0, 3),
     }))
   }
-}
-
-interface SearchIndexItem {
-  path: string
-  slug: string
-  title: string
-  section?: string
-  content: string
-  headings: string
-  tags: string
 }
 
 function extractExcerpt(content: string, query: string): string {

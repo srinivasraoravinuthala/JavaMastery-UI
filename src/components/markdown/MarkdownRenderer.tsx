@@ -8,14 +8,16 @@ import { Link } from 'react-router-dom'
 import { CodeBlock } from './CodeBlock'
 import { MermaidDiagram } from './MermaidDiagram'
 import { Callout, parseCalloutType } from './Callout'
+import { InlineRunCommand, isRunCommand } from './InlineRunCommand'
 import { extractTextFromChildren } from '@/utils/extractText'
+import { resolveMdLink, resolveRepoLink } from '@/utils/slugify'
 
 interface MarkdownRendererProps {
   content: string
-  currentSlug?: string
+  currentDocPath?: string
 }
 
-export function MarkdownRenderer({ content, currentSlug }: MarkdownRendererProps) {
+export function MarkdownRenderer({ content, currentDocPath }: MarkdownRendererProps) {
   const processedContent = useMemo(() => {
     return content
       .replace(/:::(\w+)\n([\s\S]*?):::/g, (_, type, body) => {
@@ -41,23 +43,44 @@ export function MarkdownRenderer({ content, currentSlug }: MarkdownRendererProps
         ]}
         components={{
           a: ({ href, children, ...props }) => {
-            if (href?.endsWith('.md')) {
-              const slug = mdLinkToSlug(href, currentSlug)
+            if (!href) {
+              return <a {...props}>{children}</a>
+            }
+
+            if (currentDocPath) {
+              const repoUrl = resolveRepoLink(href, currentDocPath)
+              if (repoUrl) {
+                return (
+                  <a href={repoUrl} target="_blank" rel="noopener noreferrer" {...props}>
+                    {children}
+                  </a>
+                )
+              }
+            }
+
+            const hashIndex = href.indexOf('#')
+            const pathHref = hashIndex >= 0 ? href.slice(0, hashIndex) : href
+            const hash = hashIndex >= 0 ? href.slice(hashIndex) : ''
+
+            if (pathHref.endsWith('.md') && currentDocPath) {
+              const slug = resolveMdLink(pathHref, currentDocPath)
               return (
-                <Link to={`/docs/${slug}`} {...props}>
+                <Link to={`/docs/${slug}${hash}`} {...props}>
                   {children}
                 </Link>
               )
             }
-            if (href?.startsWith('/')) {
+
+            if (href.startsWith('/')) {
               return (
                 <Link to={href} {...props}>
                   {children}
                 </Link>
               )
             }
+
             return (
-              <a href={href} target={href?.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" {...props}>
+              <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" {...props}>
                 {children}
               </a>
             )
@@ -78,6 +101,12 @@ export function MarkdownRenderer({ content, currentSlug }: MarkdownRendererProps
           code: ({ className, children, ...props }) => {
             const isBlock = className?.includes('language-')
             if (isBlock) return <code className={className} {...props}>{children}</code>
+
+            const text = String(children).trim()
+            if (isRunCommand(text)) {
+              return <InlineRunCommand command={text} />
+            }
+
             return (
               <code className="bg-muted px-1.5 py-0.5 rounded text-sm font-mono text-primary" {...props}>
                 {children}
@@ -111,30 +140,4 @@ export function MarkdownRenderer({ content, currentSlug }: MarkdownRendererProps
       </ReactMarkdown>
     </div>
   )
-}
-
-function mdLinkToSlug(href: string, currentSlug?: string): string {
-  if (href.startsWith('http')) return href
-
-  let path = href.replace(/\.md$/, '').replace(/^\.\//, '')
-
-  if (path.startsWith('../') && currentSlug) {
-    const parts = currentSlug.split('--')
-    parts.pop()
-    const parent = parts.join('--')
-    path = path.replace(/^\.\.\//, '')
-    return parent ? `${parent}--${path}` : path
-  }
-
-  if (path.includes('/')) {
-    return path.replace(/\//g, '--')
-  }
-
-  if (currentSlug?.includes('--')) {
-    const parts = currentSlug.split('--')
-    parts[parts.length - 1] = path
-    return parts.join('--')
-  }
-
-  return path
 }

@@ -86,6 +86,15 @@ function resolveMdPath(href, currentDocPath) {
 }
 
 const LINK_RE = /\[([^\]]*)\]\(([^)]+)\)/g
+const PKG_PATH_RE = /(?:^|\/)(pkg\d[\w]*(?:\/[\w.-]+)?)/
+const BUILD_PATH_RE = /(?:^|\/|\.\.\/)(build\/?)/
+
+function isRepoSourceLink(href) {
+  const [pathPart] = href.split('#')
+  if (pathPart.includes('README.md')) return true
+  if (pathPart.endsWith('.md')) return false
+  return PKG_PATH_RE.test(pathPart) || BUILD_PATH_RE.test(pathPart)
+}
 
 function validateLinks(docsDir) {
   const mdFiles = walkMdFiles(docsDir)
@@ -110,8 +119,10 @@ function validateLinks(docsDir) {
       LINK_RE.lastIndex = 0
       while ((match = LINK_RE.exec(line)) !== null) {
         const href = match[2]
+        const [pathHref] = href.split('#')
         if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) continue
-        if (!href.includes('.md') && !href.startsWith('../') && !href.startsWith('./')) continue
+        if (isRepoSourceLink(href)) continue
+        if (!pathHref.endsWith('.md')) continue
 
         const resolved = resolveMdPath(href, currentDocPath)
         const pathOnly = resolved.split('#')[0]

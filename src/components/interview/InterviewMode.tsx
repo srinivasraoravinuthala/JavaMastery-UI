@@ -15,6 +15,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { InterviewAnswer } from '@/components/interview/InterviewAnswer'
+import { MarkdownRenderer } from '@/components/markdown/MarkdownRenderer'
 import type { InterviewQuestion } from '@/types'
 import { cn } from '@/utils/cn'
 
@@ -205,17 +206,21 @@ export function InterviewMode({
       >
         <CardContent className="p-6">
           {viewMode === 'flashcard' && !flipped && !showAnswers && !revealed.has(current.id) ? (
-            <div className="flex flex-col items-center justify-center min-h-[160px] text-center gap-3">
-              <p className="text-lg font-semibold">{current.question}</p>
-              <p className="text-sm text-muted-foreground">Tap to reveal answer</p>
+            <div className="flex flex-col items-stretch justify-center min-h-[160px] gap-4">
+              <div className="text-left">
+                <MarkdownRenderer content={current.question} />
+              </div>
+              <p className="text-sm text-muted-foreground text-center">Tap to reveal answer</p>
               {current.difficulty && (
-                <Badge variant="outline" className="capitalize">{current.difficulty}</Badge>
+                <Badge variant="outline" className="capitalize self-center">{current.difficulty}</Badge>
               )}
             </div>
           ) : (
             <>
               <div className="flex items-start justify-between gap-4 mb-4">
-                <h3 className="text-lg font-semibold text-foreground">{current.question}</h3>
+                <div className="min-w-0 flex-1 text-left">
+                  <MarkdownRenderer content={current.question} />
+                </div>
                 <div className="flex gap-1 shrink-0">
                   {current.difficulty && (
                     <Badge
@@ -252,7 +257,9 @@ export function InterviewMode({
               </div>
 
               {(showAnswers || revealed.has(current.id) || flipped) ? (
-                <InterviewAnswer content={current.answer} />
+                <div className="border-t border-border pt-4 mt-2">
+                  <InterviewAnswer content={current.answer} />
+                </div>
               ) : (
                 <Button onClick={() => revealAnswer(current.id)} className="w-full sm:w-auto">
                   <Eye className="h-4 w-4" />

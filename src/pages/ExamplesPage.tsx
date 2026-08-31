@@ -132,17 +132,19 @@ export function ExamplesPage() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-2 mb-8">
-        <PackageFilterLink active={!pkgParam} href="/examples" label="All" count={entries.length} />
-        {packages.map((pkg) => (
-          <PackageFilterLink
-            key={pkg}
-            active={pkgParam === pkg}
-            href={`/examples/${pkg}`}
-            label={pkg}
-            count={entries.filter((e) => e.package === pkg).length}
-          />
-        ))}
+      <div className="-mx-4 mb-8 px-4 overflow-x-auto">
+        <div className="flex gap-2 min-w-min pb-1">
+          <PackageFilterLink active={!pkgParam} href="/examples" label="All" count={entries.length} />
+          {packages.map((pkg) => (
+            <PackageFilterLink
+              key={pkg}
+              active={pkgParam === pkg}
+              href={`/examples/${pkg}`}
+              label={pkg}
+              count={entries.filter((e) => e.package === pkg).length}
+            />
+          ))}
+        </div>
       </div>
 
       {filtered.length === 0 ? (
@@ -165,16 +167,20 @@ export function ExamplesPage() {
                         <p className="text-sm text-muted-foreground truncate mt-0.5">{entry.title}</p>
                       )}
                     </div>
-                    <div className="flex items-center gap-2 shrink-0">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 shrink-0 w-full sm:w-auto">
                       {entry.learnChapter && (
                         <Link
                           to={`/docs/${entry.learnChapter}`}
-                          className="text-xs text-primary hover:underline"
+                          className="text-xs text-primary hover:underline sm:mr-1"
                         >
                           Tutorial →
                         </Link>
                       )}
-                      <Button size="sm" onClick={() => openExample(entry.path)}>
+                      <Button
+                        size="sm"
+                        className="min-h-10 w-full sm:w-auto"
+                        onClick={() => openExample(entry.path)}
+                      >
                         View source
                       </Button>
                     </div>
@@ -210,7 +216,7 @@ function PackageFilterLink({
     <Link
       to={href}
       className={cn(
-        'inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium border transition-colors',
+        'inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-xs font-medium border transition-colors whitespace-nowrap min-h-9',
         active
           ? 'bg-primary text-primary-foreground border-primary'
           : 'border-border hover:bg-muted'

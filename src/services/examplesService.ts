@@ -11,6 +11,7 @@ import {
   exampleRunCommand,
   isExampleJavaPath,
 } from '@/utils/exampleIndex'
+import { buildOneCompilerUrls } from '@/utils/oneCompiler'
 
 const EXAMPLES_BASE = '/examples'
 const INDEX_URL = '/examples-index.json'
@@ -260,8 +261,7 @@ export class ExamplesService {
   }
 
   getOneCompilerUrl(source: string): string {
-    const code = source.replace(/^package\s+[\w.]+;\s*/m, '')
-    return `https://onecompiler.com/java?code=${encodeURIComponent(code)}`
+    return buildOneCompilerUrls(source).fullTabUrl
   }
 }
 

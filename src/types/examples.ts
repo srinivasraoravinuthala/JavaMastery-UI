@@ -7,6 +7,8 @@ export interface ExampleIndexEntry {
   runCommand: string
   level: string
   learnChapter?: string
+  prerequisites?: string
+  expectedOutput?: string
 }
 
 export interface ExampleContent extends ExampleIndexEntry {

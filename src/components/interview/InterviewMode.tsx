@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import {
   Eye,
   EyeOff,
@@ -7,12 +7,18 @@ import {
   Shuffle,
   ChevronLeft,
   ChevronRight,
+  Layers,
+  List,
+  Filter,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import type { InterviewQuestion } from '@/types'
 import { cn } from '@/utils/cn'
+
+type ViewMode = 'card' | 'flashcard'
+type DifficultyFilter = 'all' | 'easy' | 'medium' | 'hard'
 
 interface InterviewModeProps {
   questions: InterviewQuestion[]
@@ -21,6 +27,9 @@ interface InterviewModeProps {
   onFavorite?: (question: InterviewQuestion) => void
   isBookmarked?: (id: string) => boolean
   isFavorite?: (id: string) => boolean
+  favoriteIds?: Set<string>
+  studyModeOnly?: boolean
+  onStudyModeChange?: (studyOnly: boolean) => void
 }
 
 export function InterviewMode({
@@ -30,23 +39,59 @@ export function InterviewMode({
   onFavorite,
   isBookmarked,
   isFavorite,
+  favoriteIds,
+  studyModeOnly = false,
+  onStudyModeChange,
 }: InterviewModeProps) {
   const [showAnswers, setShowAnswers] = useState(false)
   const [revealed, setRevealed] = useState<Set<string>>(new Set())
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [viewMode, setViewMode] = useState<ViewMode>('card')
+  const [difficulty, setDifficulty] = useState<DifficultyFilter>('all')
+  const [quizFavoritesOnly, setQuizFavoritesOnly] = useState(false)
+  const [flipped, setFlipped] = useState(false)
+
+  const filtered = useMemo(() => {
+    let list = questions
+    if (difficulty !== 'all') {
+      list = list.filter((q) => q.difficulty === difficulty)
+    }
+    if (quizFavoritesOnly && favoriteIds) {
+      list = list.filter((q) => favoriteIds.has(q.id))
+    }
+    return list
+  }, [questions, difficulty, quizFavoritesOnly, favoriteIds])
 
   if (questions.length === 0) return null
 
-  const current = questions[currentIndex]
+  const current = filtered[currentIndex] ?? filtered[0]
+  const safeIndex = current ? currentIndex : 0
 
   const revealAnswer = (id: string) => {
     setRevealed((prev) => new Set([...prev, id]))
+    setFlipped(true)
   }
 
   const randomQuestion = () => {
-    const index = Math.floor(Math.random() * questions.length)
+    if (filtered.length === 0) return
+    const index = Math.floor(Math.random() * filtered.length)
     setCurrentIndex(index)
     setRevealed(new Set())
+    setFlipped(false)
+  }
+
+  const goTo = (index: number) => {
+    setCurrentIndex(index)
+    setRevealed(new Set())
+    setFlipped(false)
+  }
+
+  if (filtered.length === 0) {
+    return (
+      <div className="mb-8 p-4 rounded-xl border border-border bg-card text-sm text-muted-foreground">
+        No questions match the current filter. Try &ldquo;All&rdquo; difficulty or disable favorites-only quiz.
+      </div>
+    )
   }
 
   return (
@@ -55,17 +100,37 @@ export function InterviewMode({
         <Badge variant="java">Interview Mode</Badge>
         {topic && <Badge variant="outline">{topic}</Badge>}
         <span className="text-sm text-muted-foreground ml-auto">
-          {questions.length} questions
+          {filtered.length} questions
         </span>
 
         <div className="flex flex-wrap gap-2 w-full mt-2">
+          {onStudyModeChange && (
+            <Button
+              variant={studyModeOnly ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => onStudyModeChange(!studyModeOnly)}
+            >
+              {studyModeOnly ? <EyeOff className="h-3.5 w-3.5" /> : <List className="h-3.5 w-3.5" />}
+              {studyModeOnly ? 'Study mode' : 'Full doc'}
+            </Button>
+          )}
+
+          <Button
+            variant={viewMode === 'flashcard' ? 'default' : 'outline'}
+            size="sm"
+            onClick={() => { setViewMode(viewMode === 'flashcard' ? 'card' : 'flashcard'); setFlipped(false) }}
+          >
+            <Layers className="h-3.5 w-3.5" />
+            Flashcard
+          </Button>
+
           <Button
             variant={showAnswers ? 'default' : 'outline'}
             size="sm"
             onClick={() => setShowAnswers(!showAnswers)}
           >
             {showAnswers ? <EyeOff className="h-3.5 w-3.5" /> : <Eye className="h-3.5 w-3.5" />}
-            {showAnswers ? 'Hide All Answers' : 'Show All Answers'}
+            {showAnswers ? 'Hide All' : 'Show All'}
           </Button>
 
           <Button variant="outline" size="sm" onClick={randomQuestion}>
@@ -73,25 +138,51 @@ export function InterviewMode({
             Random
           </Button>
 
+          {favoriteIds && favoriteIds.size > 0 && (
+            <Button
+              variant={quizFavoritesOnly ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => { setQuizFavoritesOnly(!quizFavoritesOnly); setCurrentIndex(0); setFlipped(false) }}
+            >
+              <Star className="h-3.5 w-3.5" />
+              Starred ({favoriteIds.size})
+            </Button>
+          )}
+
+          <div className="flex items-center gap-1">
+            <Filter className="h-3.5 w-3.5 text-muted-foreground" />
+            {(['all', 'easy', 'medium', 'hard'] as const).map((d) => (
+              <Button
+                key={d}
+                variant={difficulty === d ? 'default' : 'ghost'}
+                size="sm"
+                className="h-7 px-2 text-xs capitalize"
+                onClick={() => { setDifficulty(d); setCurrentIndex(0); setFlipped(false) }}
+              >
+                {d}
+              </Button>
+            ))}
+          </div>
+
           <div className="flex items-center gap-1 ml-auto">
             <Button
               variant="outline"
               size="icon"
               className="h-8 w-8"
-              disabled={currentIndex === 0}
-              onClick={() => { setCurrentIndex((i) => i - 1); setRevealed(new Set()) }}
+              disabled={safeIndex === 0}
+              onClick={() => goTo(safeIndex - 1)}
             >
               <ChevronLeft className="h-4 w-4" />
             </Button>
             <span className="text-sm text-muted-foreground px-2">
-              {currentIndex + 1} / {questions.length}
+              {safeIndex + 1} / {filtered.length}
             </span>
             <Button
               variant="outline"
               size="icon"
               className="h-8 w-8"
-              disabled={currentIndex === questions.length - 1}
-              onClick={() => { setCurrentIndex((i) => i + 1); setRevealed(new Set()) }}
+              disabled={safeIndex >= filtered.length - 1}
+              onClick={() => goTo(safeIndex + 1)}
             >
               <ChevronRight className="h-4 w-4" />
             </Button>
@@ -99,53 +190,77 @@ export function InterviewMode({
         </div>
       </div>
 
-      <Card className="border-primary/20">
+      <Card
+        id={current.id}
+        className={cn(
+          'border-primary/20 transition-transform',
+          viewMode === 'flashcard' && 'cursor-pointer min-h-[200px]'
+        )}
+        onClick={() => {
+          if (viewMode === 'flashcard' && !flipped && !showAnswers) {
+            revealAnswer(current.id)
+          }
+        }}
+      >
         <CardContent className="p-6">
-          <div className="flex items-start justify-between gap-4 mb-4">
-            <h3 className="text-lg font-semibold text-foreground">{current.question}</h3>
-            <div className="flex gap-1 shrink-0">
+          {viewMode === 'flashcard' && !flipped && !showAnswers && !revealed.has(current.id) ? (
+            <div className="flex flex-col items-center justify-center min-h-[160px] text-center gap-3">
+              <p className="text-lg font-semibold">{current.question}</p>
+              <p className="text-sm text-muted-foreground">Tap to reveal answer</p>
               {current.difficulty && (
-                <Badge
-                  variant={
-                    current.difficulty === 'hard' ? 'default' :
-                    current.difficulty === 'medium' ? 'secondary' : 'outline'
-                  }
-                >
-                  {current.difficulty}
-                </Badge>
+                <Badge variant="outline" className="capitalize">{current.difficulty}</Badge>
               )}
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8"
-                onClick={() => onBookmark?.(current)}
-              >
-                <Bookmark
-                  className={cn('h-4 w-4', isBookmarked?.(current.id) && 'fill-primary text-primary')}
-                />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-8 w-8"
-                onClick={() => onFavorite?.(current)}
-              >
-                <Star
-                  className={cn('h-4 w-4', isFavorite?.(current.id) && 'fill-yellow-500 text-yellow-500')}
-                />
-              </Button>
-            </div>
-          </div>
-
-          {(showAnswers || revealed.has(current.id)) ? (
-            <div className="prose prose-sm text-muted-foreground whitespace-pre-wrap">
-              {current.answer}
             </div>
           ) : (
-            <Button onClick={() => revealAnswer(current.id)} className="w-full sm:w-auto">
-              <Eye className="h-4 w-4" />
-              Reveal Answer
-            </Button>
+            <>
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <h3 className="text-lg font-semibold text-foreground">{current.question}</h3>
+                <div className="flex gap-1 shrink-0">
+                  {current.difficulty && (
+                    <Badge
+                      variant={
+                        current.difficulty === 'hard' ? 'default' :
+                        current.difficulty === 'medium' ? 'secondary' : 'outline'
+                      }
+                      className="capitalize"
+                    >
+                      {current.difficulty}
+                    </Badge>
+                  )}
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8"
+                    onClick={(e) => { e.stopPropagation(); onBookmark?.(current) }}
+                  >
+                    <Bookmark
+                      className={cn('h-4 w-4', isBookmarked?.(current.id) && 'fill-primary text-primary')}
+                    />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8"
+                    onClick={(e) => { e.stopPropagation(); onFavorite?.(current) }}
+                  >
+                    <Star
+                      className={cn('h-4 w-4', isFavorite?.(current.id) && 'fill-yellow-500 text-yellow-500')}
+                    />
+                  </Button>
+                </div>
+              </div>
+
+              {(showAnswers || revealed.has(current.id) || flipped) ? (
+                <div className="prose prose-sm text-muted-foreground whitespace-pre-wrap">
+                  {current.answer}
+                </div>
+              ) : (
+                <Button onClick={() => revealAnswer(current.id)} className="w-full sm:w-auto">
+                  <Eye className="h-4 w-4" />
+                  Reveal Answer
+                </Button>
+              )}
+            </>
           )}
         </CardContent>
       </Card>

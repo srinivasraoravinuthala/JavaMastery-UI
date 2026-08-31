@@ -1,5 +1,5 @@
 export const LEARN_SECTION_ID = 'learn'
-export const LEARN_CHAPTER_COUNT = 37
+export const LEARN_CHAPTER_COUNT = 40
 
 const LEARN_CHAPTER_RE = /^docs\/02-learn\/\d+-[\w-]+\.md$/
 

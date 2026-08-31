@@ -38,6 +38,9 @@ export interface SearchResult {
   excerpt: string
   score: number
   headings?: string[]
+  kind?: 'doc' | 'example'
+  package?: string
+  runCommand?: string
 }
 
 export interface Bookmark {
@@ -46,6 +49,8 @@ export interface Bookmark {
   title: string
   section?: string
   addedAt: number
+  questionId?: string
+  type?: 'page' | 'question'
 }
 
 export interface Favorite extends Bookmark {

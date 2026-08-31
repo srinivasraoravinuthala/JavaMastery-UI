@@ -13,17 +13,18 @@ export function useBookmarks() {
 
   const addBookmark = useCallback((bookmark: Omit<Bookmark, 'addedAt'>) => {
     setBookmarks((prev) => {
-      if (prev.some((b) => b.path === bookmark.path)) return prev
+      const key = bookmark.questionId || bookmark.path
+      if (prev.some((b) => (b.questionId || b.path) === key)) return prev
       return [{ ...bookmark, addedAt: Date.now() }, ...prev]
     })
   }, [])
 
-  const removeBookmark = useCallback((path: string) => {
-    setBookmarks((prev) => prev.filter((b) => b.path !== path))
+  const removeBookmark = useCallback((key: string) => {
+    setBookmarks((prev) => prev.filter((b) => (b.questionId || b.path) !== key))
   }, [])
 
   const isBookmarked = useCallback(
-    (path: string) => bookmarks.some((b) => b.path === path),
+    (key: string) => bookmarks.some((b) => (b.questionId || b.path) === key),
     [bookmarks]
   )
 

@@ -12,14 +12,24 @@ function isHtmlResponse(content: string): boolean {
   return trimmed.startsWith('<!doctype html') || trimmed.startsWith('<html')
 }
 
-function parseJavaHeader(content: string): { title: string; explanation: string; className: string } {
+function parseJavaHeader(content: string): {
+  title: string
+  explanation: string
+  className: string
+  prerequisites: string
+  expectedOutput: string
+} {
   const blockMatch = content.match(/^\/\*([\s\S]*?)\*\//)
-  if (!blockMatch) return { title: '', explanation: '', className: '' }
+  if (!blockMatch) return { title: '', explanation: '', className: '', prerequisites: '', expectedOutput: '' }
 
   const lines = blockMatch[1].split('\n').map((l) => l.replace(/^\s*\*\s?/, '').trim())
   let className = ''
   const explanationLines: string[] = []
+  const prereqLines: string[] = []
+  const outputLines: string[] = []
   let inExplanation = false
+  let inPrereq = false
+  let inOutput = false
 
   for (const line of lines) {
     if (!line || line.startsWith('---')) continue
@@ -27,18 +37,44 @@ function parseJavaHeader(content: string): { title: string; explanation: string;
       className = line.replace(/\.java$/, '')
       continue
     }
+    if (line.toUpperCase().startsWith('PREREQUISITES:')) {
+      inPrereq = true
+      inExplanation = false
+      inOutput = false
+      const rest = line.replace(/^PREREQUISITES:\s*/i, '')
+      if (rest) prereqLines.push(rest)
+      continue
+    }
+    if (line.toUpperCase().startsWith('OUTPUT:')) {
+      inOutput = true
+      inExplanation = false
+      inPrereq = false
+      const rest = line.replace(/^OUTPUT:\s*/i, '')
+      if (rest) outputLines.push(rest)
+      continue
+    }
     if (line.toUpperCase().startsWith('EXPLANATION:')) {
       inExplanation = true
+      inPrereq = false
+      inOutput = false
       const rest = line.replace(/^EXPLANATION:\s*/i, '')
       if (rest) explanationLines.push(rest)
       continue
     }
-    if (inExplanation) explanationLines.push(line)
+    if (inPrereq) prereqLines.push(line)
+    else if (inOutput) outputLines.push(line)
+    else if (inExplanation) explanationLines.push(line)
   }
 
   const explanation = explanationLines.join(' ').trim()
   const title = explanation.split('.')[0]?.trim() || className
-  return { title, explanation, className }
+  return {
+    title,
+    explanation,
+    className,
+    prerequisites: prereqLines.join(' ').trim(),
+    expectedOutput: outputLines.join('\n').trim(),
+  }
 }
 
 export class ExamplesService {
@@ -130,7 +166,13 @@ export class ExamplesService {
     const source = await this.fetchSource(repoPath)
 
     if (entry) {
-      return { ...entry, source }
+      const header = parseJavaHeader(source)
+      return {
+        ...entry,
+        source,
+        prerequisites: entry.prerequisites || header.prerequisites,
+        expectedOutput: entry.expectedOutput || header.expectedOutput,
+      }
     }
 
     const header = parseJavaHeader(source)
@@ -144,6 +186,8 @@ export class ExamplesService {
       className,
       title: header.title || className,
       explanation: header.explanation,
+      prerequisites: header.prerequisites,
+      expectedOutput: header.expectedOutput,
       runCommand: `java ${repoPath.replace(/\.java$/, '')}.java`,
       level: 'Other',
       source,
@@ -152,6 +196,15 @@ export class ExamplesService {
 
   getGitHubUrl(repoPath: string): string {
     return `${SITE_CONFIG.github.url}/blob/${SITE_CONFIG.github.branch}/${repoPath}`
+  }
+
+  getCodespacesUrl(repoPath: string): string {
+    return `${SITE_CONFIG.github.url}/blob/${SITE_CONFIG.github.branch}/${repoPath}#code-execution`
+  }
+
+  getOneCompilerUrl(source: string): string {
+    const code = source.replace(/^package\s+[\w.]+;\s*/m, '')
+    return `https://onecompiler.com/java?code=${encodeURIComponent(code)}`
   }
 }
 

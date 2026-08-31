@@ -12,11 +12,15 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { useDocContent, useContentTree, getAdjacentDocs, flattenTree } from '@/hooks/useContent'
 import { useBookmarks, useFavorites, useRecentPages, useProgress } from '@/hooks/useBookmarks'
+import { useInterviewReview } from '@/hooks/useLearnerData'
+import { useActiveHeading } from '@/hooks/useActiveHeading'
+import { usePreferences } from '@/hooks/usePreferences'
 import { usePageMeta } from '@/hooks/usePageMeta'
 import { parseInterviewQuestions } from '@/utils/interviewParser'
 import { suggestSlugs } from '@/utils/slugSuggestions'
 import { getSearchService } from '@/services/searchService'
 import { isLearnChapter, LEARN_CHAPTER_COUNT, LEARN_SECTION_ID } from '@/config/learn'
+import { getLearnChapterNumber } from '@/utils/learnProgress'
 
 export function DocPage() {
   const { slug } = useParams<{ slug: string }>()
@@ -24,10 +28,19 @@ export function DocPage() {
   const { doc, loading, error } = useDocContent(slug)
   const { tree } = useContentTree()
   const { addBookmark, removeBookmark, isBookmarked } = useBookmarks()
-  const { addFavorite, isFavorite } = useFavorites()
+  const { favorites, addFavorite, removeFavorite, isFavorite } = useFavorites()
   const { addRecent } = useRecentPages()
   const { toggleComplete, isComplete } = useProgress()
+  const { toggleReviewed, isReviewed } = useInterviewReview()
+  const { prefs } = usePreferences()
   const [slugSuggestions, setSlugSuggestions] = useState<string[]>([])
+  const [studyModeOnly, setStudyModeOnly] = useState(prefs.interviewMode)
+  const activeHeadingId = useActiveHeading(doc?.headings ?? [])
+
+  const favoriteIds = useMemo(
+    () => new Set(favorites.filter((f) => f.questionId).map((f) => f.questionId!)),
+    [favorites]
+  )
 
   const adjacent = useMemo(
     () => (slug ? getAdjacentDocs(tree, slug) : { prev: null, next: null }),
@@ -102,14 +115,18 @@ export function DocPage() {
   const bookmarked = isBookmarked(doc.path)
   const completed = isComplete(LEARN_SECTION_ID, doc.path)
   const showProgress = isLearnChapter(doc.path)
+  const chapterNum = getLearnChapterNumber(doc.path)
+  const reviewed = doc.isInterview && isReviewed(doc.slug)
 
   const handleBookmark = () => {
     if (bookmarked) {
       removeBookmark(doc.path)
     } else {
-      addBookmark({ path: doc.path, slug: doc.slug, title: doc.title, section: doc.sectionTitle })
+      addBookmark({ path: doc.path, slug: doc.slug, title: doc.title, section: doc.sectionTitle, type: 'page' })
     }
   }
+
+  const showMarkdown = !doc.isInterview || !studyModeOnly || interviewQuestions.length === 0
 
   return (
     <div className="container mx-auto px-4 py-8 lg:py-12">
@@ -118,6 +135,11 @@ export function DocPage() {
           <header className="mb-8">
             {doc.sectionTitle && (
               <Badge variant="secondary" className="mb-3">{doc.sectionTitle}</Badge>
+            )}
+            {chapterNum != null && (
+              <p className="text-xs text-muted-foreground mb-2">
+                Chapter {chapterNum} of {LEARN_CHAPTER_COUNT}
+              </p>
             )}
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
               <DocTitle title={doc.title} showChapter={showProgress} />
@@ -140,6 +162,12 @@ export function DocPage() {
                   {completed ? 'Completed' : 'Mark complete'}
                 </Button>
               )}
+              {doc.isInterview && (
+                <Button variant="ghost" size="sm" onClick={() => toggleReviewed(doc.slug)}>
+                  <CheckCircle2 className={`h-4 w-4 ${reviewed ? 'text-primary' : ''}`} />
+                  {reviewed ? 'Reviewed' : 'Mark reviewed'}
+                </Button>
+              )}
               <Button variant="ghost" size="sm" onClick={handleBookmark} className="ml-auto">
                 {bookmarked ? (
                   <BookmarkCheck className="h-4 w-4 text-primary" />
@@ -157,37 +185,55 @@ export function DocPage() {
             <InterviewMode
               questions={interviewQuestions}
               topic={doc.title}
-              onBookmark={(q) =>
-                addBookmark({
-                  path: doc.path,
-                  slug: doc.slug,
-                  title: q.question,
-                  section: doc.sectionTitle,
-                })
-              }
-              onFavorite={(q) =>
-                addFavorite({
-                  path: doc.path,
-                  slug: doc.slug,
-                  title: q.question,
-                  section: doc.sectionTitle,
-                  type: 'question',
-                  questionId: q.id,
-                })
-              }
-              isBookmarked={() => isBookmarked(doc.path)}
+              favoriteIds={favoriteIds}
+              studyModeOnly={studyModeOnly}
+              onStudyModeChange={setStudyModeOnly}
+              onBookmark={(q) => {
+                const key = q.id
+                if (isBookmarked(key)) {
+                  removeBookmark(key)
+                } else {
+                  addBookmark({
+                    path: doc.path,
+                    slug: doc.slug,
+                    title: q.question,
+                    section: doc.sectionTitle,
+                    questionId: q.id,
+                    type: 'question',
+                  })
+                }
+              }}
+              onFavorite={(q) => {
+                const key = q.id
+                if (isFavorite(key)) {
+                  removeFavorite(key)
+                } else {
+                  addFavorite({
+                    path: doc.path,
+                    slug: doc.slug,
+                    title: q.question,
+                    section: doc.sectionTitle,
+                    type: 'question',
+                    questionId: q.id,
+                  })
+                }
+              }}
+              isBookmarked={isBookmarked}
               isFavorite={isFavorite}
             />
           )}
 
-          <MarkdownRenderer content={doc.content} currentDocPath={doc.path} stripTitle />
+          {showMarkdown && (
+            <MarkdownRenderer content={doc.content} currentDocPath={doc.path} stripTitle />
+          )}
+
           <DocNavigation prev={adjacent.prev} next={adjacent.next} />
         </article>
 
-        {doc.headings.length > 0 && (
+        {doc.headings.length > 0 && showMarkdown && (
           <aside className="hidden xl:block w-56 shrink-0">
             <div className="sticky top-20">
-              <TableOfContents headings={doc.headings} />
+              <TableOfContents headings={doc.headings} activeId={activeHeadingId} />
             </div>
           </aside>
         )}

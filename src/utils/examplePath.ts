@@ -2,7 +2,7 @@
 
 const JAVA_CMD_RE = /^java\s+(.+)$/i
 const PKG_PATH_RE = /^pkg[\w]+(?:\/[\w./-]+)?$/i
-const BARE_CLASS_RE = /^(core|intro|leetcode|concurrency|networking|jdbc|restapi|libs|io|datastructures|algorithms|jvm|patterns|versions|performance|serialization|advconcurrency|metaprogramming|modules)[\w]+$/i
+const BARE_CLASS_RE = /^(core|intro|leetcode|concurrency|networking|jdbc|restapi|libs|io|datastructures|algorithms|jvm|patterns|versions|performance|serialization|advconcurrency|metaprogramming|modules|resilience)[\w]+$/i
 
 const PREFIX_TO_PACKAGE: Record<string, string> = {
   intro: 'pkg0intro',
@@ -21,8 +21,8 @@ const PREFIX_TO_PACKAGE: Record<string, string> = {
   restapi: 'pkg12restapi',
   libs: 'pkg13libs',
   advconcurrency: 'pkg16advconcurrency',
-  metaprogramming: 'pkg17metaprogramming',
   performance: 'pkg19performance',
+  resilience: 'pkg18resiliencepatterns',
   serialization: 'pkg20serialization',
 }
 

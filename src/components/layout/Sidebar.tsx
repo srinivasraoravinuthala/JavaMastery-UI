@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ChevronRight, ChevronDown, FileText } from 'lucide-react'
+import { ChevronRight, ChevronDown, FileText, Play, Bookmark } from 'lucide-react'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { TOPIC_SECTIONS } from '@/config/site'
@@ -45,6 +45,34 @@ export function Sidebar({ tree, open, onClose }: SidebarProps) {
               )}
             >
               Home
+            </Link>
+
+            <Link
+              to="/examples"
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                location.pathname.startsWith('/examples')
+                  ? 'bg-primary/10 text-primary'
+                  : 'text-sidebar-foreground hover:bg-accent'
+              )}
+            >
+              <Play className="h-4 w-4 shrink-0" />
+              Examples
+            </Link>
+
+            <Link
+              to="/bookmarks"
+              onClick={onClose}
+              className={cn(
+                'flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                location.pathname === '/bookmarks'
+                  ? 'bg-primary/10 text-primary'
+                  : 'text-sidebar-foreground hover:bg-accent'
+              )}
+            >
+              <Bookmark className="h-4 w-4 shrink-0" />
+              Bookmarks
             </Link>
 
             {tree.map((section) => (

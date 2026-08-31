@@ -11,6 +11,10 @@ interface SearchIndexItem {
   content: string
   headings: string
   tags: string
+  kind?: 'doc' | 'example'
+  package?: string
+  runCommand?: string
+  learnChapter?: string
 }
 
 export class SearchService {
@@ -46,7 +50,38 @@ export class SearchService {
       content: doc.content,
       headings: doc.headings.map((h) => h.text).join(' '),
       tags: (doc.tags || []).join(' '),
+      kind: 'doc' as const,
     }))
+
+    try {
+      const exRes = await fetch('/examples-index.json')
+      if (exRes.ok) {
+        const exIndex = await exRes.json()
+        for (const entry of Object.values(exIndex) as Array<{
+          path: string
+          className: string
+          title: string
+          explanation?: string
+          runCommand: string
+          package: string
+        }>) {
+          this.index.push({
+            path: entry.path,
+            slug: `example--${entry.path.replace(/\//g, '--').replace(/\.java$/, '')}`,
+            title: entry.title || entry.className,
+            section: entry.package,
+            content: [entry.className, entry.title, entry.explanation, entry.runCommand].join(' '),
+            headings: entry.className,
+            tags: `${entry.package} example java`,
+            kind: 'example',
+            package: entry.package,
+            runCommand: entry.runCommand,
+          })
+        }
+      }
+    } catch {
+      // examples optional
+    }
 
     this.buildFuse()
     this.initialized = true
@@ -69,7 +104,7 @@ export class SearchService {
 
   async getAllSlugs(): Promise<string[]> {
     await this.initialize()
-    return this.index.map((item) => item.slug)
+    return this.index.filter((i) => i.kind !== 'example').map((item) => item.slug)
   }
 
   async search(query: string, limit = 20): Promise<SearchResult[]> {
@@ -86,6 +121,9 @@ export class SearchService {
       excerpt: extractExcerpt(result.item.content, query),
       score: 1 - (result.score || 0),
       headings: result.item.headings.split(' ').filter(Boolean).slice(0, 3),
+      kind: result.item.kind || 'doc',
+      package: result.item.package,
+      runCommand: result.item.runCommand,
     }))
   }
 }

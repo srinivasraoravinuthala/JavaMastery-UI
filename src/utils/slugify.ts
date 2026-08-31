@@ -146,12 +146,12 @@ export function extractTitleFromPath(path: string): string {
     .replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
-export function extractTitleFromContent(content: string): string {
+export function extractTitleFromContent(content: string): string | null {
   const match = content.match(/^#\s+(.+)$/m)
   if (match) {
     return match[1].replace(/[*_`]/g, '').trim()
   }
-  return 'Untitled'
+  return null
 }
 
 export function getSectionFromPath(path: string): { id: string; title: string } | undefined {

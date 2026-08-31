@@ -143,50 +143,58 @@ export class GitHubContentProvider extends BaseContentProvider {
 
 export class LocalContentProvider extends BaseContentProvider {
   private manifest: string[] | null = null
+  private githubFallback: GitHubContentProvider | null = null
+
+  private getFallback(): GitHubContentProvider {
+    if (!this.githubFallback) {
+      this.githubFallback = new GitHubContentProvider()
+    }
+    return this.githubFallback
+  }
 
   async fetchTree(): Promise<string[]> {
     if (this.manifest) return this.manifest
 
     try {
       const res = await fetch(`${LOCAL_DOCS_BASE}/manifest.json`)
-      if (res.ok) {
-        this.manifest = await res.json()
-        return this.manifest!
-      }
-    } catch {
-      // fall through
-    }
+      if (!res.ok) throw new Error(`manifest.json HTTP ${res.status}`)
 
-    return getDefaultManifest()
+      const manifest = await res.json()
+      if (!Array.isArray(manifest) || manifest.length === 0) {
+        throw new Error('manifest.json is empty')
+      }
+
+      this.manifest = manifest
+      return manifest
+    } catch (error) {
+      console.warn('[JavaMastery] Local docs unavailable, falling back to GitHub:', error)
+      return this.getFallback().fetchTree()
+    }
   }
 
   async fetchRaw(path: string): Promise<string> {
     const url = `${LOCAL_DOCS_BASE}/${path.replace(/^docs\//, '')}`
-    const res = await fetch(url)
-    if (!res.ok) throw new Error(`Failed to fetch local file: ${path}`)
-    return res.text()
+
+    try {
+      const res = await fetch(url)
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+
+      const content = await res.text()
+      if (isSpaOrHtmlResponse(content)) {
+        throw new Error('received HTML instead of markdown (doc likely missing from build)')
+      }
+
+      return content
+    } catch (error) {
+      console.warn(`[JavaMastery] Local fetch failed for ${path}, using GitHub:`, error)
+      return this.getFallback().fetchRaw(path)
+    }
   }
 }
 
-function getDefaultManifest(): string[] {
-  const learn = Array.from({ length: 37 }, (_, i) =>
-    `docs/02-learn/${String(i + 1).padStart(2, '0')}-*.md`
-  )
-  const interview = [
-    '01-CoreJava.md', '02-OopAndSolid.md', '03-Collections.md', '04-Concurrency.md',
-    '05-JVM.md', '06-Streams.md', '07-Exceptions.md', '08-Generics.md',
-    '09-StringsAndPerformance.md', '10-Java9To21Features.md', '11-IOAndSerialization.md',
-    '12-ReflectionAndAnnotations.md', '13-DesignPatterns.md', '14-EffectiveJava.md',
-    '15-SpringBoot.md', '16-JdbcJpaHibernate.md', '17-PrintPuzzles.md', '18-SystemDesign.md',
-  ].map((f) => `docs/03-interview/${f}`)
-
-  return [
-    'docs/00-INDEX.md',
-    'docs/01-orientation/01-TutorialAndHistory.md',
-    'docs/01-orientation/02-LearningPath.md',
-    ...learn,
-    ...interview,
-  ]
+function isSpaOrHtmlResponse(content: string): boolean {
+  const trimmed = content.trimStart().slice(0, 200).toLowerCase()
+  return trimmed.startsWith('<!doctype html') || trimmed.startsWith('<html')
 }
 
 function buildTreeFromPaths(paths: string[]): DocNode[] {
@@ -253,14 +261,17 @@ function formatSectionTitle(key: string): string {
 }
 
 let providerInstance: ContentProvider | null = null
+let providerMode: 'github' | 'local' | null = null
 
 export function getContentProvider(mode: 'github' | 'local' = 'github'): ContentProvider {
-  if (!providerInstance) {
+  if (!providerInstance || providerMode !== mode) {
     providerInstance = mode === 'local' ? new LocalContentProvider() : new GitHubContentProvider()
+    providerMode = mode
   }
   return providerInstance
 }
 
 export function resetContentProvider(): void {
   providerInstance = null
+  providerMode = null
 }

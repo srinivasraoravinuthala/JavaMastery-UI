@@ -1,11 +1,11 @@
-export function pathToSlug(path: string): string {
+export function pathToSlug(path) {
   return path
     .replace(/^docs\//, '')
     .replace(/\.md$/, '')
     .replace(/\//g, '--')
 }
 
-export function extractTitleFromPath(path: string): string {
+export function extractTitleFromPath(path) {
   const filename = path.split('/').pop() || path
   return filename
     .replace(/\.md$/, '')
@@ -14,7 +14,7 @@ export function extractTitleFromPath(path: string): string {
     .replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
-export function extractTitleFromContent(content: string): string {
+export function extractTitleFromContent(content) {
   const match = content.match(/^#\s+(.+)$/m)
   if (match) {
     return match[1].replace(/[*_`]/g, '').trim()
@@ -22,8 +22,8 @@ export function extractTitleFromContent(content: string): string {
   return extractTitleFromPath(content)
 }
 
-export function extractHeadings(content: string): string[] {
-  const headings: string[] = []
+export function extractHeadings(content) {
+  const headings = []
   for (const line of content.split('\n')) {
     const match = line.match(/^#{1,4}\s+(.+)$/)
     if (match) {
@@ -33,8 +33,8 @@ export function extractHeadings(content: string): string[] {
   return headings
 }
 
-export function extractTags(content: string): string[] {
-  const tags: string[] = []
+export function extractTags(content) {
+  const tags = []
   const tagMatch = content.match(/^tags:\s*\[(.+)\]/m)
   if (tagMatch) {
     tagMatch[1].split(',').forEach((t) => tags.push(t.trim().replace(/['"]/g, '')))
@@ -42,7 +42,7 @@ export function extractTags(content: string): string[] {
   return tags
 }
 
-export function extractExcerpt(content: string, maxLen = 200): string {
+export function extractExcerpt(content, maxLen = 200) {
   const body = content.replace(/^---[\s\S]*?---\n/, '').replace(/^#.+$/m, '')
   return body.replace(/[#*`[\]]/g, '').trim().slice(0, maxLen)
 }

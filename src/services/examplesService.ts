@@ -1,8 +1,16 @@
 import {
+  GITHUB_API_BASE,
   GITHUB_RAW_BASE,
   SITE_CONFIG,
 } from '@/config/site'
 import type { ExampleContent, ExampleIndexEntry, ExamplesIndex } from '@/types/examples'
+import {
+  PACKAGE_LEVELS,
+  exampleClassName,
+  examplePackage,
+  exampleRunCommand,
+  isExampleJavaPath,
+} from '@/utils/exampleIndex'
 
 const EXAMPLES_BASE = '/examples'
 const INDEX_URL = '/examples-index.json'
@@ -77,27 +85,75 @@ function parseJavaHeader(content: string): {
   }
 }
 
+function entryFromPath(path: string): ExampleIndexEntry {
+  const className = exampleClassName(path)
+  const pkg = examplePackage(path)
+  return {
+    path,
+    package: pkg,
+    className,
+    title: className,
+    explanation: '',
+    runCommand: exampleRunCommand(path),
+    level: PACKAGE_LEVELS[pkg] || 'Other',
+  }
+}
+
 export class ExamplesService {
   private index: ExamplesIndex | null = null
   private sourceCache = new Map<string, string>()
   private classToPath = new Map<string, string>()
 
   async getIndex(): Promise<ExamplesIndex> {
-    if (this.index) return this.index
+    if (this.index && Object.keys(this.index).length > 0) return this.index
 
-    try {
-      const res = await fetch(INDEX_URL)
-      if (res.ok) {
-        this.index = await res.json()
-        this.buildClassMap()
-        return this.index!
-      }
-    } catch {
-      // fall through
+    const local = await this.fetchLocalIndex()
+    if (local && Object.keys(local).length > 0) {
+      this.index = local
+      this.buildClassMap()
+      return this.index
     }
 
-    this.index = {}
+    const remote = await this.fetchGitHubIndex()
+    this.index = remote
+    this.buildClassMap()
     return this.index
+  }
+
+  private async fetchLocalIndex(): Promise<ExamplesIndex | null> {
+    try {
+      const res = await fetch(INDEX_URL)
+      if (!res.ok) return null
+      const text = await res.text()
+      if (isHtmlResponse(text)) return null
+      const data = JSON.parse(text) as ExamplesIndex
+      if (!data || typeof data !== 'object' || Array.isArray(data)) return null
+      return data
+    } catch {
+      return null
+    }
+  }
+
+  /** Build a minimal index from the JavaMastery GitHub tree when local sync is missing. */
+  private async fetchGitHubIndex(): Promise<ExamplesIndex> {
+    try {
+      const branchRes = await fetch(`${GITHUB_API_BASE}/branches/${SITE_CONFIG.github.branch}`)
+      if (!branchRes.ok) return {}
+      const branch = await branchRes.json() as { commit: { sha: string } }
+      const treeRes = await fetch(
+        `${GITHUB_API_BASE}/git/trees/${branch.commit.sha}?recursive=1`
+      )
+      if (!treeRes.ok) return {}
+      const tree = await treeRes.json() as { tree?: Array<{ path: string; type: string }> }
+      const index: ExamplesIndex = {}
+      for (const item of tree.tree || []) {
+        if (item.type !== 'blob' || !isExampleJavaPath(item.path)) continue
+        index[item.path] = entryFromPath(item.path)
+      }
+      return index
+    } catch {
+      return {}
+    }
   }
 
   private buildClassMap() {
@@ -169,6 +225,8 @@ export class ExamplesService {
       const header = parseJavaHeader(source)
       return {
         ...entry,
+        title: entry.title || header.title || entry.className,
+        explanation: entry.explanation || header.explanation,
         source,
         prerequisites: entry.prerequisites || header.prerequisites,
         expectedOutput: entry.expectedOutput || header.expectedOutput,
@@ -176,9 +234,8 @@ export class ExamplesService {
     }
 
     const header = parseJavaHeader(source)
-    const parts = repoPath.split('/')
-    const className = parts.pop()?.replace(/\.java$/, '') || repoPath
-    const pkg = parts.join('/') || ''
+    const className = exampleClassName(repoPath)
+    const pkg = examplePackage(repoPath)
 
     return {
       path: repoPath,
@@ -188,8 +245,8 @@ export class ExamplesService {
       explanation: header.explanation,
       prerequisites: header.prerequisites,
       expectedOutput: header.expectedOutput,
-      runCommand: `java ${repoPath.replace(/\.java$/, '')}.java`,
-      level: 'Other',
+      runCommand: exampleRunCommand(repoPath),
+      level: PACKAGE_LEVELS[pkg] || 'Other',
       source,
     }
   }

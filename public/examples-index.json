@@ -1,0 +1,3842 @@
+{
+  "pkg0intro/intro1AboutJava.java": {
+    "path": "pkg0intro/intro1AboutJava.java",
+    "package": "pkg0intro",
+    "className": "intro1AboutJava",
+    "title": "intro1AboutJava",
+    "explanation": "",
+    "runCommand": "java pkg0intro/intro1AboutJava.java",
+    "level": "Orientation"
+  },
+  "pkg0intro/intro2HistoryOfJava.java": {
+    "path": "pkg0intro/intro2HistoryOfJava.java",
+    "package": "pkg0intro",
+    "className": "intro2HistoryOfJava",
+    "title": "intro2HistoryOfJava",
+    "explanation": "",
+    "runCommand": "java pkg0intro/intro2HistoryOfJava.java",
+    "level": "Orientation"
+  },
+  "pkg0intro/intro3Objectives.java": {
+    "path": "pkg0intro/intro3Objectives.java",
+    "package": "pkg0intro",
+    "className": "intro3Objectives",
+    "title": "intro3Objectives",
+    "explanation": "",
+    "runCommand": "java pkg0intro/intro3Objectives.java",
+    "level": "Orientation"
+  },
+  "pkg10networking/networking1InetAddress.java": {
+    "path": "pkg10networking/networking1InetAddress.java",
+    "package": "pkg10networking",
+    "className": "networking1InetAddress",
+    "title": "networking1InetAddress",
+    "explanation": "",
+    "runCommand": "java pkg10networking/networking1InetAddress.java",
+    "level": "Applied Java",
+    "learnChapter": "02-learn--29-Networking"
+  },
+  "pkg10networking/networking2TcpSocket.java": {
+    "path": "pkg10networking/networking2TcpSocket.java",
+    "package": "pkg10networking",
+    "className": "networking2TcpSocket",
+    "title": "networking2TcpSocket",
+    "explanation": "",
+    "runCommand": "java pkg10networking/networking2TcpSocket.java",
+    "level": "Applied Java"
+  },
+  "pkg10networking/networking3UdpDatagram.java": {
+    "path": "pkg10networking/networking3UdpDatagram.java",
+    "package": "pkg10networking",
+    "className": "networking3UdpDatagram",
+    "title": "networking3UdpDatagram",
+    "explanation": "",
+    "runCommand": "java pkg10networking/networking3UdpDatagram.java",
+    "level": "Applied Java"
+  },
+  "pkg10networking/networking4UrlAndConnection.java": {
+    "path": "pkg10networking/networking4UrlAndConnection.java",
+    "package": "pkg10networking",
+    "className": "networking4UrlAndConnection",
+    "title": "networking4UrlAndConnection",
+    "explanation": "",
+    "runCommand": "java pkg10networking/networking4UrlAndConnection.java",
+    "level": "Applied Java"
+  },
+  "pkg10networking/networking5HttpClient.java": {
+    "path": "pkg10networking/networking5HttpClient.java",
+    "package": "pkg10networking",
+    "className": "networking5HttpClient",
+    "title": "networking5HttpClient",
+    "explanation": "",
+    "runCommand": "java pkg10networking/networking5HttpClient.java",
+    "level": "Applied Java"
+  },
+  "pkg11jdbc/jdbc1JdbcOverview.java": {
+    "path": "pkg11jdbc/jdbc1JdbcOverview.java",
+    "package": "pkg11jdbc",
+    "className": "jdbc1JdbcOverview",
+    "title": "jdbc1JdbcOverview",
+    "explanation": "",
+    "runCommand": "java pkg11jdbc/jdbc1JdbcOverview.java",
+    "level": "Applied Java",
+    "learnChapter": "02-learn--30-JDBC"
+  },
+  "pkg11jdbc/jdbc2CrudStatements.java": {
+    "path": "pkg11jdbc/jdbc2CrudStatements.java",
+    "package": "pkg11jdbc",
+    "className": "jdbc2CrudStatements",
+    "title": "jdbc2CrudStatements",
+    "explanation": "",
+    "runCommand": "java pkg11jdbc/jdbc2CrudStatements.java",
+    "level": "Applied Java"
+  },
+  "pkg11jdbc/jdbc3ResultSetAndMetadata.java": {
+    "path": "pkg11jdbc/jdbc3ResultSetAndMetadata.java",
+    "package": "pkg11jdbc",
+    "className": "jdbc3ResultSetAndMetadata",
+    "title": "jdbc3ResultSetAndMetadata",
+    "explanation": "",
+    "runCommand": "java pkg11jdbc/jdbc3ResultSetAndMetadata.java",
+    "level": "Applied Java"
+  },
+  "pkg11jdbc/jdbc4TransactionsAndBatch.java": {
+    "path": "pkg11jdbc/jdbc4TransactionsAndBatch.java",
+    "package": "pkg11jdbc",
+    "className": "jdbc4TransactionsAndBatch",
+    "title": "jdbc4TransactionsAndBatch",
+    "explanation": "",
+    "runCommand": "java pkg11jdbc/jdbc4TransactionsAndBatch.java",
+    "level": "Applied Java"
+  },
+  "pkg11jdbc/jdbc5ConnectionPooling.java": {
+    "path": "pkg11jdbc/jdbc5ConnectionPooling.java",
+    "package": "pkg11jdbc",
+    "className": "jdbc5ConnectionPooling",
+    "title": "jdbc5ConnectionPooling",
+    "explanation": "",
+    "runCommand": "java pkg11jdbc/jdbc5ConnectionPooling.java",
+    "level": "Applied Java"
+  },
+  "pkg12restapi/restapi1RestConcepts.java": {
+    "path": "pkg12restapi/restapi1RestConcepts.java",
+    "package": "pkg12restapi",
+    "className": "restapi1RestConcepts",
+    "title": "restapi1RestConcepts",
+    "explanation": "",
+    "runCommand": "java pkg12restapi/restapi1RestConcepts.java",
+    "level": "Applied Java",
+    "learnChapter": "02-learn--31-RestAPIs"
+  },
+  "pkg12restapi/restapi2HttpServerDemo.java": {
+    "path": "pkg12restapi/restapi2HttpServerDemo.java",
+    "package": "pkg12restapi",
+    "className": "restapi2HttpServerDemo",
+    "title": "restapi2HttpServerDemo",
+    "explanation": "",
+    "runCommand": "java pkg12restapi/restapi2HttpServerDemo.java",
+    "level": "Applied Java"
+  },
+  "pkg12restapi/restapi3RestCrudApi.java": {
+    "path": "pkg12restapi/restapi3RestCrudApi.java",
+    "package": "pkg12restapi",
+    "className": "restapi3RestCrudApi",
+    "title": "restapi3RestCrudApi",
+    "explanation": "",
+    "runCommand": "java pkg12restapi/restapi3RestCrudApi.java",
+    "level": "Applied Java"
+  },
+  "pkg12restapi/restapi4JsonHandling.java": {
+    "path": "pkg12restapi/restapi4JsonHandling.java",
+    "package": "pkg12restapi",
+    "className": "restapi4JsonHandling",
+    "title": "restapi4JsonHandling",
+    "explanation": "",
+    "runCommand": "java pkg12restapi/restapi4JsonHandling.java",
+    "level": "Applied Java"
+  },
+  "pkg12restapi/restapi5HttpClientConsume.java": {
+    "path": "pkg12restapi/restapi5HttpClientConsume.java",
+    "package": "pkg12restapi",
+    "className": "restapi5HttpClientConsume",
+    "title": "restapi5HttpClientConsume",
+    "explanation": "",
+    "runCommand": "java pkg12restapi/restapi5HttpClientConsume.java",
+    "level": "Applied Java"
+  },
+  "pkg13libs/libs1DateTimeApi.java": {
+    "path": "pkg13libs/libs1DateTimeApi.java",
+    "package": "pkg13libs",
+    "className": "libs1DateTimeApi",
+    "title": "libs1DateTimeApi",
+    "explanation": "",
+    "runCommand": "java pkg13libs/libs1DateTimeApi.java",
+    "level": "Applied Java",
+    "learnChapter": "02-learn--32-StandardLibraries"
+  },
+  "pkg13libs/libs2RegexPattern.java": {
+    "path": "pkg13libs/libs2RegexPattern.java",
+    "package": "pkg13libs",
+    "className": "libs2RegexPattern",
+    "title": "libs2RegexPattern",
+    "explanation": "",
+    "runCommand": "java pkg13libs/libs2RegexPattern.java",
+    "level": "Applied Java"
+  },
+  "pkg13libs/libs3CryptoAndHashing.java": {
+    "path": "pkg13libs/libs3CryptoAndHashing.java",
+    "package": "pkg13libs",
+    "className": "libs3CryptoAndHashing",
+    "title": "libs3CryptoAndHashing",
+    "explanation": "",
+    "runCommand": "java pkg13libs/libs3CryptoAndHashing.java",
+    "level": "Applied Java"
+  },
+  "pkg13libs/libs4RandomAndUuid.java": {
+    "path": "pkg13libs/libs4RandomAndUuid.java",
+    "package": "pkg13libs",
+    "className": "libs4RandomAndUuid",
+    "title": "libs4RandomAndUuid",
+    "explanation": "",
+    "runCommand": "java pkg13libs/libs4RandomAndUuid.java",
+    "level": "Applied Java"
+  },
+  "pkg13libs/libs5BigNumbersAndMath.java": {
+    "path": "pkg13libs/libs5BigNumbersAndMath.java",
+    "package": "pkg13libs",
+    "className": "libs5BigNumbersAndMath",
+    "title": "libs5BigNumbersAndMath",
+    "explanation": "",
+    "runCommand": "java pkg13libs/libs5BigNumbersAndMath.java",
+    "level": "Applied Java"
+  },
+  "pkg13libs/libs6Reflection.java": {
+    "path": "pkg13libs/libs6Reflection.java",
+    "package": "pkg13libs",
+    "className": "libs6Reflection",
+    "title": "libs6Reflection",
+    "explanation": "",
+    "runCommand": "java pkg13libs/libs6Reflection.java",
+    "level": "Applied Java"
+  },
+  "pkg13libs/libs7Annotations.java": {
+    "path": "pkg13libs/libs7Annotations.java",
+    "package": "pkg13libs",
+    "className": "libs7Annotations",
+    "title": "libs7Annotations",
+    "explanation": "",
+    "runCommand": "java pkg13libs/libs7Annotations.java",
+    "level": "Applied Java"
+  },
+  "pkg13libs/libs8Logging.java": {
+    "path": "pkg13libs/libs8Logging.java",
+    "package": "pkg13libs",
+    "className": "libs8Logging",
+    "title": "libs8Logging",
+    "explanation": "",
+    "runCommand": "java pkg13libs/libs8Logging.java",
+    "level": "Applied Java"
+  },
+  "pkg14testing/src/main/java/pkg14testing/Calculator.java": {
+    "path": "pkg14testing/src/main/java/pkg14testing/Calculator.java",
+    "package": "pkg14testing",
+    "className": "Calculator",
+    "title": "Calculator",
+    "explanation": "",
+    "runCommand": "java pkg14testing/src/main/java/pkg14testing/Calculator.java",
+    "level": "Ecosystem"
+  },
+  "pkg14testing/src/main/java/pkg14testing/testing1TestingOverview.java": {
+    "path": "pkg14testing/src/main/java/pkg14testing/testing1TestingOverview.java",
+    "package": "pkg14testing",
+    "className": "testing1TestingOverview",
+    "title": "testing1TestingOverview",
+    "explanation": "",
+    "runCommand": "java pkg14testing/src/main/java/pkg14testing/testing1TestingOverview.java",
+    "level": "Ecosystem"
+  },
+  "pkg15modules/modules1JpmsConcepts.java": {
+    "path": "pkg15modules/modules1JpmsConcepts.java",
+    "package": "pkg15modules",
+    "className": "modules1JpmsConcepts",
+    "title": "modules1JpmsConcepts",
+    "explanation": "",
+    "runCommand": "java pkg15modules/modules1JpmsConcepts.java",
+    "level": "Other",
+    "learnChapter": "02-learn--34-Modules"
+  },
+  "pkg15modules/modules2ServiceLoaderSpi.java": {
+    "path": "pkg15modules/modules2ServiceLoaderSpi.java",
+    "package": "pkg15modules",
+    "className": "modules2ServiceLoaderSpi",
+    "title": "modules2ServiceLoaderSpi",
+    "explanation": "",
+    "runCommand": "java pkg15modules/modules2ServiceLoaderSpi.java",
+    "level": "Other"
+  },
+  "pkg15modules/spi-demo/src/main/java/pkg15modules/SpiDemoMain.java": {
+    "path": "pkg15modules/spi-demo/src/main/java/pkg15modules/SpiDemoMain.java",
+    "package": "pkg15modules",
+    "className": "SpiDemoMain",
+    "title": "SpiDemoMain",
+    "explanation": "",
+    "runCommand": "java pkg15modules/spi-demo/src/main/java/pkg15modules/SpiDemoMain.java",
+    "level": "Other"
+  },
+  "pkg15modules/spi-demo/src/main/java/pkg15modules/spi/Encoder.java": {
+    "path": "pkg15modules/spi-demo/src/main/java/pkg15modules/spi/Encoder.java",
+    "package": "pkg15modules",
+    "className": "Encoder",
+    "title": "Encoder",
+    "explanation": "",
+    "runCommand": "java pkg15modules/spi-demo/src/main/java/pkg15modules/spi/Encoder.java",
+    "level": "Other"
+  },
+  "pkg15modules/spi-demo/src/main/java/pkg15modules/spi/ReverseEncoder.java": {
+    "path": "pkg15modules/spi-demo/src/main/java/pkg15modules/spi/ReverseEncoder.java",
+    "package": "pkg15modules",
+    "className": "ReverseEncoder",
+    "title": "ReverseEncoder",
+    "explanation": "",
+    "runCommand": "java pkg15modules/spi-demo/src/main/java/pkg15modules/spi/ReverseEncoder.java",
+    "level": "Other"
+  },
+  "pkg15modules/spi-demo/src/main/java/pkg15modules/spi/UpperEncoder.java": {
+    "path": "pkg15modules/spi-demo/src/main/java/pkg15modules/spi/UpperEncoder.java",
+    "package": "pkg15modules",
+    "className": "UpperEncoder",
+    "title": "UpperEncoder",
+    "explanation": "",
+    "runCommand": "java pkg15modules/spi-demo/src/main/java/pkg15modules/spi/UpperEncoder.java",
+    "level": "Other"
+  },
+  "pkg16advconcurrency/advconcurrency1CountDownLatch.java": {
+    "path": "pkg16advconcurrency/advconcurrency1CountDownLatch.java",
+    "package": "pkg16advconcurrency",
+    "className": "advconcurrency1CountDownLatch",
+    "title": "advconcurrency1CountDownLatch",
+    "explanation": "",
+    "runCommand": "java pkg16advconcurrency/advconcurrency1CountDownLatch.java",
+    "level": "Tech Lead"
+  },
+  "pkg16advconcurrency/advconcurrency2CyclicBarrier.java": {
+    "path": "pkg16advconcurrency/advconcurrency2CyclicBarrier.java",
+    "package": "pkg16advconcurrency",
+    "className": "advconcurrency2CyclicBarrier",
+    "title": "advconcurrency2CyclicBarrier",
+    "explanation": "",
+    "runCommand": "java pkg16advconcurrency/advconcurrency2CyclicBarrier.java",
+    "level": "Tech Lead"
+  },
+  "pkg16advconcurrency/advconcurrency3Semaphore.java": {
+    "path": "pkg16advconcurrency/advconcurrency3Semaphore.java",
+    "package": "pkg16advconcurrency",
+    "className": "advconcurrency3Semaphore",
+    "title": "advconcurrency3Semaphore",
+    "explanation": "",
+    "runCommand": "java pkg16advconcurrency/advconcurrency3Semaphore.java",
+    "level": "Tech Lead"
+  },
+  "pkg16advconcurrency/advconcurrency4Phaser.java": {
+    "path": "pkg16advconcurrency/advconcurrency4Phaser.java",
+    "package": "pkg16advconcurrency",
+    "className": "advconcurrency4Phaser",
+    "title": "advconcurrency4Phaser",
+    "explanation": "",
+    "runCommand": "java pkg16advconcurrency/advconcurrency4Phaser.java",
+    "level": "Tech Lead"
+  },
+  "pkg16advconcurrency/advconcurrency5Exchanger.java": {
+    "path": "pkg16advconcurrency/advconcurrency5Exchanger.java",
+    "package": "pkg16advconcurrency",
+    "className": "advconcurrency5Exchanger",
+    "title": "advconcurrency5Exchanger",
+    "explanation": "",
+    "runCommand": "java pkg16advconcurrency/advconcurrency5Exchanger.java",
+    "level": "Tech Lead"
+  },
+  "pkg16advconcurrency/advconcurrency6JavaMemoryModel.java": {
+    "path": "pkg16advconcurrency/advconcurrency6JavaMemoryModel.java",
+    "package": "pkg16advconcurrency",
+    "className": "advconcurrency6JavaMemoryModel",
+    "title": "advconcurrency6JavaMemoryModel",
+    "explanation": "",
+    "runCommand": "java pkg16advconcurrency/advconcurrency6JavaMemoryModel.java",
+    "level": "Tech Lead"
+  },
+  "pkg16advconcurrency/advconcurrency7StructuredConcurrency.java": {
+    "path": "pkg16advconcurrency/advconcurrency7StructuredConcurrency.java",
+    "package": "pkg16advconcurrency",
+    "className": "advconcurrency7StructuredConcurrency",
+    "title": "advconcurrency7StructuredConcurrency",
+    "explanation": "",
+    "runCommand": "java pkg16advconcurrency/advconcurrency7StructuredConcurrency.java",
+    "level": "Tech Lead"
+  },
+  "pkg17metaprogramming/metaprogramming1DynamicProxy.java": {
+    "path": "pkg17metaprogramming/metaprogramming1DynamicProxy.java",
+    "package": "pkg17metaprogramming",
+    "className": "metaprogramming1DynamicProxy",
+    "title": "metaprogramming1DynamicProxy",
+    "explanation": "",
+    "runCommand": "java pkg17metaprogramming/metaprogramming1DynamicProxy.java",
+    "level": "Ecosystem",
+    "learnChapter": "02-learn--38-Metaprogramming"
+  },
+  "pkg17metaprogramming/metaprogramming2MethodHandles.java": {
+    "path": "pkg17metaprogramming/metaprogramming2MethodHandles.java",
+    "package": "pkg17metaprogramming",
+    "className": "metaprogramming2MethodHandles",
+    "title": "metaprogramming2MethodHandles",
+    "explanation": "",
+    "runCommand": "java pkg17metaprogramming/metaprogramming2MethodHandles.java",
+    "level": "Ecosystem"
+  },
+  "pkg17metaprogramming/metaprogramming3VarHandles.java": {
+    "path": "pkg17metaprogramming/metaprogramming3VarHandles.java",
+    "package": "pkg17metaprogramming",
+    "className": "metaprogramming3VarHandles",
+    "title": "metaprogramming3VarHandles",
+    "explanation": "",
+    "runCommand": "java pkg17metaprogramming/metaprogramming3VarHandles.java",
+    "level": "Ecosystem"
+  },
+  "pkg17metaprogramming/metaprogramming4AnnotationProcessing.java": {
+    "path": "pkg17metaprogramming/metaprogramming4AnnotationProcessing.java",
+    "package": "pkg17metaprogramming",
+    "className": "metaprogramming4AnnotationProcessing",
+    "title": "metaprogramming4AnnotationProcessing",
+    "explanation": "",
+    "runCommand": "java pkg17metaprogramming/metaprogramming4AnnotationProcessing.java",
+    "level": "Ecosystem"
+  },
+  "pkg17metaprogramming/metaprogramming5ReflectionVsHandles.java": {
+    "path": "pkg17metaprogramming/metaprogramming5ReflectionVsHandles.java",
+    "package": "pkg17metaprogramming",
+    "className": "metaprogramming5ReflectionVsHandles",
+    "title": "metaprogramming5ReflectionVsHandles",
+    "explanation": "",
+    "runCommand": "java pkg17metaprogramming/metaprogramming5ReflectionVsHandles.java",
+    "level": "Ecosystem"
+  },
+  "pkg18resiliencepatterns/resilience1CircuitBreaker.java": {
+    "path": "pkg18resiliencepatterns/resilience1CircuitBreaker.java",
+    "package": "pkg18resiliencepatterns",
+    "className": "resilience1CircuitBreaker",
+    "title": "resilience1CircuitBreaker",
+    "explanation": "",
+    "runCommand": "java pkg18resiliencepatterns/resilience1CircuitBreaker.java",
+    "level": "Other",
+    "learnChapter": "02-learn--39-ResiliencePatterns"
+  },
+  "pkg18resiliencepatterns/resilience2RetryWithBackoff.java": {
+    "path": "pkg18resiliencepatterns/resilience2RetryWithBackoff.java",
+    "package": "pkg18resiliencepatterns",
+    "className": "resilience2RetryWithBackoff",
+    "title": "resilience2RetryWithBackoff",
+    "explanation": "",
+    "runCommand": "java pkg18resiliencepatterns/resilience2RetryWithBackoff.java",
+    "level": "Other"
+  },
+  "pkg18resiliencepatterns/resilience3Bulkhead.java": {
+    "path": "pkg18resiliencepatterns/resilience3Bulkhead.java",
+    "package": "pkg18resiliencepatterns",
+    "className": "resilience3Bulkhead",
+    "title": "resilience3Bulkhead",
+    "explanation": "",
+    "runCommand": "java pkg18resiliencepatterns/resilience3Bulkhead.java",
+    "level": "Other"
+  },
+  "pkg18resiliencepatterns/resilience4RateLimiter.java": {
+    "path": "pkg18resiliencepatterns/resilience4RateLimiter.java",
+    "package": "pkg18resiliencepatterns",
+    "className": "resilience4RateLimiter",
+    "title": "resilience4RateLimiter",
+    "explanation": "",
+    "runCommand": "java pkg18resiliencepatterns/resilience4RateLimiter.java",
+    "level": "Other"
+  },
+  "pkg19performance/jmh-demo/src/main/java/pkg19performance/jmh/StringConcatBenchmark.java": {
+    "path": "pkg19performance/jmh-demo/src/main/java/pkg19performance/jmh/StringConcatBenchmark.java",
+    "package": "pkg19performance",
+    "className": "StringConcatBenchmark",
+    "title": "StringConcatBenchmark",
+    "explanation": "",
+    "runCommand": "java pkg19performance/jmh-demo/src/main/java/pkg19performance/jmh/StringConcatBenchmark.java",
+    "level": "Ecosystem"
+  },
+  "pkg19performance/performance1GcAllocationDemo.java": {
+    "path": "pkg19performance/performance1GcAllocationDemo.java",
+    "package": "pkg19performance",
+    "className": "performance1GcAllocationDemo",
+    "title": "performance1GcAllocationDemo",
+    "explanation": "",
+    "runCommand": "java pkg19performance/performance1GcAllocationDemo.java",
+    "level": "Ecosystem"
+  },
+  "pkg19performance/performance2JvmFlagsGuide.java": {
+    "path": "pkg19performance/performance2JvmFlagsGuide.java",
+    "package": "pkg19performance",
+    "className": "performance2JvmFlagsGuide",
+    "title": "performance2JvmFlagsGuide",
+    "explanation": "",
+    "runCommand": "java pkg19performance/performance2JvmFlagsGuide.java",
+    "level": "Ecosystem"
+  },
+  "pkg19performance/performance3JfrConcepts.java": {
+    "path": "pkg19performance/performance3JfrConcepts.java",
+    "package": "pkg19performance",
+    "className": "performance3JfrConcepts",
+    "title": "performance3JfrConcepts",
+    "explanation": "",
+    "runCommand": "java pkg19performance/performance3JfrConcepts.java",
+    "level": "Ecosystem"
+  },
+  "pkg19performance/performance4GraalVmNativeImage.java": {
+    "path": "pkg19performance/performance4GraalVmNativeImage.java",
+    "package": "pkg19performance",
+    "className": "performance4GraalVmNativeImage",
+    "title": "performance4GraalVmNativeImage",
+    "explanation": "",
+    "runCommand": "java pkg19performance/performance4GraalVmNativeImage.java",
+    "level": "Ecosystem"
+  },
+  "pkg1core/core10Encapsulation.java": {
+    "path": "pkg1core/core10Encapsulation.java",
+    "package": "pkg1core",
+    "className": "core10Encapsulation",
+    "title": "core10Encapsulation",
+    "explanation": "",
+    "runCommand": "java pkg1core/core10Encapsulation.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--11-ConstructorsAndEncapsulation"
+  },
+  "pkg1core/core11Inheritance.java": {
+    "path": "pkg1core/core11Inheritance.java",
+    "package": "pkg1core",
+    "className": "core11Inheritance",
+    "title": "core11Inheritance",
+    "explanation": "",
+    "runCommand": "java pkg1core/core11Inheritance.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--12-InheritanceAndPolymorphism"
+  },
+  "pkg1core/core12Polymorphism.java": {
+    "path": "pkg1core/core12Polymorphism.java",
+    "package": "pkg1core",
+    "className": "core12Polymorphism",
+    "title": "core12Polymorphism",
+    "explanation": "",
+    "runCommand": "java pkg1core/core12Polymorphism.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--12-InheritanceAndPolymorphism"
+  },
+  "pkg1core/core13AbstractionDemo.java": {
+    "path": "pkg1core/core13AbstractionDemo.java",
+    "package": "pkg1core",
+    "className": "core13AbstractionDemo",
+    "title": "core13AbstractionDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core13AbstractionDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--13-AbstractionAndInterfaces"
+  },
+  "pkg1core/core14InterfacesDemo.java": {
+    "path": "pkg1core/core14InterfacesDemo.java",
+    "package": "pkg1core",
+    "className": "core14InterfacesDemo",
+    "title": "core14InterfacesDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core14InterfacesDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--13-AbstractionAndInterfaces"
+  },
+  "pkg1core/core15EnumsDemo.java": {
+    "path": "pkg1core/core15EnumsDemo.java",
+    "package": "pkg1core",
+    "className": "core15EnumsDemo",
+    "title": "core15EnumsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core15EnumsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--14-StaticAndEnums"
+  },
+  "pkg1core/core16RecordsDemo.java": {
+    "path": "pkg1core/core16RecordsDemo.java",
+    "package": "pkg1core",
+    "className": "core16RecordsDemo",
+    "title": "core16RecordsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core16RecordsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--15-RecordsAndSealed"
+  },
+  "pkg1core/core17SealedClassesDemo.java": {
+    "path": "pkg1core/core17SealedClassesDemo.java",
+    "package": "pkg1core",
+    "className": "core17SealedClassesDemo",
+    "title": "core17SealedClassesDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core17SealedClassesDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--15-RecordsAndSealed"
+  },
+  "pkg1core/core18ExceptionsDemo.java": {
+    "path": "pkg1core/core18ExceptionsDemo.java",
+    "package": "pkg1core",
+    "className": "core18ExceptionsDemo",
+    "title": "core18ExceptionsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core18ExceptionsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--16-Exceptions"
+  },
+  "pkg1core/core19CollectionsDemo.java": {
+    "path": "pkg1core/core19CollectionsDemo.java",
+    "package": "pkg1core",
+    "className": "core19CollectionsDemo",
+    "title": "core19CollectionsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core19CollectionsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--17-Collections"
+  },
+  "pkg1core/core1HelloWorld.java": {
+    "path": "pkg1core/core1HelloWorld.java",
+    "package": "pkg1core",
+    "className": "core1HelloWorld",
+    "title": "core1HelloWorld",
+    "explanation": "",
+    "runCommand": "java pkg1core/core1HelloWorld.java",
+    "level": "Beginner"
+  },
+  "pkg1core/core20GenericsDemo.java": {
+    "path": "pkg1core/core20GenericsDemo.java",
+    "package": "pkg1core",
+    "className": "core20GenericsDemo",
+    "title": "core20GenericsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core20GenericsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--18-Generics"
+  },
+  "pkg1core/core21FunctionalProgramming.java": {
+    "path": "pkg1core/core21FunctionalProgramming.java",
+    "package": "pkg1core",
+    "className": "core21FunctionalProgramming",
+    "title": "core21FunctionalProgramming",
+    "explanation": "",
+    "runCommand": "java pkg1core/core21FunctionalProgramming.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--19-LambdasAndFunctional"
+  },
+  "pkg1core/core22StreamsDemo.java": {
+    "path": "pkg1core/core22StreamsDemo.java",
+    "package": "pkg1core",
+    "className": "core22StreamsDemo",
+    "title": "core22StreamsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core22StreamsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--20-StreamsAndOptional"
+  },
+  "pkg1core/core23OptionalDemo.java": {
+    "path": "pkg1core/core23OptionalDemo.java",
+    "package": "pkg1core",
+    "className": "core23OptionalDemo",
+    "title": "core23OptionalDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core23OptionalDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--20-StreamsAndOptional"
+  },
+  "pkg1core/core24UserInput.java": {
+    "path": "pkg1core/core24UserInput.java",
+    "package": "pkg1core",
+    "className": "core24UserInput",
+    "title": "core24UserInput",
+    "explanation": "",
+    "runCommand": "java pkg1core/core24UserInput.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--09-UserInput"
+  },
+  "pkg1core/core25ClassesAndObjectsDemo.java": {
+    "path": "pkg1core/core25ClassesAndObjectsDemo.java",
+    "package": "pkg1core",
+    "className": "core25ClassesAndObjectsDemo",
+    "title": "core25ClassesAndObjectsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core25ClassesAndObjectsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--10-ClassesAndObjects"
+  },
+  "pkg1core/core26ConstructorsDemo.java": {
+    "path": "pkg1core/core26ConstructorsDemo.java",
+    "package": "pkg1core",
+    "className": "core26ConstructorsDemo",
+    "title": "core26ConstructorsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core26ConstructorsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--11-ConstructorsAndEncapsulation"
+  },
+  "pkg1core/core27StaticMembersDemo.java": {
+    "path": "pkg1core/core27StaticMembersDemo.java",
+    "package": "pkg1core",
+    "className": "core27StaticMembersDemo",
+    "title": "core27StaticMembersDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core27StaticMembersDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--14-StaticAndEnums"
+  },
+  "pkg1core/core28ComparatorDemo.java": {
+    "path": "pkg1core/core28ComparatorDemo.java",
+    "package": "pkg1core",
+    "className": "core28ComparatorDemo",
+    "title": "core28ComparatorDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core28ComparatorDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--17-Collections"
+  },
+  "pkg1core/core2Variables.java": {
+    "path": "pkg1core/core2Variables.java",
+    "package": "pkg1core",
+    "className": "core2Variables",
+    "title": "core2Variables",
+    "explanation": "",
+    "runCommand": "java pkg1core/core2Variables.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--02-VariablesAndTypes"
+  },
+  "pkg1core/core3DataTypes.java": {
+    "path": "pkg1core/core3DataTypes.java",
+    "package": "pkg1core",
+    "className": "core3DataTypes",
+    "title": "core3DataTypes",
+    "explanation": "",
+    "runCommand": "java pkg1core/core3DataTypes.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--02-VariablesAndTypes"
+  },
+  "pkg1core/core4Operators.java": {
+    "path": "pkg1core/core4Operators.java",
+    "package": "pkg1core",
+    "className": "core4Operators",
+    "title": "core4Operators",
+    "explanation": "",
+    "runCommand": "java pkg1core/core4Operators.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--03-OperatorsAndCasting"
+  },
+  "pkg1core/core5ControlStatements.java": {
+    "path": "pkg1core/core5ControlStatements.java",
+    "package": "pkg1core",
+    "className": "core5ControlStatements",
+    "title": "core5ControlStatements",
+    "explanation": "",
+    "runCommand": "java pkg1core/core5ControlStatements.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--04-ControlFlow"
+  },
+  "pkg1core/core6Loops.java": {
+    "path": "pkg1core/core6Loops.java",
+    "package": "pkg1core",
+    "className": "core6Loops",
+    "title": "core6Loops",
+    "explanation": "",
+    "runCommand": "java pkg1core/core6Loops.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--05-Loops"
+  },
+  "pkg1core/core7Methods.java": {
+    "path": "pkg1core/core7Methods.java",
+    "package": "pkg1core",
+    "className": "core7Methods",
+    "title": "core7Methods",
+    "explanation": "",
+    "runCommand": "java pkg1core/core7Methods.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--06-Methods"
+  },
+  "pkg1core/core8ArraysDemo.java": {
+    "path": "pkg1core/core8ArraysDemo.java",
+    "package": "pkg1core",
+    "className": "core8ArraysDemo",
+    "title": "core8ArraysDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core8ArraysDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--07-Arrays"
+  },
+  "pkg1core/core9StringsDemo.java": {
+    "path": "pkg1core/core9StringsDemo.java",
+    "package": "pkg1core",
+    "className": "core9StringsDemo",
+    "title": "core9StringsDemo",
+    "explanation": "",
+    "runCommand": "java pkg1core/core9StringsDemo.java",
+    "level": "Beginner",
+    "learnChapter": "02-learn--08-Strings"
+  },
+  "pkg20serialization/src/main/java/pkg20serialization/serialization1JacksonDemo.java": {
+    "path": "pkg20serialization/src/main/java/pkg20serialization/serialization1JacksonDemo.java",
+    "package": "pkg20serialization",
+    "className": "serialization1JacksonDemo",
+    "title": "serialization1JacksonDemo",
+    "explanation": "",
+    "runCommand": "java pkg20serialization/src/main/java/pkg20serialization/serialization1JacksonDemo.java",
+    "level": "Ecosystem"
+  },
+  "pkg20serialization/src/main/java/pkg20serialization/serialization2JaxbDemo.java": {
+    "path": "pkg20serialization/src/main/java/pkg20serialization/serialization2JaxbDemo.java",
+    "package": "pkg20serialization",
+    "className": "serialization2JaxbDemo",
+    "title": "serialization2JaxbDemo",
+    "explanation": "",
+    "runCommand": "java pkg20serialization/src/main/java/pkg20serialization/serialization2JaxbDemo.java",
+    "level": "Ecosystem"
+  },
+  "pkg20serialization/src/main/java/pkg20serialization/serialization3YamlDemo.java": {
+    "path": "pkg20serialization/src/main/java/pkg20serialization/serialization3YamlDemo.java",
+    "package": "pkg20serialization",
+    "className": "serialization3YamlDemo",
+    "title": "serialization3YamlDemo",
+    "explanation": "",
+    "runCommand": "java pkg20serialization/src/main/java/pkg20serialization/serialization3YamlDemo.java",
+    "level": "Ecosystem"
+  },
+  "pkg20serialization/src/main/java/pkg20serialization/serialization4ProtobufDemo.java": {
+    "path": "pkg20serialization/src/main/java/pkg20serialization/serialization4ProtobufDemo.java",
+    "package": "pkg20serialization",
+    "className": "serialization4ProtobufDemo",
+    "title": "serialization4ProtobufDemo",
+    "explanation": "",
+    "runCommand": "java pkg20serialization/src/main/java/pkg20serialization/serialization4ProtobufDemo.java",
+    "level": "Ecosystem"
+  },
+  "pkg20serialization/src/main/java/pkg20serialization/serialization5AvroDemo.java": {
+    "path": "pkg20serialization/src/main/java/pkg20serialization/serialization5AvroDemo.java",
+    "package": "pkg20serialization",
+    "className": "serialization5AvroDemo",
+    "title": "serialization5AvroDemo",
+    "explanation": "",
+    "runCommand": "java pkg20serialization/src/main/java/pkg20serialization/serialization5AvroDemo.java",
+    "level": "Ecosystem"
+  },
+  "pkg21spring/src/main/java/com/javamastery/notes/Note.java": {
+    "path": "pkg21spring/src/main/java/com/javamastery/notes/Note.java",
+    "package": "pkg21spring",
+    "className": "Note",
+    "title": "Note",
+    "explanation": "",
+    "runCommand": "java pkg21spring/src/main/java/com/javamastery/notes/Note.java",
+    "level": "Other"
+  },
+  "pkg21spring/src/main/java/com/javamastery/notes/NoteController.java": {
+    "path": "pkg21spring/src/main/java/com/javamastery/notes/NoteController.java",
+    "package": "pkg21spring",
+    "className": "NoteController",
+    "title": "NoteController",
+    "explanation": "",
+    "runCommand": "java pkg21spring/src/main/java/com/javamastery/notes/NoteController.java",
+    "level": "Other"
+  },
+  "pkg21spring/src/main/java/com/javamastery/notes/NoteRepository.java": {
+    "path": "pkg21spring/src/main/java/com/javamastery/notes/NoteRepository.java",
+    "package": "pkg21spring",
+    "className": "NoteRepository",
+    "title": "NoteRepository",
+    "explanation": "",
+    "runCommand": "java pkg21spring/src/main/java/com/javamastery/notes/NoteRepository.java",
+    "level": "Other"
+  },
+  "pkg21spring/src/main/java/com/javamastery/notes/NotesApplication.java": {
+    "path": "pkg21spring/src/main/java/com/javamastery/notes/NotesApplication.java",
+    "package": "pkg21spring",
+    "className": "NotesApplication",
+    "title": "NotesApplication",
+    "explanation": "",
+    "runCommand": "java pkg21spring/src/main/java/com/javamastery/notes/NotesApplication.java",
+    "level": "Other"
+  },
+  "pkg2versions/versions1Java5Features.java": {
+    "path": "pkg2versions/versions1Java5Features.java",
+    "package": "pkg2versions",
+    "className": "versions1Java5Features",
+    "title": "versions1Java5Features",
+    "explanation": "",
+    "runCommand": "java pkg2versions/versions1Java5Features.java",
+    "level": "Intermediate",
+    "learnChapter": "02-learn--21-JavaVersions"
+  },
+  "pkg2versions/versions2Java7Features.java": {
+    "path": "pkg2versions/versions2Java7Features.java",
+    "package": "pkg2versions",
+    "className": "versions2Java7Features",
+    "title": "versions2Java7Features",
+    "explanation": "",
+    "runCommand": "java pkg2versions/versions2Java7Features.java",
+    "level": "Intermediate"
+  },
+  "pkg2versions/versions3Java8Features.java": {
+    "path": "pkg2versions/versions3Java8Features.java",
+    "package": "pkg2versions",
+    "className": "versions3Java8Features",
+    "title": "versions3Java8Features",
+    "explanation": "",
+    "runCommand": "java pkg2versions/versions3Java8Features.java",
+    "level": "Intermediate"
+  },
+  "pkg2versions/versions4Java9To11Features.java": {
+    "path": "pkg2versions/versions4Java9To11Features.java",
+    "package": "pkg2versions",
+    "className": "versions4Java9To11Features",
+    "title": "versions4Java9To11Features",
+    "explanation": "",
+    "runCommand": "java pkg2versions/versions4Java9To11Features.java",
+    "level": "Intermediate"
+  },
+  "pkg2versions/versions5Java17Features.java": {
+    "path": "pkg2versions/versions5Java17Features.java",
+    "package": "pkg2versions",
+    "className": "versions5Java17Features",
+    "title": "versions5Java17Features",
+    "explanation": "",
+    "runCommand": "java pkg2versions/versions5Java17Features.java",
+    "level": "Intermediate"
+  },
+  "pkg2versions/versions6Java21Features.java": {
+    "path": "pkg2versions/versions6Java21Features.java",
+    "package": "pkg2versions",
+    "className": "versions6Java21Features",
+    "title": "versions6Java21Features",
+    "explanation": "",
+    "runCommand": "java pkg2versions/versions6Java21Features.java",
+    "level": "Intermediate"
+  },
+  "pkg3datastructures/datastructures0DynamicArray.java": {
+    "path": "pkg3datastructures/datastructures0DynamicArray.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures0DynamicArray",
+    "title": "datastructures0DynamicArray",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures0DynamicArray.java",
+    "level": "Computer Science",
+    "learnChapter": "02-learn--22-DataStructures"
+  },
+  "pkg3datastructures/datastructures10Trie.java": {
+    "path": "pkg3datastructures/datastructures10Trie.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures10Trie",
+    "title": "datastructures10Trie",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures10Trie.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures11GraphImpl.java": {
+    "path": "pkg3datastructures/datastructures11GraphImpl.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures11GraphImpl",
+    "title": "datastructures11GraphImpl",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures11GraphImpl.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures12UnionFind.java": {
+    "path": "pkg3datastructures/datastructures12UnionFind.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures12UnionFind",
+    "title": "datastructures12UnionFind",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures12UnionFind.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures1SinglyLinkedList.java": {
+    "path": "pkg3datastructures/datastructures1SinglyLinkedList.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures1SinglyLinkedList",
+    "title": "datastructures1SinglyLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures1SinglyLinkedList.java",
+    "level": "Computer Science",
+    "learnChapter": "02-learn--22-DataStructures"
+  },
+  "pkg3datastructures/datastructures2DoublyLinkedList.java": {
+    "path": "pkg3datastructures/datastructures2DoublyLinkedList.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures2DoublyLinkedList",
+    "title": "datastructures2DoublyLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures2DoublyLinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures3StackImpl.java": {
+    "path": "pkg3datastructures/datastructures3StackImpl.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures3StackImpl",
+    "title": "datastructures3StackImpl",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures3StackImpl.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures4QueueImpl.java": {
+    "path": "pkg3datastructures/datastructures4QueueImpl.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures4QueueImpl",
+    "title": "datastructures4QueueImpl",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures4QueueImpl.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures5MinHeap.java": {
+    "path": "pkg3datastructures/datastructures5MinHeap.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures5MinHeap",
+    "title": "datastructures5MinHeap",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures5MinHeap.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures6HashTableImpl.java": {
+    "path": "pkg3datastructures/datastructures6HashTableImpl.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures6HashTableImpl",
+    "title": "datastructures6HashTableImpl",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures6HashTableImpl.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures7BinaryTree.java": {
+    "path": "pkg3datastructures/datastructures7BinaryTree.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures7BinaryTree",
+    "title": "datastructures7BinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures7BinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures8BinarySearchTree.java": {
+    "path": "pkg3datastructures/datastructures8BinarySearchTree.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures8BinarySearchTree",
+    "title": "datastructures8BinarySearchTree",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures8BinarySearchTree.java",
+    "level": "Computer Science"
+  },
+  "pkg3datastructures/datastructures9AVLTree.java": {
+    "path": "pkg3datastructures/datastructures9AVLTree.java",
+    "package": "pkg3datastructures",
+    "className": "datastructures9AVLTree",
+    "title": "datastructures9AVLTree",
+    "explanation": "",
+    "runCommand": "java pkg3datastructures/datastructures9AVLTree.java",
+    "level": "Computer Science"
+  },
+  "pkg4algorithms/algorithms1SortingAlgorithms.java": {
+    "path": "pkg4algorithms/algorithms1SortingAlgorithms.java",
+    "package": "pkg4algorithms",
+    "className": "algorithms1SortingAlgorithms",
+    "title": "algorithms1SortingAlgorithms",
+    "explanation": "",
+    "runCommand": "java pkg4algorithms/algorithms1SortingAlgorithms.java",
+    "level": "Computer Science",
+    "learnChapter": "02-learn--23-Algorithms"
+  },
+  "pkg4algorithms/algorithms2SearchingAlgorithms.java": {
+    "path": "pkg4algorithms/algorithms2SearchingAlgorithms.java",
+    "package": "pkg4algorithms",
+    "className": "algorithms2SearchingAlgorithms",
+    "title": "algorithms2SearchingAlgorithms",
+    "explanation": "",
+    "runCommand": "java pkg4algorithms/algorithms2SearchingAlgorithms.java",
+    "level": "Computer Science"
+  },
+  "pkg4algorithms/algorithms3GreedyAlgorithms.java": {
+    "path": "pkg4algorithms/algorithms3GreedyAlgorithms.java",
+    "package": "pkg4algorithms",
+    "className": "algorithms3GreedyAlgorithms",
+    "title": "algorithms3GreedyAlgorithms",
+    "explanation": "",
+    "runCommand": "java pkg4algorithms/algorithms3GreedyAlgorithms.java",
+    "level": "Computer Science"
+  },
+  "pkg4algorithms/algorithms4DynamicProgramming.java": {
+    "path": "pkg4algorithms/algorithms4DynamicProgramming.java",
+    "package": "pkg4algorithms",
+    "className": "algorithms4DynamicProgramming",
+    "title": "algorithms4DynamicProgramming",
+    "explanation": "",
+    "runCommand": "java pkg4algorithms/algorithms4DynamicProgramming.java",
+    "level": "Computer Science"
+  },
+  "pkg4algorithms/algorithms5Backtracking.java": {
+    "path": "pkg4algorithms/algorithms5Backtracking.java",
+    "package": "pkg4algorithms",
+    "className": "algorithms5Backtracking",
+    "title": "algorithms5Backtracking",
+    "explanation": "",
+    "runCommand": "java pkg4algorithms/algorithms5Backtracking.java",
+    "level": "Computer Science"
+  },
+  "pkg4algorithms/algorithms6GraphAlgorithms.java": {
+    "path": "pkg4algorithms/algorithms6GraphAlgorithms.java",
+    "package": "pkg4algorithms",
+    "className": "algorithms6GraphAlgorithms",
+    "title": "algorithms6GraphAlgorithms",
+    "explanation": "",
+    "runCommand": "java pkg4algorithms/algorithms6GraphAlgorithms.java",
+    "level": "Computer Science"
+  },
+  "pkg4algorithms/algorithms7DivideAndConquer.java": {
+    "path": "pkg4algorithms/algorithms7DivideAndConquer.java",
+    "package": "pkg4algorithms",
+    "className": "algorithms7DivideAndConquer",
+    "title": "algorithms7DivideAndConquer",
+    "explanation": "",
+    "runCommand": "java pkg4algorithms/algorithms7DivideAndConquer.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC100SameTree.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC100SameTree.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC100SameTree",
+    "title": "blind75_LC100SameTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC100SameTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC102BinaryTreeLevelOrderTraversal.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC102BinaryTreeLevelOrderTraversal.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC102BinaryTreeLevelOrderTraversal",
+    "title": "blind75_LC102BinaryTreeLevelOrderTraversal",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC102BinaryTreeLevelOrderTraversal.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC104MaximumDepthOfBinaryTree.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC104MaximumDepthOfBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC104MaximumDepthOfBinaryTree",
+    "title": "blind75_LC104MaximumDepthOfBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC104MaximumDepthOfBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC105ConstructBinaryTreeFromPreorderAndInorder.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC105ConstructBinaryTreeFromPreorderAndInorder.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC105ConstructBinaryTreeFromPreorderAndInorder",
+    "title": "blind75_LC105ConstructBinaryTreeFromPreorderAndInorder",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC105ConstructBinaryTreeFromPreorderAndInorder.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC1143LongestCommonSubsequence.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC1143LongestCommonSubsequence.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC1143LongestCommonSubsequence",
+    "title": "blind75_LC1143LongestCommonSubsequence",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC1143LongestCommonSubsequence.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC11ContainerWithMostWater.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC11ContainerWithMostWater.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC11ContainerWithMostWater",
+    "title": "blind75_LC11ContainerWithMostWater",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC11ContainerWithMostWater.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC121BestTimeToBuyAndSellStock.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC121BestTimeToBuyAndSellStock.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC121BestTimeToBuyAndSellStock",
+    "title": "blind75_LC121BestTimeToBuyAndSellStock",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC121BestTimeToBuyAndSellStock.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC124BinaryTreeMaximumPathSum.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC124BinaryTreeMaximumPathSum.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC124BinaryTreeMaximumPathSum",
+    "title": "blind75_LC124BinaryTreeMaximumPathSum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC124BinaryTreeMaximumPathSum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC125ValidPalindrome.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC125ValidPalindrome.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC125ValidPalindrome",
+    "title": "blind75_LC125ValidPalindrome",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC125ValidPalindrome.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC128LongestConsecutiveSequence.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC128LongestConsecutiveSequence.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC128LongestConsecutiveSequence",
+    "title": "blind75_LC128LongestConsecutiveSequence",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC128LongestConsecutiveSequence.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC133CloneGraph.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC133CloneGraph.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC133CloneGraph",
+    "title": "blind75_LC133CloneGraph",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC133CloneGraph.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC139WordBreak.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC139WordBreak.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC139WordBreak",
+    "title": "blind75_LC139WordBreak",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC139WordBreak.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC141LinkedListCycle.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC141LinkedListCycle.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC141LinkedListCycle",
+    "title": "blind75_LC141LinkedListCycle",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC141LinkedListCycle.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC143ReorderList.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC143ReorderList.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC143ReorderList",
+    "title": "blind75_LC143ReorderList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC143ReorderList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC152MaximumProductSubarray.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC152MaximumProductSubarray.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC152MaximumProductSubarray",
+    "title": "blind75_LC152MaximumProductSubarray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC152MaximumProductSubarray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC153FindMinimumInRotatedSortedArray.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC153FindMinimumInRotatedSortedArray.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC153FindMinimumInRotatedSortedArray",
+    "title": "blind75_LC153FindMinimumInRotatedSortedArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC153FindMinimumInRotatedSortedArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC15ThreeSum.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC15ThreeSum.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC15ThreeSum",
+    "title": "blind75_LC15ThreeSum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC15ThreeSum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC190ReverseBits.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC190ReverseBits.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC190ReverseBits",
+    "title": "blind75_LC190ReverseBits",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC190ReverseBits.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC191NumberOf1Bits.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC191NumberOf1Bits.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC191NumberOf1Bits",
+    "title": "blind75_LC191NumberOf1Bits",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC191NumberOf1Bits.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC198HouseRobber.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC198HouseRobber.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC198HouseRobber",
+    "title": "blind75_LC198HouseRobber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC198HouseRobber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC19RemoveNthNodeFromEnd.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC19RemoveNthNodeFromEnd.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC19RemoveNthNodeFromEnd",
+    "title": "blind75_LC19RemoveNthNodeFromEnd",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC19RemoveNthNodeFromEnd.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC1TwoSum.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC1TwoSum.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC1TwoSum",
+    "title": "blind75_LC1TwoSum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC1TwoSum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC200NumberOfIslands.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC200NumberOfIslands.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC200NumberOfIslands",
+    "title": "blind75_LC200NumberOfIslands",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC200NumberOfIslands.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC206ReverseLinkedList.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC206ReverseLinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC206ReverseLinkedList",
+    "title": "blind75_LC206ReverseLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC206ReverseLinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC207CourseSchedule.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC207CourseSchedule.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC207CourseSchedule",
+    "title": "blind75_LC207CourseSchedule",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC207CourseSchedule.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC208ImplementTrie.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC208ImplementTrie.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC208ImplementTrie",
+    "title": "blind75_LC208ImplementTrie",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC208ImplementTrie.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC20ValidParentheses.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC20ValidParentheses.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC20ValidParentheses",
+    "title": "blind75_LC20ValidParentheses",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC20ValidParentheses.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC211DesignAddAndSearchWordsDataStructure.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC211DesignAddAndSearchWordsDataStructure.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC211DesignAddAndSearchWordsDataStructure",
+    "title": "blind75_LC211DesignAddAndSearchWordsDataStructure",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC211DesignAddAndSearchWordsDataStructure.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC212WordSearchII.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC212WordSearchII.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC212WordSearchII",
+    "title": "blind75_LC212WordSearchII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC212WordSearchII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC213HouseRobberII.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC213HouseRobberII.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC213HouseRobberII",
+    "title": "blind75_LC213HouseRobberII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC213HouseRobberII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC217ContainsDuplicate.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC217ContainsDuplicate.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC217ContainsDuplicate",
+    "title": "blind75_LC217ContainsDuplicate",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC217ContainsDuplicate.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC21MergeTwoSortedLists.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC21MergeTwoSortedLists.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC21MergeTwoSortedLists",
+    "title": "blind75_LC21MergeTwoSortedLists",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC21MergeTwoSortedLists.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC226InvertBinaryTree.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC226InvertBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC226InvertBinaryTree",
+    "title": "blind75_LC226InvertBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC226InvertBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC230KthSmallestElementInBST.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC230KthSmallestElementInBST.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC230KthSmallestElementInBST",
+    "title": "blind75_LC230KthSmallestElementInBST",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC230KthSmallestElementInBST.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC235LowestCommonAncestorOfBST.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC235LowestCommonAncestorOfBST.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC235LowestCommonAncestorOfBST",
+    "title": "blind75_LC235LowestCommonAncestorOfBST",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC235LowestCommonAncestorOfBST.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC238ProductOfArrayExceptSelf.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC238ProductOfArrayExceptSelf.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC238ProductOfArrayExceptSelf",
+    "title": "blind75_LC238ProductOfArrayExceptSelf",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC238ProductOfArrayExceptSelf.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC23MergeKSortedLists.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC23MergeKSortedLists.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC23MergeKSortedLists",
+    "title": "blind75_LC23MergeKSortedLists",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC23MergeKSortedLists.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC242ValidAnagram.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC242ValidAnagram.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC242ValidAnagram",
+    "title": "blind75_LC242ValidAnagram",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC242ValidAnagram.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC252MeetingRooms.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC252MeetingRooms.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC252MeetingRooms",
+    "title": "blind75_LC252MeetingRooms",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC252MeetingRooms.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC253MeetingRoomsII.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC253MeetingRoomsII.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC253MeetingRoomsII",
+    "title": "blind75_LC253MeetingRoomsII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC253MeetingRoomsII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC261GraphValidTree.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC261GraphValidTree.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC261GraphValidTree",
+    "title": "blind75_LC261GraphValidTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC261GraphValidTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC268MissingNumber.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC268MissingNumber.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC268MissingNumber",
+    "title": "blind75_LC268MissingNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC268MissingNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC269AlienDictionary.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC269AlienDictionary.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC269AlienDictionary",
+    "title": "blind75_LC269AlienDictionary",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC269AlienDictionary.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC271EncodeAndDecodeStrings.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC271EncodeAndDecodeStrings.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC271EncodeAndDecodeStrings",
+    "title": "blind75_LC271EncodeAndDecodeStrings",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC271EncodeAndDecodeStrings.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC295FindMedianFromDataStream.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC295FindMedianFromDataStream.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC295FindMedianFromDataStream",
+    "title": "blind75_LC295FindMedianFromDataStream",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC295FindMedianFromDataStream.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC297SerializeAndDeserializeBinaryTree.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC297SerializeAndDeserializeBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC297SerializeAndDeserializeBinaryTree",
+    "title": "blind75_LC297SerializeAndDeserializeBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC297SerializeAndDeserializeBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC300LongestIncreasingSubsequence.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC300LongestIncreasingSubsequence.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC300LongestIncreasingSubsequence",
+    "title": "blind75_LC300LongestIncreasingSubsequence",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC300LongestIncreasingSubsequence.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC322CoinChange.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC322CoinChange.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC322CoinChange",
+    "title": "blind75_LC322CoinChange",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC322CoinChange.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC323NumberOfConnectedComponents.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC323NumberOfConnectedComponents.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC323NumberOfConnectedComponents",
+    "title": "blind75_LC323NumberOfConnectedComponents",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC323NumberOfConnectedComponents.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC338CountingBits.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC338CountingBits.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC338CountingBits",
+    "title": "blind75_LC338CountingBits",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC338CountingBits.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC33SearchInRotatedSortedArray.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC33SearchInRotatedSortedArray.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC33SearchInRotatedSortedArray",
+    "title": "blind75_LC33SearchInRotatedSortedArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC33SearchInRotatedSortedArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC347TopKFrequentElements.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC347TopKFrequentElements.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC347TopKFrequentElements",
+    "title": "blind75_LC347TopKFrequentElements",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC347TopKFrequentElements.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC371SumOfTwoIntegers.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC371SumOfTwoIntegers.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC371SumOfTwoIntegers",
+    "title": "blind75_LC371SumOfTwoIntegers",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC371SumOfTwoIntegers.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC39CombinationSum.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC39CombinationSum.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC39CombinationSum",
+    "title": "blind75_LC39CombinationSum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC39CombinationSum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC3LongestSubstringWithoutRepeating.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC3LongestSubstringWithoutRepeating.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC3LongestSubstringWithoutRepeating",
+    "title": "blind75_LC3LongestSubstringWithoutRepeating",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC3LongestSubstringWithoutRepeating.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC417PacificAtlanticWaterFlow.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC417PacificAtlanticWaterFlow.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC417PacificAtlanticWaterFlow",
+    "title": "blind75_LC417PacificAtlanticWaterFlow",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC417PacificAtlanticWaterFlow.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC424LongestRepeatingCharacterReplacement.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC424LongestRepeatingCharacterReplacement.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC424LongestRepeatingCharacterReplacement",
+    "title": "blind75_LC424LongestRepeatingCharacterReplacement",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC424LongestRepeatingCharacterReplacement.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC435NonOverlappingIntervals.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC435NonOverlappingIntervals.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC435NonOverlappingIntervals",
+    "title": "blind75_LC435NonOverlappingIntervals",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC435NonOverlappingIntervals.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC48RotateImage.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC48RotateImage.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC48RotateImage",
+    "title": "blind75_LC48RotateImage",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC48RotateImage.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC49GroupAnagrams.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC49GroupAnagrams.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC49GroupAnagrams",
+    "title": "blind75_LC49GroupAnagrams",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC49GroupAnagrams.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC53MaximumSubarray.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC53MaximumSubarray.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC53MaximumSubarray",
+    "title": "blind75_LC53MaximumSubarray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC53MaximumSubarray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC54SpiralMatrix.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC54SpiralMatrix.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC54SpiralMatrix",
+    "title": "blind75_LC54SpiralMatrix",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC54SpiralMatrix.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC55JumpGame.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC55JumpGame.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC55JumpGame",
+    "title": "blind75_LC55JumpGame",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC55JumpGame.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC56MergeIntervals.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC56MergeIntervals.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC56MergeIntervals",
+    "title": "blind75_LC56MergeIntervals",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC56MergeIntervals.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC572SubtreeOfAnotherTree.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC572SubtreeOfAnotherTree.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC572SubtreeOfAnotherTree",
+    "title": "blind75_LC572SubtreeOfAnotherTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC572SubtreeOfAnotherTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC57InsertInterval.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC57InsertInterval.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC57InsertInterval",
+    "title": "blind75_LC57InsertInterval",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC57InsertInterval.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC5LongestPalindromicSubstring.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC5LongestPalindromicSubstring.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC5LongestPalindromicSubstring",
+    "title": "blind75_LC5LongestPalindromicSubstring",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC5LongestPalindromicSubstring.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC62UniquePaths.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC62UniquePaths.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC62UniquePaths",
+    "title": "blind75_LC62UniquePaths",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC62UniquePaths.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC647PalindromicSubstrings.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC647PalindromicSubstrings.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC647PalindromicSubstrings",
+    "title": "blind75_LC647PalindromicSubstrings",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC647PalindromicSubstrings.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC70ClimbingStairs.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC70ClimbingStairs.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC70ClimbingStairs",
+    "title": "blind75_LC70ClimbingStairs",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC70ClimbingStairs.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC73SetMatrixZeroes.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC73SetMatrixZeroes.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC73SetMatrixZeroes",
+    "title": "blind75_LC73SetMatrixZeroes",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC73SetMatrixZeroes.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC76MinimumWindowSubstring.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC76MinimumWindowSubstring.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC76MinimumWindowSubstring",
+    "title": "blind75_LC76MinimumWindowSubstring",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC76MinimumWindowSubstring.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC79WordSearch.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC79WordSearch.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC79WordSearch",
+    "title": "blind75_LC79WordSearch",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC79WordSearch.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC91DecodeWays.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC91DecodeWays.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC91DecodeWays",
+    "title": "blind75_LC91DecodeWays",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC91DecodeWays.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/blind75/blind75_LC98ValidateBinarySearchTree.java": {
+    "path": "pkg5leetcode/blind75/blind75_LC98ValidateBinarySearchTree.java",
+    "package": "pkg5leetcode",
+    "className": "blind75_LC98ValidateBinarySearchTree",
+    "title": "blind75_LC98ValidateBinarySearchTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/blind75/blind75_LC98ValidateBinarySearchTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/common/ListNode.java": {
+    "path": "pkg5leetcode/common/ListNode.java",
+    "package": "pkg5leetcode",
+    "className": "ListNode",
+    "title": "javac pkg5leetcode/common/ListNode.java pkg5leetcode/blind75/YourProblem",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/common/ListNode.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/common/TreeNode.java": {
+    "path": "pkg5leetcode/common/TreeNode.java",
+    "package": "pkg5leetcode",
+    "className": "TreeNode",
+    "title": "javac pkg5leetcode/common/TreeNode.java pkg5leetcode/blind75/YourProblem",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/common/TreeNode.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC1004MaxConsecutiveOnesIII.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC1004MaxConsecutiveOnesIII.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC1004MaxConsecutiveOnesIII",
+    "title": "interview150_LC1004MaxConsecutiveOnesIII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC1004MaxConsecutiveOnesIII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC101SymmetricTree.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC101SymmetricTree.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC101SymmetricTree",
+    "title": "interview150_LC101SymmetricTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC101SymmetricTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC116PopulatingNextRightPointers.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC116PopulatingNextRightPointers.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC116PopulatingNextRightPointers",
+    "title": "interview150_LC116PopulatingNextRightPointers",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC116PopulatingNextRightPointers.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC118PascalsTriangle.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC118PascalsTriangle.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC118PascalsTriangle",
+    "title": "interview150_LC118PascalsTriangle",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC118PascalsTriangle.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC120Triangle.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC120Triangle.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC120Triangle",
+    "title": "interview150_LC120Triangle",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC120Triangle.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC134GasStation.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC134GasStation.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC134GasStation",
+    "title": "interview150_LC134GasStation",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC134GasStation.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC136SingleNumber.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC136SingleNumber.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC136SingleNumber",
+    "title": "interview150_LC136SingleNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC136SingleNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC146LRUCache.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC146LRUCache.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC146LRUCache",
+    "title": "interview150_LC146LRUCache",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC146LRUCache.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC14LongestCommonPrefix.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC14LongestCommonPrefix.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC14LongestCommonPrefix",
+    "title": "interview150_LC14LongestCommonPrefix",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC14LongestCommonPrefix.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC150EvaluateReversePolishNotation.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC150EvaluateReversePolishNotation.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC150EvaluateReversePolishNotation",
+    "title": "interview150_LC150EvaluateReversePolishNotation",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC150EvaluateReversePolishNotation.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC155MinStack.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC155MinStack.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC155MinStack",
+    "title": "interview150_LC155MinStack",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC155MinStack.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC167TwoSumII.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC167TwoSumII.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC167TwoSumII",
+    "title": "interview150_LC167TwoSumII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC167TwoSumII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC169MajorityElement.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC169MajorityElement.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC169MajorityElement",
+    "title": "interview150_LC169MajorityElement",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC169MajorityElement.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC171ExcelSheetColumnNumber.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC171ExcelSheetColumnNumber.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC171ExcelSheetColumnNumber",
+    "title": "interview150_LC171ExcelSheetColumnNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC171ExcelSheetColumnNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC173BinarySearchTreeIterator.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC173BinarySearchTreeIterator.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC173BinarySearchTreeIterator",
+    "title": "interview150_LC173BinarySearchTreeIterator",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC173BinarySearchTreeIterator.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC189RotateArray.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC189RotateArray.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC189RotateArray",
+    "title": "interview150_LC189RotateArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC189RotateArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC202HappyNumber.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC202HappyNumber.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC202HappyNumber",
+    "title": "interview150_LC202HappyNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC202HappyNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC205IsomorphicStrings.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC205IsomorphicStrings.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC205IsomorphicStrings",
+    "title": "interview150_LC205IsomorphicStrings",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC205IsomorphicStrings.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC210CourseScheduleII.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC210CourseScheduleII.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC210CourseScheduleII",
+    "title": "interview150_LC210CourseScheduleII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC210CourseScheduleII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC219ContainsDuplicateII.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC219ContainsDuplicateII.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC219ContainsDuplicateII",
+    "title": "interview150_LC219ContainsDuplicateII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC219ContainsDuplicateII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC227BasicCalculatorII.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC227BasicCalculatorII.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC227BasicCalculatorII",
+    "title": "interview150_LC227BasicCalculatorII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC227BasicCalculatorII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC228SummaryRanges.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC228SummaryRanges.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC228SummaryRanges",
+    "title": "interview150_LC228SummaryRanges",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC228SummaryRanges.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC229MajorityElementII.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC229MajorityElementII.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC229MajorityElementII",
+    "title": "interview150_LC229MajorityElementII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC229MajorityElementII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC234PalindromeLinkedList.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC234PalindromeLinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC234PalindromeLinkedList",
+    "title": "interview150_LC234PalindromeLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC234PalindromeLinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC236LowestCommonAncestorOfBinaryTree.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC236LowestCommonAncestorOfBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC236LowestCommonAncestorOfBinaryTree",
+    "title": "interview150_LC236LowestCommonAncestorOfBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC236LowestCommonAncestorOfBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC26RemoveDuplicates.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC26RemoveDuplicates.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC26RemoveDuplicates",
+    "title": "interview150_LC26RemoveDuplicates",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC26RemoveDuplicates.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC27RemoveElement.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC27RemoveElement.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC27RemoveElement",
+    "title": "interview150_LC27RemoveElement",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC27RemoveElement.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC283MoveZeroes.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC283MoveZeroes.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC283MoveZeroes",
+    "title": "interview150_LC283MoveZeroes",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC283MoveZeroes.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC287FindTheDuplicateNumber.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC287FindTheDuplicateNumber.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC287FindTheDuplicateNumber",
+    "title": "interview150_LC287FindTheDuplicateNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC287FindTheDuplicateNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC290WordPattern.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC290WordPattern.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC290WordPattern",
+    "title": "interview150_LC290WordPattern",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC290WordPattern.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC2AddTwoNumbers.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC2AddTwoNumbers.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC2AddTwoNumbers",
+    "title": "interview150_LC2AddTwoNumbers",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC2AddTwoNumbers.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC344ReverseString.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC344ReverseString.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC344ReverseString",
+    "title": "interview150_LC344ReverseString",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC344ReverseString.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC35SearchInsertPosition.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC35SearchInsertPosition.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC35SearchInsertPosition",
+    "title": "interview150_LC35SearchInsertPosition",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC35SearchInsertPosition.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC36ValidSudoku.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC36ValidSudoku.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC36ValidSudoku",
+    "title": "interview150_LC36ValidSudoku",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC36ValidSudoku.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC380InsertDeleteGetRandom.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC380InsertDeleteGetRandom.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC380InsertDeleteGetRandom",
+    "title": "interview150_LC380InsertDeleteGetRandom",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC380InsertDeleteGetRandom.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC383RansomNote.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC383RansomNote.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC383RansomNote",
+    "title": "interview150_LC383RansomNote",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC383RansomNote.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC399EvaluateDivision.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC399EvaluateDivision.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC399EvaluateDivision",
+    "title": "interview150_LC399EvaluateDivision",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC399EvaluateDivision.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC409LongestPalindrome.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC409LongestPalindrome.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC409LongestPalindrome",
+    "title": "interview150_LC409LongestPalindrome",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC409LongestPalindrome.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC42TrappingRainWater.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC42TrappingRainWater.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC42TrappingRainWater",
+    "title": "interview150_LC42TrappingRainWater",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC42TrappingRainWater.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC438FindAllAnagramsInAString.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC438FindAllAnagramsInAString.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC438FindAllAnagramsInAString",
+    "title": "interview150_LC438FindAllAnagramsInAString",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC438FindAllAnagramsInAString.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC45JumpGameII.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC45JumpGameII.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC45JumpGameII",
+    "title": "interview150_LC45JumpGameII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC45JumpGameII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC4MedianTwoSortedArrays.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC4MedianTwoSortedArrays.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC4MedianTwoSortedArrays",
+    "title": "interview150_LC4MedianTwoSortedArrays",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC4MedianTwoSortedArrays.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC509FibonacciNumber.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC509FibonacciNumber.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC509FibonacciNumber",
+    "title": "interview150_LC509FibonacciNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC509FibonacciNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC560SubarraySumEqualsK.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC560SubarraySumEqualsK.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC560SubarraySumEqualsK",
+    "title": "interview150_LC560SubarraySumEqualsK",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC560SubarraySumEqualsK.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC58LengthOfLastWord.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC58LengthOfLastWord.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC58LengthOfLastWord",
+    "title": "interview150_LC58LengthOfLastWord",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC58LengthOfLastWord.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC66PlusOne.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC66PlusOne.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC66PlusOne",
+    "title": "interview150_LC66PlusOne",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC66PlusOne.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC684RedundantConnection.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC684RedundantConnection.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC684RedundantConnection",
+    "title": "interview150_LC684RedundantConnection",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC684RedundantConnection.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC69SqrtX.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC69SqrtX.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC69SqrtX",
+    "title": "interview150_LC69SqrtX",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC69SqrtX.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC704BinarySearch.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC704BinarySearch.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC704BinarySearch",
+    "title": "interview150_LC704BinarySearch",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC704BinarySearch.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC71SimplifyPath.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC71SimplifyPath.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC71SimplifyPath",
+    "title": "interview150_LC71SimplifyPath",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC71SimplifyPath.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC721AccountsMerge.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC721AccountsMerge.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC721AccountsMerge",
+    "title": "interview150_LC721AccountsMerge",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC721AccountsMerge.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC733FloodFill.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC733FloodFill.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC733FloodFill",
+    "title": "interview150_LC733FloodFill",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC733FloodFill.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC739DailyTemperatures.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC739DailyTemperatures.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC739DailyTemperatures",
+    "title": "interview150_LC739DailyTemperatures",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC739DailyTemperatures.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC746MinCostClimbingStairs.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC746MinCostClimbingStairs.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC746MinCostClimbingStairs",
+    "title": "interview150_LC746MinCostClimbingStairs",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC746MinCostClimbingStairs.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC74SearchA2DMatrix.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC74SearchA2DMatrix.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC74SearchA2DMatrix",
+    "title": "interview150_LC74SearchA2DMatrix",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC74SearchA2DMatrix.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC763PartitionLabels.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC763PartitionLabels.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC763PartitionLabels",
+    "title": "interview150_LC763PartitionLabels",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC763PartitionLabels.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC767ReorganizeString.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC767ReorganizeString.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC767ReorganizeString",
+    "title": "interview150_LC767ReorganizeString",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC767ReorganizeString.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC787CheapestFlightsWithinKStops.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC787CheapestFlightsWithinKStops.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC787CheapestFlightsWithinKStops",
+    "title": "interview150_LC787CheapestFlightsWithinKStops",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC787CheapestFlightsWithinKStops.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC791CustomSortString.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC791CustomSortString.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC791CustomSortString",
+    "title": "interview150_LC791CustomSortString",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC791CustomSortString.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC7ReverseInteger.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC7ReverseInteger.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC7ReverseInteger",
+    "title": "interview150_LC7ReverseInteger",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC7ReverseInteger.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC83RemoveDuplicatesFromSortedList.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC83RemoveDuplicatesFromSortedList.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC83RemoveDuplicatesFromSortedList",
+    "title": "interview150_LC83RemoveDuplicatesFromSortedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC83RemoveDuplicatesFromSortedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC844BackspaceStringCompare.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC844BackspaceStringCompare.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC844BackspaceStringCompare",
+    "title": "interview150_LC844BackspaceStringCompare",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC844BackspaceStringCompare.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC852PeakIndexInMountainArray.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC852PeakIndexInMountainArray.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC852PeakIndexInMountainArray",
+    "title": "interview150_LC852PeakIndexInMountainArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC852PeakIndexInMountainArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC875KokoEatingBananas.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC875KokoEatingBananas.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC875KokoEatingBananas",
+    "title": "interview150_LC875KokoEatingBananas",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC875KokoEatingBananas.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC876MiddleOfTheLinkedList.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC876MiddleOfTheLinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC876MiddleOfTheLinkedList",
+    "title": "interview150_LC876MiddleOfTheLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC876MiddleOfTheLinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC88MergeSortedArray.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC88MergeSortedArray.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC88MergeSortedArray",
+    "title": "interview150_LC88MergeSortedArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC88MergeSortedArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC909SnakesAndLadders.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC909SnakesAndLadders.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC909SnakesAndLadders",
+    "title": "interview150_LC909SnakesAndLadders",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC909SnakesAndLadders.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC921MinimumAddToMakeValid.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC921MinimumAddToMakeValid.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC921MinimumAddToMakeValid",
+    "title": "interview150_LC921MinimumAddToMakeValid",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC921MinimumAddToMakeValid.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC931MinimumFallingPathSum.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC931MinimumFallingPathSum.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC931MinimumFallingPathSum",
+    "title": "interview150_LC931MinimumFallingPathSum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC931MinimumFallingPathSum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC94BinaryTreeInorderTraversal.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC94BinaryTreeInorderTraversal.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC94BinaryTreeInorderTraversal",
+    "title": "interview150_LC94BinaryTreeInorderTraversal",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC94BinaryTreeInorderTraversal.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC977SquaresOfASortedArray.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC977SquaresOfASortedArray.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC977SquaresOfASortedArray",
+    "title": "interview150_LC977SquaresOfASortedArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC977SquaresOfASortedArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC981TimeBasedKeyValueStore.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC981TimeBasedKeyValueStore.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC981TimeBasedKeyValueStore",
+    "title": "interview150_LC981TimeBasedKeyValueStore",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC981TimeBasedKeyValueStore.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC989AddStrings.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC989AddStrings.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC989AddStrings",
+    "title": "interview150_LC989AddStrings",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC989AddStrings.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC994RottingOranges.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC994RottingOranges.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC994RottingOranges",
+    "title": "interview150_LC994RottingOranges",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC994RottingOranges.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/interview150/interview150_LC9PalindromeNumber.java": {
+    "path": "pkg5leetcode/interview150/interview150_LC9PalindromeNumber.java",
+    "package": "pkg5leetcode",
+    "className": "interview150_LC9PalindromeNumber",
+    "title": "interview150_LC9PalindromeNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/interview150/interview150_LC9PalindromeNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode10ClimbingStairs.java": {
+    "path": "pkg5leetcode/leetcode10ClimbingStairs.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode10ClimbingStairs",
+    "title": "leetcode10ClimbingStairs",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode10ClimbingStairs.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode11NumberOfIslands.java": {
+    "path": "pkg5leetcode/leetcode11NumberOfIslands.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode11NumberOfIslands",
+    "title": "leetcode11NumberOfIslands",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode11NumberOfIslands.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode12TopKFrequent.java": {
+    "path": "pkg5leetcode/leetcode12TopKFrequent.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode12TopKFrequent",
+    "title": "leetcode12TopKFrequent",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode12TopKFrequent.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode1TwoSum.java": {
+    "path": "pkg5leetcode/leetcode1TwoSum.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode1TwoSum",
+    "title": "leetcode1TwoSum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode1TwoSum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode2ValidParentheses.java": {
+    "path": "pkg5leetcode/leetcode2ValidParentheses.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode2ValidParentheses",
+    "title": "leetcode2ValidParentheses",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode2ValidParentheses.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode3ValidAnagram.java": {
+    "path": "pkg5leetcode/leetcode3ValidAnagram.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode3ValidAnagram",
+    "title": "leetcode3ValidAnagram",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode3ValidAnagram.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode4BestTimeToBuySellStock.java": {
+    "path": "pkg5leetcode/leetcode4BestTimeToBuySellStock.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode4BestTimeToBuySellStock",
+    "title": "leetcode4BestTimeToBuySellStock",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode4BestTimeToBuySellStock.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode5MaxSubArray.java": {
+    "path": "pkg5leetcode/leetcode5MaxSubArray.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode5MaxSubArray",
+    "title": "leetcode5MaxSubArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode5MaxSubArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode6ProductExceptSelf.java": {
+    "path": "pkg5leetcode/leetcode6ProductExceptSelf.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode6ProductExceptSelf",
+    "title": "leetcode6ProductExceptSelf",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode6ProductExceptSelf.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode7LongestSubstringNoRepeat.java": {
+    "path": "pkg5leetcode/leetcode7LongestSubstringNoRepeat.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode7LongestSubstringNoRepeat",
+    "title": "leetcode7LongestSubstringNoRepeat",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode7LongestSubstringNoRepeat.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode8MergeIntervals.java": {
+    "path": "pkg5leetcode/leetcode8MergeIntervals.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode8MergeIntervals",
+    "title": "leetcode8MergeIntervals",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode8MergeIntervals.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/leetcode9ReverseLinkedList.java": {
+    "path": "pkg5leetcode/leetcode9ReverseLinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "leetcode9ReverseLinkedList",
+    "title": "leetcode9ReverseLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/leetcode9ReverseLinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1004MaxConsecutiveOnesIII.java": {
+    "path": "pkg5leetcode/official75/official75_LC1004MaxConsecutiveOnesIII.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1004MaxConsecutiveOnesIII",
+    "title": "official75_LC1004MaxConsecutiveOnesIII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1004MaxConsecutiveOnesIII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC104MaximumDepthOfBinaryTree.java": {
+    "path": "pkg5leetcode/official75/official75_LC104MaximumDepthOfBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC104MaximumDepthOfBinaryTree",
+    "title": "official75_LC104MaximumDepthOfBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC104MaximumDepthOfBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1071GreatestCommonDivisorOfStrings.java": {
+    "path": "pkg5leetcode/official75/official75_LC1071GreatestCommonDivisorOfStrings.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1071GreatestCommonDivisorOfStrings",
+    "title": "official75_LC1071GreatestCommonDivisorOfStrings",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1071GreatestCommonDivisorOfStrings.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1161MaximumLevelSumOfBinaryTree.java": {
+    "path": "pkg5leetcode/official75/official75_LC1161MaximumLevelSumOfBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1161MaximumLevelSumOfBinaryTree",
+    "title": "official75_LC1161MaximumLevelSumOfBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1161MaximumLevelSumOfBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC11ContainerWithMostWater.java": {
+    "path": "pkg5leetcode/official75/official75_LC11ContainerWithMostWater.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC11ContainerWithMostWater",
+    "title": "official75_LC11ContainerWithMostWater",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC11ContainerWithMostWater.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1207UniqueNumberOfOccurrences.java": {
+    "path": "pkg5leetcode/official75/official75_LC1207UniqueNumberOfOccurrences.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1207UniqueNumberOfOccurrences",
+    "title": "official75_LC1207UniqueNumberOfOccurrences",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1207UniqueNumberOfOccurrences.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC123BestTimeToBuyAndSellStockIII.java": {
+    "path": "pkg5leetcode/official75/official75_LC123BestTimeToBuyAndSellStockIII.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC123BestTimeToBuyAndSellStockIII",
+    "title": "official75_LC123BestTimeToBuyAndSellStockIII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC123BestTimeToBuyAndSellStockIII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1268SearchSuggestionsSystem.java": {
+    "path": "pkg5leetcode/official75/official75_LC1268SearchSuggestionsSystem.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1268SearchSuggestionsSystem",
+    "title": "official75_LC1268SearchSuggestionsSystem",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1268SearchSuggestionsSystem.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1318MinimumFlipsToMakeAORbEqualToC.java": {
+    "path": "pkg5leetcode/official75/official75_LC1318MinimumFlipsToMakeAORbEqualToC.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1318MinimumFlipsToMakeAORbEqualToC",
+    "title": "official75_LC1318MinimumFlipsToMakeAORbEqualToC",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1318MinimumFlipsToMakeAORbEqualToC.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1372LongestZigZagPathInBinaryTree.java": {
+    "path": "pkg5leetcode/official75/official75_LC1372LongestZigZagPathInBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1372LongestZigZagPathInBinaryTree",
+    "title": "official75_LC1372LongestZigZagPathInBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1372LongestZigZagPathInBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1431KidsWithTheGreatestNumberOfCandies.java": {
+    "path": "pkg5leetcode/official75/official75_LC1431KidsWithTheGreatestNumberOfCandies.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1431KidsWithTheGreatestNumberOfCandies",
+    "title": "official75_LC1431KidsWithTheGreatestNumberOfCandies",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1431KidsWithTheGreatestNumberOfCandies.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1448CountGoodNodesInBinaryTree.java": {
+    "path": "pkg5leetcode/official75/official75_LC1448CountGoodNodesInBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1448CountGoodNodesInBinaryTree",
+    "title": "official75_LC1448CountGoodNodesInBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1448CountGoodNodesInBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1456MaximumNumberOfVowelsInSubstring.java": {
+    "path": "pkg5leetcode/official75/official75_LC1456MaximumNumberOfVowelsInSubstring.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1456MaximumNumberOfVowelsInSubstring",
+    "title": "official75_LC1456MaximumNumberOfVowelsInSubstring",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1456MaximumNumberOfVowelsInSubstring.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1466ReorderRoutesToMakeAllPathsLeadToCityZero.java": {
+    "path": "pkg5leetcode/official75/official75_LC1466ReorderRoutesToMakeAllPathsLeadToCityZero.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1466ReorderRoutesToMakeAllPathsLeadToCityZero",
+    "title": "official75_LC1466ReorderRoutesToMakeAllPathsLeadToCityZero",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1466ReorderRoutesToMakeAllPathsLeadToCityZero.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1493LongestSubarrayOfOnesAfterDeletingOneElement.java": {
+    "path": "pkg5leetcode/official75/official75_LC1493LongestSubarrayOfOnesAfterDeletingOneElement.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1493LongestSubarrayOfOnesAfterDeletingOneElement",
+    "title": "official75_LC1493LongestSubarrayOfOnesAfterDeletingOneElement",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1493LongestSubarrayOfOnesAfterDeletingOneElement.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC151ReverseWordsInAString.java": {
+    "path": "pkg5leetcode/official75/official75_LC151ReverseWordsInAString.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC151ReverseWordsInAString",
+    "title": "official75_LC151ReverseWordsInAString",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC151ReverseWordsInAString.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC162FindPeakElement.java": {
+    "path": "pkg5leetcode/official75/official75_LC162FindPeakElement.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC162FindPeakElement",
+    "title": "official75_LC162FindPeakElement",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC162FindPeakElement.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1657DetermineIfTwoStringsHaveEqualCharacterFrequency.java": {
+    "path": "pkg5leetcode/official75/official75_LC1657DetermineIfTwoStringsHaveEqualCharacterFrequency.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1657DetermineIfTwoStringsHaveEqualCharacterFrequency",
+    "title": "official75_LC1657DetermineIfTwoStringsHaveEqualCharacterFrequency",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1657DetermineIfTwoStringsHaveEqualCharacterFrequency.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1679MaxNumberOfKSumPairs.java": {
+    "path": "pkg5leetcode/official75/official75_LC1679MaxNumberOfKSumPairs.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1679MaxNumberOfKSumPairs",
+    "title": "official75_LC1679MaxNumberOfKSumPairs",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1679MaxNumberOfKSumPairs.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1732FindTheHighestAltitude.java": {
+    "path": "pkg5leetcode/official75/official75_LC1732FindTheHighestAltitude.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1732FindTheHighestAltitude",
+    "title": "official75_LC1732FindTheHighestAltitude",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1732FindTheHighestAltitude.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1768MergeStringsAlternately.java": {
+    "path": "pkg5leetcode/official75/official75_LC1768MergeStringsAlternately.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1768MergeStringsAlternately",
+    "title": "official75_LC1768MergeStringsAlternately",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1768MergeStringsAlternately.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC17LetterCombinationsOfAPhoneNumber.java": {
+    "path": "pkg5leetcode/official75/official75_LC17LetterCombinationsOfAPhoneNumber.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC17LetterCombinationsOfAPhoneNumber",
+    "title": "official75_LC17LetterCombinationsOfAPhoneNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC17LetterCombinationsOfAPhoneNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC188BestTimeToBuyAndSellStockIV.java": {
+    "path": "pkg5leetcode/official75/official75_LC188BestTimeToBuyAndSellStockIV.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC188BestTimeToBuyAndSellStockIV",
+    "title": "official75_LC188BestTimeToBuyAndSellStockIV",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC188BestTimeToBuyAndSellStockIV.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC1926NearestExitFromEntranceInMaze.java": {
+    "path": "pkg5leetcode/official75/official75_LC1926NearestExitFromEntranceInMaze.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC1926NearestExitFromEntranceInMaze",
+    "title": "official75_LC1926NearestExitFromEntranceInMaze",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC1926NearestExitFromEntranceInMaze.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC199BinaryTreeRightSideView.java": {
+    "path": "pkg5leetcode/official75/official75_LC199BinaryTreeRightSideView.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC199BinaryTreeRightSideView",
+    "title": "official75_LC199BinaryTreeRightSideView",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC199BinaryTreeRightSideView.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC206ReverseLinkedList.java": {
+    "path": "pkg5leetcode/official75/official75_LC206ReverseLinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC206ReverseLinkedList",
+    "title": "official75_LC206ReverseLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC206ReverseLinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC208ImplementTrie.java": {
+    "path": "pkg5leetcode/official75/official75_LC208ImplementTrie.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC208ImplementTrie",
+    "title": "official75_LC208ImplementTrie",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC208ImplementTrie.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC2095DeleteTheMiddleNodeOfALinkedList.java": {
+    "path": "pkg5leetcode/official75/official75_LC2095DeleteTheMiddleNodeOfALinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC2095DeleteTheMiddleNodeOfALinkedList",
+    "title": "official75_LC2095DeleteTheMiddleNodeOfALinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC2095DeleteTheMiddleNodeOfALinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC2130MaximumTwinSumOfALinkedList.java": {
+    "path": "pkg5leetcode/official75/official75_LC2130MaximumTwinSumOfALinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC2130MaximumTwinSumOfALinkedList",
+    "title": "official75_LC2130MaximumTwinSumOfALinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC2130MaximumTwinSumOfALinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC215KthLargestElementInAnArray.java": {
+    "path": "pkg5leetcode/official75/official75_LC215KthLargestElementInAnArray.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC215KthLargestElementInAnArray",
+    "title": "official75_LC215KthLargestElementInAnArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC215KthLargestElementInAnArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC216CombinationSumIII.java": {
+    "path": "pkg5leetcode/official75/official75_LC216CombinationSumIII.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC216CombinationSumIII",
+    "title": "official75_LC216CombinationSumIII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC216CombinationSumIII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC2215FindTheDifferenceOfTwoArrays.java": {
+    "path": "pkg5leetcode/official75/official75_LC2215FindTheDifferenceOfTwoArrays.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC2215FindTheDifferenceOfTwoArrays",
+    "title": "official75_LC2215FindTheDifferenceOfTwoArrays",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC2215FindTheDifferenceOfTwoArrays.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC221MaximalSquare.java": {
+    "path": "pkg5leetcode/official75/official75_LC221MaximalSquare.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC221MaximalSquare",
+    "title": "official75_LC221MaximalSquare",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC221MaximalSquare.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC230KthSmallestElementInABST.java": {
+    "path": "pkg5leetcode/official75/official75_LC230KthSmallestElementInABST.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC230KthSmallestElementInABST",
+    "title": "official75_LC230KthSmallestElementInABST",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC230KthSmallestElementInABST.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC2336SmallestNumberInInfiniteSet.java": {
+    "path": "pkg5leetcode/official75/official75_LC2336SmallestNumberInInfiniteSet.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC2336SmallestNumberInInfiniteSet",
+    "title": "official75_LC2336SmallestNumberInInfiniteSet",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC2336SmallestNumberInInfiniteSet.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC2352EqualRowAndColumnPairs.java": {
+    "path": "pkg5leetcode/official75/official75_LC2352EqualRowAndColumnPairs.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC2352EqualRowAndColumnPairs",
+    "title": "official75_LC2352EqualRowAndColumnPairs",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC2352EqualRowAndColumnPairs.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC236LowestCommonAncestorOfBinaryTree.java": {
+    "path": "pkg5leetcode/official75/official75_LC236LowestCommonAncestorOfBinaryTree.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC236LowestCommonAncestorOfBinaryTree",
+    "title": "official75_LC236LowestCommonAncestorOfBinaryTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC236LowestCommonAncestorOfBinaryTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC238ProductOfArrayExceptSelf.java": {
+    "path": "pkg5leetcode/official75/official75_LC238ProductOfArrayExceptSelf.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC238ProductOfArrayExceptSelf",
+    "title": "official75_LC238ProductOfArrayExceptSelf",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC238ProductOfArrayExceptSelf.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC2390RemovingStarsFromAString.java": {
+    "path": "pkg5leetcode/official75/official75_LC2390RemovingStarsFromAString.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC2390RemovingStarsFromAString",
+    "title": "official75_LC2390RemovingStarsFromAString",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC2390RemovingStarsFromAString.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC2419LongestSubarrayWithMaximumBitwiseAND.java": {
+    "path": "pkg5leetcode/official75/official75_LC2419LongestSubarrayWithMaximumBitwiseAND.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC2419LongestSubarrayWithMaximumBitwiseAND",
+    "title": "official75_LC2419LongestSubarrayWithMaximumBitwiseAND",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC2419LongestSubarrayWithMaximumBitwiseAND.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC283MoveZeroes.java": {
+    "path": "pkg5leetcode/official75/official75_LC283MoveZeroes.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC283MoveZeroes",
+    "title": "official75_LC283MoveZeroes",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC283MoveZeroes.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC328OddEvenLinkedList.java": {
+    "path": "pkg5leetcode/official75/official75_LC328OddEvenLinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC328OddEvenLinkedList",
+    "title": "official75_LC328OddEvenLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC328OddEvenLinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC334IncreasingTripletSubsequence.java": {
+    "path": "pkg5leetcode/official75/official75_LC334IncreasingTripletSubsequence.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC334IncreasingTripletSubsequence",
+    "title": "official75_LC334IncreasingTripletSubsequence",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC334IncreasingTripletSubsequence.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC338CountingBits.java": {
+    "path": "pkg5leetcode/official75/official75_LC338CountingBits.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC338CountingBits",
+    "title": "official75_LC338CountingBits",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC338CountingBits.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC345ReverseVowelsOfAString.java": {
+    "path": "pkg5leetcode/official75/official75_LC345ReverseVowelsOfAString.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC345ReverseVowelsOfAString",
+    "title": "official75_LC345ReverseVowelsOfAString",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC345ReverseVowelsOfAString.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC373FindKPairsWithSmallestSums.java": {
+    "path": "pkg5leetcode/official75/official75_LC373FindKPairsWithSmallestSums.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC373FindKPairsWithSmallestSums",
+    "title": "official75_LC373FindKPairsWithSmallestSums",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC373FindKPairsWithSmallestSums.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC374GuessNumberHigherOrLower.java": {
+    "path": "pkg5leetcode/official75/official75_LC374GuessNumberHigherOrLower.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC374GuessNumberHigherOrLower",
+    "title": "official75_LC374GuessNumberHigherOrLower",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC374GuessNumberHigherOrLower.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC392IsSubsequence.java": {
+    "path": "pkg5leetcode/official75/official75_LC392IsSubsequence.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC392IsSubsequence",
+    "title": "official75_LC392IsSubsequence",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC392IsSubsequence.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC394DecodeString.java": {
+    "path": "pkg5leetcode/official75/official75_LC394DecodeString.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC394DecodeString",
+    "title": "official75_LC394DecodeString",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC394DecodeString.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC399EvaluateDivision.java": {
+    "path": "pkg5leetcode/official75/official75_LC399EvaluateDivision.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC399EvaluateDivision",
+    "title": "official75_LC399EvaluateDivision",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC399EvaluateDivision.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC435NonOverlappingIntervals.java": {
+    "path": "pkg5leetcode/official75/official75_LC435NonOverlappingIntervals.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC435NonOverlappingIntervals",
+    "title": "official75_LC435NonOverlappingIntervals",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC435NonOverlappingIntervals.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC437PathSumIII.java": {
+    "path": "pkg5leetcode/official75/official75_LC437PathSumIII.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC437PathSumIII",
+    "title": "official75_LC437PathSumIII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC437PathSumIII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC443StringCompression.java": {
+    "path": "pkg5leetcode/official75/official75_LC443StringCompression.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC443StringCompression",
+    "title": "official75_LC443StringCompression",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC443StringCompression.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC450DeleteNodeInABST.java": {
+    "path": "pkg5leetcode/official75/official75_LC450DeleteNodeInABST.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC450DeleteNodeInABST",
+    "title": "official75_LC450DeleteNodeInABST",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC450DeleteNodeInABST.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC452MinimumNumberOfArrowsToBurstBalloons.java": {
+    "path": "pkg5leetcode/official75/official75_LC452MinimumNumberOfArrowsToBurstBalloons.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC452MinimumNumberOfArrowsToBurstBalloons",
+    "title": "official75_LC452MinimumNumberOfArrowsToBurstBalloons",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC452MinimumNumberOfArrowsToBurstBalloons.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC502IPO.java": {
+    "path": "pkg5leetcode/official75/official75_LC502IPO.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC502IPO",
+    "title": "official75_LC502IPO",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC502IPO.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC605CanPlaceFlowers.java": {
+    "path": "pkg5leetcode/official75/official75_LC605CanPlaceFlowers.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC605CanPlaceFlowers",
+    "title": "official75_LC605CanPlaceFlowers",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC605CanPlaceFlowers.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC63UniquePathsII.java": {
+    "path": "pkg5leetcode/official75/official75_LC63UniquePathsII.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC63UniquePathsII",
+    "title": "official75_LC63UniquePathsII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC63UniquePathsII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC643MaximumAverageSubarrayI.java": {
+    "path": "pkg5leetcode/official75/official75_LC643MaximumAverageSubarrayI.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC643MaximumAverageSubarrayI",
+    "title": "official75_LC643MaximumAverageSubarrayI",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC643MaximumAverageSubarrayI.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC649Dota2Senate.java": {
+    "path": "pkg5leetcode/official75/official75_LC649Dota2Senate.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC649Dota2Senate",
+    "title": "official75_LC649Dota2Senate",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC649Dota2Senate.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC700SearchInABinarySearchTree.java": {
+    "path": "pkg5leetcode/official75/official75_LC700SearchInABinarySearchTree.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC700SearchInABinarySearchTree",
+    "title": "official75_LC700SearchInABinarySearchTree",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC700SearchInABinarySearchTree.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC714BestTimeToBuyAndSellStockWithTransactionFee.java": {
+    "path": "pkg5leetcode/official75/official75_LC714BestTimeToBuyAndSellStockWithTransactionFee.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC714BestTimeToBuyAndSellStockWithTransactionFee",
+    "title": "official75_LC714BestTimeToBuyAndSellStockWithTransactionFee",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC714BestTimeToBuyAndSellStockWithTransactionFee.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC724FindPivotIndex.java": {
+    "path": "pkg5leetcode/official75/official75_LC724FindPivotIndex.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC724FindPivotIndex",
+    "title": "official75_LC724FindPivotIndex",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC724FindPivotIndex.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC72EditDistance.java": {
+    "path": "pkg5leetcode/official75/official75_LC72EditDistance.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC72EditDistance",
+    "title": "official75_LC72EditDistance",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC72EditDistance.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC735AsteroidCollision.java": {
+    "path": "pkg5leetcode/official75/official75_LC735AsteroidCollision.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC735AsteroidCollision",
+    "title": "official75_LC735AsteroidCollision",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC735AsteroidCollision.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC739DailyTemperatures.java": {
+    "path": "pkg5leetcode/official75/official75_LC739DailyTemperatures.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC739DailyTemperatures",
+    "title": "official75_LC739DailyTemperatures",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC739DailyTemperatures.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC746MinCostClimbingStairs.java": {
+    "path": "pkg5leetcode/official75/official75_LC746MinCostClimbingStairs.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC746MinCostClimbingStairs",
+    "title": "official75_LC746MinCostClimbingStairs",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC746MinCostClimbingStairs.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC74SearchA2DMatrix.java": {
+    "path": "pkg5leetcode/official75/official75_LC74SearchA2DMatrix.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC74SearchA2DMatrix",
+    "title": "official75_LC74SearchA2DMatrix",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC74SearchA2DMatrix.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC790DominoAndTrominoTiling.java": {
+    "path": "pkg5leetcode/official75/official75_LC790DominoAndTrominoTiling.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC790DominoAndTrominoTiling",
+    "title": "official75_LC790DominoAndTrominoTiling",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC790DominoAndTrominoTiling.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC797AllPathsFromSourceToTarget.java": {
+    "path": "pkg5leetcode/official75/official75_LC797AllPathsFromSourceToTarget.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC797AllPathsFromSourceToTarget",
+    "title": "official75_LC797AllPathsFromSourceToTarget",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC797AllPathsFromSourceToTarget.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC841KeysAndRooms.java": {
+    "path": "pkg5leetcode/official75/official75_LC841KeysAndRooms.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC841KeysAndRooms",
+    "title": "official75_LC841KeysAndRooms",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC841KeysAndRooms.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC872LeafSimilarTrees.java": {
+    "path": "pkg5leetcode/official75/official75_LC872LeafSimilarTrees.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC872LeafSimilarTrees",
+    "title": "official75_LC872LeafSimilarTrees",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC872LeafSimilarTrees.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC901OnlineStockSpan.java": {
+    "path": "pkg5leetcode/official75/official75_LC901OnlineStockSpan.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC901OnlineStockSpan",
+    "title": "official75_LC901OnlineStockSpan",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC901OnlineStockSpan.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC933NumberOfRecentCalls.java": {
+    "path": "pkg5leetcode/official75/official75_LC933NumberOfRecentCalls.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC933NumberOfRecentCalls",
+    "title": "official75_LC933NumberOfRecentCalls",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC933NumberOfRecentCalls.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/official75/official75_LC994RottingOranges.java": {
+    "path": "pkg5leetcode/official75/official75_LC994RottingOranges.java",
+    "package": "pkg5leetcode",
+    "className": "official75_LC994RottingOranges",
+    "title": "official75_LC994RottingOranges",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/official75/official75_LC994RottingOranges.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC114FlattenBinaryTreeToLinkedList.java": {
+    "path": "pkg5leetcode/top100/top100_LC114FlattenBinaryTreeToLinkedList.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC114FlattenBinaryTreeToLinkedList",
+    "title": "top100_LC114FlattenBinaryTreeToLinkedList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC114FlattenBinaryTreeToLinkedList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC148SortList.java": {
+    "path": "pkg5leetcode/top100/top100_LC148SortList.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC148SortList",
+    "title": "top100_LC148SortList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC148SortList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC17LetterCombinationsOfAPhoneNumber.java": {
+    "path": "pkg5leetcode/top100/top100_LC17LetterCombinationsOfAPhoneNumber.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC17LetterCombinationsOfAPhoneNumber",
+    "title": "top100_LC17LetterCombinationsOfAPhoneNumber",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC17LetterCombinationsOfAPhoneNumber.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC215KthLargestElementInAnArray.java": {
+    "path": "pkg5leetcode/top100/top100_LC215KthLargestElementInAnArray.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC215KthLargestElementInAnArray",
+    "title": "top100_LC215KthLargestElementInAnArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC215KthLargestElementInAnArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC222CountCompleteTreeNodes.java": {
+    "path": "pkg5leetcode/top100/top100_LC222CountCompleteTreeNodes.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC222CountCompleteTreeNodes",
+    "title": "top100_LC222CountCompleteTreeNodes",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC222CountCompleteTreeNodes.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC22GenerateParentheses.java": {
+    "path": "pkg5leetcode/top100/top100_LC22GenerateParentheses.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC22GenerateParentheses",
+    "title": "top100_LC22GenerateParentheses",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC22GenerateParentheses.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC239SlidingWindowMaximum.java": {
+    "path": "pkg5leetcode/top100/top100_LC239SlidingWindowMaximum.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC239SlidingWindowMaximum",
+    "title": "top100_LC239SlidingWindowMaximum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC239SlidingWindowMaximum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC240SearchA2DMatrixII.java": {
+    "path": "pkg5leetcode/top100/top100_LC240SearchA2DMatrixII.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC240SearchA2DMatrixII",
+    "title": "top100_LC240SearchA2DMatrixII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC240SearchA2DMatrixII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC31NextPermutation.java": {
+    "path": "pkg5leetcode/top100/top100_LC31NextPermutation.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC31NextPermutation",
+    "title": "top100_LC31NextPermutation",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC31NextPermutation.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC34FindFirstAndLastPositionOfElement.java": {
+    "path": "pkg5leetcode/top100/top100_LC34FindFirstAndLastPositionOfElement.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC34FindFirstAndLastPositionOfElement",
+    "title": "top100_LC34FindFirstAndLastPositionOfElement",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC34FindFirstAndLastPositionOfElement.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC448FindAllNumbersDisappearedInAnArray.java": {
+    "path": "pkg5leetcode/top100/top100_LC448FindAllNumbersDisappearedInAnArray.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC448FindAllNumbersDisappearedInAnArray",
+    "title": "top100_LC448FindAllNumbersDisappearedInAnArray",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC448FindAllNumbersDisappearedInAnArray.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC461HammingDistance.java": {
+    "path": "pkg5leetcode/top100/top100_LC461HammingDistance.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC461HammingDistance",
+    "title": "top100_LC461HammingDistance",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC461HammingDistance.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC46Permutations.java": {
+    "path": "pkg5leetcode/top100/top100_LC46Permutations.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC46Permutations",
+    "title": "top100_LC46Permutations",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC46Permutations.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC494TargetSum.java": {
+    "path": "pkg5leetcode/top100/top100_LC494TargetSum.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC494TargetSum",
+    "title": "top100_LC494TargetSum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC494TargetSum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC503NextGreaterElementII.java": {
+    "path": "pkg5leetcode/top100/top100_LC503NextGreaterElementII.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC503NextGreaterElementII",
+    "title": "top100_LC503NextGreaterElementII",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC503NextGreaterElementII.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC516LongestPalindromicSubsequence.java": {
+    "path": "pkg5leetcode/top100/top100_LC516LongestPalindromicSubsequence.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC516LongestPalindromicSubsequence",
+    "title": "top100_LC516LongestPalindromicSubsequence",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC516LongestPalindromicSubsequence.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC51NQueens.java": {
+    "path": "pkg5leetcode/top100/top100_LC51NQueens.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC51NQueens",
+    "title": "top100_LC51NQueens",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC51NQueens.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC64MinimumPathSum.java": {
+    "path": "pkg5leetcode/top100/top100_LC64MinimumPathSum.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC64MinimumPathSum",
+    "title": "top100_LC64MinimumPathSum",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC64MinimumPathSum.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC72EditDistance.java": {
+    "path": "pkg5leetcode/top100/top100_LC72EditDistance.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC72EditDistance",
+    "title": "top100_LC72EditDistance",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC72EditDistance.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC75SortColors.java": {
+    "path": "pkg5leetcode/top100/top100_LC75SortColors.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC75SortColors",
+    "title": "top100_LC75SortColors",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC75SortColors.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC78Subsets.java": {
+    "path": "pkg5leetcode/top100/top100_LC78Subsets.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC78Subsets",
+    "title": "top100_LC78Subsets",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC78Subsets.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC84LargestRectangleInHistogram.java": {
+    "path": "pkg5leetcode/top100/top100_LC84LargestRectangleInHistogram.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC84LargestRectangleInHistogram",
+    "title": "top100_LC84LargestRectangleInHistogram",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC84LargestRectangleInHistogram.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC85MaximalRectangle.java": {
+    "path": "pkg5leetcode/top100/top100_LC85MaximalRectangle.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC85MaximalRectangle",
+    "title": "top100_LC85MaximalRectangle",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC85MaximalRectangle.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC86PartitionList.java": {
+    "path": "pkg5leetcode/top100/top100_LC86PartitionList.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC86PartitionList",
+    "title": "top100_LC86PartitionList",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC86PartitionList.java",
+    "level": "Computer Science"
+  },
+  "pkg5leetcode/top100/top100_LC96UniqueBinarySearchTrees.java": {
+    "path": "pkg5leetcode/top100/top100_LC96UniqueBinarySearchTrees.java",
+    "package": "pkg5leetcode",
+    "className": "top100_LC96UniqueBinarySearchTrees",
+    "title": "top100_LC96UniqueBinarySearchTrees",
+    "explanation": "",
+    "runCommand": "java pkg5leetcode/top100/top100_LC96UniqueBinarySearchTrees.java",
+    "level": "Computer Science"
+  },
+  "pkg6jvm/jvm1ClassLoadingDemo.java": {
+    "path": "pkg6jvm/jvm1ClassLoadingDemo.java",
+    "package": "pkg6jvm",
+    "className": "jvm1ClassLoadingDemo",
+    "title": "jvm1ClassLoadingDemo",
+    "explanation": "",
+    "runCommand": "java pkg6jvm/jvm1ClassLoadingDemo.java",
+    "level": "Senior",
+    "learnChapter": "02-learn--25-JVMAndMemory"
+  },
+  "pkg6jvm/jvm2MemoryAreasDemo.java": {
+    "path": "pkg6jvm/jvm2MemoryAreasDemo.java",
+    "package": "pkg6jvm",
+    "className": "jvm2MemoryAreasDemo",
+    "title": "jvm2MemoryAreasDemo",
+    "explanation": "",
+    "runCommand": "java pkg6jvm/jvm2MemoryAreasDemo.java",
+    "level": "Senior"
+  },
+  "pkg6jvm/jvm3GarbageCollectionDemo.java": {
+    "path": "pkg6jvm/jvm3GarbageCollectionDemo.java",
+    "package": "pkg6jvm",
+    "className": "jvm3GarbageCollectionDemo",
+    "title": "jvm3GarbageCollectionDemo",
+    "explanation": "",
+    "runCommand": "java pkg6jvm/jvm3GarbageCollectionDemo.java",
+    "level": "Senior"
+  },
+  "pkg7concurrency/concurrency1ThreadBasics.java": {
+    "path": "pkg7concurrency/concurrency1ThreadBasics.java",
+    "package": "pkg7concurrency",
+    "className": "concurrency1ThreadBasics",
+    "title": "concurrency1ThreadBasics",
+    "explanation": "",
+    "runCommand": "java pkg7concurrency/concurrency1ThreadBasics.java",
+    "level": "Tech Lead",
+    "learnChapter": "02-learn--26-Concurrency"
+  },
+  "pkg7concurrency/concurrency2SynchronizationDemo.java": {
+    "path": "pkg7concurrency/concurrency2SynchronizationDemo.java",
+    "package": "pkg7concurrency",
+    "className": "concurrency2SynchronizationDemo",
+    "title": "concurrency2SynchronizationDemo",
+    "explanation": "",
+    "runCommand": "java pkg7concurrency/concurrency2SynchronizationDemo.java",
+    "level": "Tech Lead"
+  },
+  "pkg7concurrency/concurrency3ExecutorsDemo.java": {
+    "path": "pkg7concurrency/concurrency3ExecutorsDemo.java",
+    "package": "pkg7concurrency",
+    "className": "concurrency3ExecutorsDemo",
+    "title": "concurrency3ExecutorsDemo",
+    "explanation": "",
+    "runCommand": "java pkg7concurrency/concurrency3ExecutorsDemo.java",
+    "level": "Tech Lead"
+  },
+  "pkg7concurrency/concurrency4CompletableFutureDemo.java": {
+    "path": "pkg7concurrency/concurrency4CompletableFutureDemo.java",
+    "package": "pkg7concurrency",
+    "className": "concurrency4CompletableFutureDemo",
+    "title": "concurrency4CompletableFutureDemo",
+    "explanation": "",
+    "runCommand": "java pkg7concurrency/concurrency4CompletableFutureDemo.java",
+    "level": "Tech Lead"
+  },
+  "pkg7concurrency/concurrency5ForkJoinDemo.java": {
+    "path": "pkg7concurrency/concurrency5ForkJoinDemo.java",
+    "package": "pkg7concurrency",
+    "className": "concurrency5ForkJoinDemo",
+    "title": "concurrency5ForkJoinDemo",
+    "explanation": "",
+    "runCommand": "java pkg7concurrency/concurrency5ForkJoinDemo.java",
+    "level": "Tech Lead"
+  },
+  "pkg7concurrency/concurrency6VirtualThreadsDemo.java": {
+    "path": "pkg7concurrency/concurrency6VirtualThreadsDemo.java",
+    "package": "pkg7concurrency",
+    "className": "concurrency6VirtualThreadsDemo",
+    "title": "concurrency6VirtualThreadsDemo",
+    "explanation": "",
+    "runCommand": "java pkg7concurrency/concurrency6VirtualThreadsDemo.java",
+    "level": "Tech Lead"
+  },
+  "pkg7concurrency/concurrency7ProducerConsumer.java": {
+    "path": "pkg7concurrency/concurrency7ProducerConsumer.java",
+    "package": "pkg7concurrency",
+    "className": "concurrency7ProducerConsumer",
+    "title": "concurrency7ProducerConsumer",
+    "explanation": "",
+    "runCommand": "java pkg7concurrency/concurrency7ProducerConsumer.java",
+    "level": "Tech Lead"
+  },
+  "pkg7concurrency/concurrency8LocksAndCoordination.java": {
+    "path": "pkg7concurrency/concurrency8LocksAndCoordination.java",
+    "package": "pkg7concurrency",
+    "className": "concurrency8LocksAndCoordination",
+    "title": "concurrency8LocksAndCoordination",
+    "explanation": "",
+    "runCommand": "java pkg7concurrency/concurrency8LocksAndCoordination.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns10FacadePattern.java": {
+    "path": "pkg8patterns/patterns10FacadePattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns10FacadePattern",
+    "title": "patterns10FacadePattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns10FacadePattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns11FlyweightPattern.java": {
+    "path": "pkg8patterns/patterns11FlyweightPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns11FlyweightPattern",
+    "title": "patterns11FlyweightPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns11FlyweightPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns12ProxyPattern.java": {
+    "path": "pkg8patterns/patterns12ProxyPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns12ProxyPattern",
+    "title": "patterns12ProxyPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns12ProxyPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns13ChainOfResponsibilityPattern.java": {
+    "path": "pkg8patterns/patterns13ChainOfResponsibilityPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns13ChainOfResponsibilityPattern",
+    "title": "patterns13ChainOfResponsibilityPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns13ChainOfResponsibilityPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns14CommandPattern.java": {
+    "path": "pkg8patterns/patterns14CommandPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns14CommandPattern",
+    "title": "patterns14CommandPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns14CommandPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns15InterpreterPattern.java": {
+    "path": "pkg8patterns/patterns15InterpreterPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns15InterpreterPattern",
+    "title": "patterns15InterpreterPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns15InterpreterPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns16IteratorPattern.java": {
+    "path": "pkg8patterns/patterns16IteratorPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns16IteratorPattern",
+    "title": "patterns16IteratorPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns16IteratorPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns17MediatorPattern.java": {
+    "path": "pkg8patterns/patterns17MediatorPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns17MediatorPattern",
+    "title": "patterns17MediatorPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns17MediatorPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns18MementoPattern.java": {
+    "path": "pkg8patterns/patterns18MementoPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns18MementoPattern",
+    "title": "patterns18MementoPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns18MementoPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns19ObserverPattern.java": {
+    "path": "pkg8patterns/patterns19ObserverPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns19ObserverPattern",
+    "title": "patterns19ObserverPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns19ObserverPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns1SingletonPattern.java": {
+    "path": "pkg8patterns/patterns1SingletonPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns1SingletonPattern",
+    "title": "patterns1SingletonPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns1SingletonPattern.java",
+    "level": "Tech Lead",
+    "learnChapter": "02-learn--27-DesignPatterns"
+  },
+  "pkg8patterns/patterns20StatePattern.java": {
+    "path": "pkg8patterns/patterns20StatePattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns20StatePattern",
+    "title": "patterns20StatePattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns20StatePattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns21StrategyPattern.java": {
+    "path": "pkg8patterns/patterns21StrategyPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns21StrategyPattern",
+    "title": "patterns21StrategyPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns21StrategyPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns22TemplateMethodPattern.java": {
+    "path": "pkg8patterns/patterns22TemplateMethodPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns22TemplateMethodPattern",
+    "title": "patterns22TemplateMethodPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns22TemplateMethodPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns23VisitorPattern.java": {
+    "path": "pkg8patterns/patterns23VisitorPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns23VisitorPattern",
+    "title": "patterns23VisitorPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns23VisitorPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns2FactoryMethodPattern.java": {
+    "path": "pkg8patterns/patterns2FactoryMethodPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns2FactoryMethodPattern",
+    "title": "patterns2FactoryMethodPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns2FactoryMethodPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns3AbstractFactoryPattern.java": {
+    "path": "pkg8patterns/patterns3AbstractFactoryPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns3AbstractFactoryPattern",
+    "title": "patterns3AbstractFactoryPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns3AbstractFactoryPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns4BuilderPattern.java": {
+    "path": "pkg8patterns/patterns4BuilderPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns4BuilderPattern",
+    "title": "patterns4BuilderPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns4BuilderPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns5PrototypePattern.java": {
+    "path": "pkg8patterns/patterns5PrototypePattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns5PrototypePattern",
+    "title": "patterns5PrototypePattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns5PrototypePattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns6AdapterPattern.java": {
+    "path": "pkg8patterns/patterns6AdapterPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns6AdapterPattern",
+    "title": "patterns6AdapterPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns6AdapterPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns7BridgePattern.java": {
+    "path": "pkg8patterns/patterns7BridgePattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns7BridgePattern",
+    "title": "patterns7BridgePattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns7BridgePattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns8CompositePattern.java": {
+    "path": "pkg8patterns/patterns8CompositePattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns8CompositePattern",
+    "title": "patterns8CompositePattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns8CompositePattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg8patterns/patterns9DecoratorPattern.java": {
+    "path": "pkg8patterns/patterns9DecoratorPattern.java",
+    "package": "pkg8patterns",
+    "className": "patterns9DecoratorPattern",
+    "title": "patterns9DecoratorPattern",
+    "explanation": "",
+    "runCommand": "java pkg8patterns/patterns9DecoratorPattern.java",
+    "level": "Tech Lead"
+  },
+  "pkg9io/io1FileBasics.java": {
+    "path": "pkg9io/io1FileBasics.java",
+    "package": "pkg9io",
+    "className": "io1FileBasics",
+    "title": "io1FileBasics",
+    "explanation": "",
+    "runCommand": "java pkg9io/io1FileBasics.java",
+    "level": "Applied Java",
+    "learnChapter": "02-learn--28-IOAndNIO"
+  },
+  "pkg9io/io2ByteStreams.java": {
+    "path": "pkg9io/io2ByteStreams.java",
+    "package": "pkg9io",
+    "className": "io2ByteStreams",
+    "title": "io2ByteStreams",
+    "explanation": "",
+    "runCommand": "java pkg9io/io2ByteStreams.java",
+    "level": "Applied Java"
+  },
+  "pkg9io/io3CharacterStreams.java": {
+    "path": "pkg9io/io3CharacterStreams.java",
+    "package": "pkg9io",
+    "className": "io3CharacterStreams",
+    "title": "io3CharacterStreams",
+    "explanation": "",
+    "runCommand": "java pkg9io/io3CharacterStreams.java",
+    "level": "Applied Java"
+  },
+  "pkg9io/io4NioFilesAndPaths.java": {
+    "path": "pkg9io/io4NioFilesAndPaths.java",
+    "package": "pkg9io",
+    "className": "io4NioFilesAndPaths",
+    "title": "io4NioFilesAndPaths",
+    "explanation": "",
+    "runCommand": "java pkg9io/io4NioFilesAndPaths.java",
+    "level": "Applied Java"
+  },
+  "pkg9io/io5Serialization.java": {
+    "path": "pkg9io/io5Serialization.java",
+    "package": "pkg9io",
+    "className": "io5Serialization",
+    "title": "io5Serialization",
+    "explanation": "",
+    "runCommand": "java pkg9io/io5Serialization.java",
+    "level": "Applied Java"
+  },
+  "pkg9io/io6TryWithResourcesAndScanner.java": {
+    "path": "pkg9io/io6TryWithResourcesAndScanner.java",
+    "package": "pkg9io",
+    "className": "io6TryWithResourcesAndScanner",
+    "title": "io6TryWithResourcesAndScanner",
+    "explanation": "",
+    "runCommand": "java pkg9io/io6TryWithResourcesAndScanner.java",
+    "level": "Applied Java"
+  }
+}

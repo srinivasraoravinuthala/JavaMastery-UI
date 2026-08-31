@@ -36,14 +36,32 @@ export function ExamplesPage() {
   })
 
   useEffect(() => {
+    let cancelled = false
+    setLoading(true)
     getExamplesService()
       .getEntries()
-      .then(setEntries)
-      .finally(() => setLoading(false))
+      .then((list) => {
+        if (!cancelled) setEntries(list)
+      })
+      .catch(() => {
+        if (!cancelled) setEntries([])
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false)
+      })
 
     getExamplesService()
       .getPackages()
-      .then(setPackages)
+      .then((pkgs) => {
+        if (!cancelled) setPackages(pkgs)
+      })
+      .catch(() => {
+        if (!cancelled) setPackages([])
+      })
+
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   const filtered = useMemo(() => {

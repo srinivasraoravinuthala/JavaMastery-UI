@@ -56,31 +56,38 @@ export class SearchService {
     try {
       const exRes = await fetch('/examples-index.json')
       if (exRes.ok) {
-        const exIndex = await exRes.json()
-        for (const entry of Object.values(exIndex) as Array<{
-          path: string
-          className: string
-          title: string
-          explanation?: string
-          runCommand: string
-          package: string
-        }>) {
-          this.index.push({
-            path: entry.path,
-            slug: `example--${entry.path.replace(/\//g, '--').replace(/\.java$/, '')}`,
-            title: entry.title || entry.className,
-            section: entry.package,
-            content: [entry.className, entry.title, entry.explanation, entry.runCommand].join(' '),
-            headings: entry.className,
-            tags: `${entry.package} example java`,
-            kind: 'example',
-            package: entry.package,
-            runCommand: entry.runCommand,
-          })
+        const text = await exRes.text()
+        const trimmed = text.trimStart().slice(0, 200).toLowerCase()
+        if (!trimmed.startsWith('<!doctype html') && !trimmed.startsWith('<html')) {
+          const exIndex = JSON.parse(text) as Record<
+            string,
+            {
+              path: string
+              className: string
+              title: string
+              explanation?: string
+              runCommand: string
+              package: string
+            }
+          >
+          for (const entry of Object.values(exIndex)) {
+            this.index.push({
+              path: entry.path,
+              slug: `example--${entry.path.replace(/\//g, '--').replace(/\.java$/, '')}`,
+              title: entry.title || entry.className,
+              section: entry.package,
+              content: [entry.className, entry.title, entry.explanation, entry.runCommand].join(' '),
+              headings: entry.className,
+              tags: `${entry.package} example java`,
+              kind: 'example',
+              package: entry.package,
+              runCommand: entry.runCommand,
+            })
+          }
         }
       }
     } catch {
-      // examples optional
+      // examples optional in search
     }
 
     this.buildFuse()

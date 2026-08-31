@@ -14,7 +14,8 @@ dist-ssr
 *.local
 public/docs/
 public/examples/
-public/examples-index.json
+# Keep a committed fallback so /examples works even if Cloudflare skips sync
+# public/examples-index.json
 public/search-index.json
 public/sitemap.xml
 

@@ -4,6 +4,7 @@ import {
   resolveMdLink,
   resolveRepoLink,
   pathToSlug,
+  parseChapterTitle,
 } from './slugify'
 
 describe('resolveRelativePath', () => {
@@ -63,5 +64,27 @@ describe('resolveRepoLink', () => {
 describe('pathToSlug', () => {
   it('converts nested paths to double-dash slugs', () => {
     expect(pathToSlug('docs/03-interview/01-CoreJava.md')).toBe('03-interview--01-CoreJava')
+  })
+})
+
+describe('parseChapterTitle', () => {
+  it('splits em-dash chapter titles', () => {
+    expect(parseChapterTitle('29 — Networking & HTTP')).toEqual({
+      chapter: 29,
+      heading: 'Networking & HTTP',
+    })
+  })
+
+  it('splits corrupted question-mark separators', () => {
+    expect(parseChapterTitle('29 ? Networking & HTTP')).toEqual({
+      chapter: 29,
+      heading: 'Networking & HTTP',
+    })
+  })
+
+  it('returns plain heading for non-chapter titles', () => {
+    expect(parseChapterTitle('Core Java Interview')).toEqual({
+      heading: 'Core Java Interview',
+    })
   })
 })

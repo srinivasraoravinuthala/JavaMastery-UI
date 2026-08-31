@@ -151,12 +151,46 @@ export function extractTitleFromContent(content: string): string | null {
   if (match) {
     return match[1]
       .replace(/[*_`]/g, '')
-      .replace(/\uFFFD/g, '—')
-      .replace(/^(\d+)\s+\?\s+/, '$1 — ')
-      .replace(/^(\d+)\s+—\s+/, (_, n) => `${n} — `)
+      .replace(/\uFFFD/g, ' ')
+      .replace(/\s+/g, ' ')
       .trim()
   }
   return null
+}
+
+/** Split learn-style titles like "29 — Networking & HTTP" into chapter number + heading. */
+export function parseChapterTitle(raw: string): { chapter?: number; heading: string } {
+  const cleaned = raw.replace(/\uFFFD/g, ' ').replace(/\s+/g, ' ').trim()
+
+  const withSeparator = cleaned.match(/^(\d{1,2})\s*(?:[—–\-:·|?]|\s+-\s+)\s*(.+)$/)
+  if (withSeparator) {
+    return {
+      chapter: parseInt(withSeparator[1], 10),
+      heading: withSeparator[2].trim(),
+    }
+  }
+
+  const spaced = cleaned.match(/^(\d{1,2})\s+([A-Za-z].+)$/)
+  if (spaced) {
+    return {
+      chapter: parseInt(spaced[1], 10),
+      heading: spaced[2].trim(),
+    }
+  }
+
+  return { heading: cleaned }
+}
+
+/** Display-friendly title without the long em-dash separator. */
+export function formatDocDisplayTitle(raw: string, includeChapter = false): string {
+  const { chapter, heading } = parseChapterTitle(raw)
+  if (chapter != null && includeChapter) {
+    return `Chapter ${chapter}: ${heading}`
+  }
+  if (chapter != null) {
+    return heading
+  }
+  return raw
 }
 
 export function getSectionFromPath(path: string): { id: string; title: string } | undefined {

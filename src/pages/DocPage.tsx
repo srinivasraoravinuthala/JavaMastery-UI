@@ -5,6 +5,7 @@ import { MarkdownRenderer } from '@/components/markdown/MarkdownRenderer'
 import { TableOfContents } from '@/components/markdown/TableOfContents'
 import { DocNavigation } from '@/components/doc/DocNavigation'
 import { DocNotFound } from '@/components/doc/DocNotFound'
+import { DocTitle, docTitleForMeta } from '@/components/doc/DocTitle'
 import { ChapterExamplesPanel } from '@/components/examples/ChapterExamplesPanel'
 import { InterviewMode } from '@/components/interview/InterviewMode'
 import { Badge } from '@/components/ui/badge'
@@ -39,8 +40,10 @@ export function DocPage() {
   }, [doc])
 
   usePageMeta({
-    title: doc?.title,
-    description: doc ? `${doc.title} — ${doc.sectionTitle || 'JavaMastery documentation'}` : undefined,
+    title: doc ? docTitleForMeta(doc.title, isLearnChapter(doc.path)) : undefined,
+    description: doc
+      ? `${docTitleForMeta(doc.title, isLearnChapter(doc.path))} — ${doc.sectionTitle || 'JavaMastery documentation'}`
+      : undefined,
     slug: doc?.slug,
   })
 
@@ -116,7 +119,9 @@ export function DocPage() {
             {doc.sectionTitle && (
               <Badge variant="secondary" className="mb-3">{doc.sectionTitle}</Badge>
             )}
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{doc.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+              <DocTitle title={doc.title} showChapter={showProgress} />
+            </h1>
             <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
                 <Clock className="h-4 w-4" />

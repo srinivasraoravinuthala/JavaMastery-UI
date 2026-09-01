@@ -31,25 +31,33 @@ export function Hero({ onSearchOpen }: HeroProps) {
           {SITE_CONFIG.description}
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" asChild>
-            <Link to="/docs/02-learn--01-GettingStarted">
-              Start Learning
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" asChild>
+              <Link to="/docs/01-orientation--03-EnvironmentSetup">
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </Button>
 
-          <Button size="lg" variant="outline" onClick={onSearchOpen}>
-            <Search className="h-4 w-4" />
-            Search Docs
-          </Button>
+            <Button size="lg" variant="outline" onClick={onSearchOpen}>
+              <Search className="h-4 w-4" />
+              Search Docs
+            </Button>
 
-          <Button size="lg" variant="ghost" asChild>
-            <Link to="/docs/03-interview--01-CoreJava">
-              <BookOpen className="h-4 w-4" />
-              Interview Prep
+            <Button size="lg" variant="ghost" asChild>
+              <Link to="/docs/03-interview--01-CoreJava">
+                <BookOpen className="h-4 w-4" />
+                Interview Prep
+              </Link>
+            </Button>
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Already set up?{' '}
+            <Link to="/docs/02-learn--01-GettingStarted" className="text-primary hover:underline">
+              Jump to chapter 01
             </Link>
-          </Button>
+          </p>
         </div>
       </div>
     </section>

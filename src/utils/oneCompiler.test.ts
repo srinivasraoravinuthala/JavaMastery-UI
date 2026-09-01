@@ -17,10 +17,19 @@ public class core10Encapsulation {
     expect(out).not.toContain('public class core10Encapsulation')
   })
 
+  it('uses listenToEvents embed URL and returns preparedCode', () => {
+    const src = 'package p;\npublic class Foo { }'
+    const { embedUrl, preparedCode, tooLargeForEmbed } = buildOneCompilerUrls(src)
+    expect(tooLargeForEmbed).toBe(false)
+    expect(embedUrl).toContain('listenToEvents=true')
+    expect(embedUrl).not.toContain('code=')
+    expect(preparedCode).toContain('public class Main')
+  })
+
   it('marks very large payloads as too large for embed', () => {
     const big = 'public class Foo {\n' + '  // ' + 'x'.repeat(20000) + '\n}'
     const { tooLargeForEmbed, fullTabUrl } = buildOneCompilerUrls(big)
     expect(tooLargeForEmbed).toBe(true)
-    expect(fullTabUrl).toContain('onecompiler.com/java')
+    expect(fullTabUrl).toBe('https://onecompiler.com/java')
   })
 })

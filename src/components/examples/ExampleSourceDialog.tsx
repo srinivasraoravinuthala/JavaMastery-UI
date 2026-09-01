@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { ExternalLink, Copy, Check, Loader2, Play, Terminal, Link as LinkIcon, Code2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import {
@@ -13,7 +13,7 @@ import { getExamplesService } from '@/services/examplesService'
 import { useViewedExamples } from '@/hooks/useLearnerData'
 import type { ExampleContent } from '@/types/examples'
 import { SITE_CONFIG } from '@/config/site'
-import { buildOneCompilerUrls } from '@/utils/oneCompiler'
+import { buildOneCompilerUrls, populateOneCompilerEmbed } from '@/utils/oneCompiler'
 import { cn } from '@/utils/cn'
 
 type ViewerTab = 'source' | 'run'
@@ -29,7 +29,9 @@ export function ExampleSourceDialog({ repoPath, open, onOpenChange }: ExampleSou
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
+  const [copiedReady, setCopiedReady] = useState(false)
   const [tab, setTab] = useState<ViewerTab>('source')
+  const iframeRef = useRef<HTMLIFrameElement>(null)
   const { markViewed } = useViewedExamples()
 
   useEffect(() => {
@@ -53,16 +55,57 @@ export function ExampleSourceDialog({ repoPath, open, onOpenChange }: ExampleSou
       .finally(() => setLoading(false))
   }, [open, repoPath, markViewed])
 
-  const handleCopy = async () => {
+  const service = getExamplesService()
+  const githubUrl = repoPath ? service.getGitHubUrl(repoPath) : ''
+  const compiler = example ? buildOneCompilerUrls(example.source) : null
+
+  // Re-inject when switching to Run tab or when prepared code changes
+  useEffect(() => {
+    if (tab !== 'run' || !compiler?.preparedCode || !iframeRef.current) return
+    const iframe = iframeRef.current
+    // Slight delay so OneCompiler finishes listening after load / tab switch
+    const t = window.setTimeout(() => {
+      populateOneCompilerEmbed(iframe, compiler.preparedCode)
+    }, 400)
+    return () => window.clearTimeout(t)
+  }, [tab, compiler?.preparedCode])
+
+  const handleCopyCommand = async () => {
     if (!example) return
     await navigator.clipboard.writeText(example.runCommand)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
 
-  const service = getExamplesService()
-  const githubUrl = repoPath ? service.getGitHubUrl(repoPath) : ''
-  const compiler = example ? buildOneCompilerUrls(example.source) : null
+  const handleCopyReadyCode = async () => {
+    if (!compiler) return
+    await navigator.clipboard.writeText(compiler.preparedCode)
+    setCopiedReady(true)
+    setTimeout(() => setCopiedReady(false), 2000)
+  }
+
+  /** Full-tab open: copy prepared Main.java first (URL code= is unreliable). */
+  const handleOpenFullTab = async () => {
+    if (!compiler) return
+    try {
+      await navigator.clipboard.writeText(compiler.preparedCode)
+      setCopiedReady(true)
+      setTimeout(() => setCopiedReady(false), 2500)
+    } catch {
+      // Clipboard may fail; still open the tab
+    }
+    window.open(compiler.fullTabUrl, '_blank', 'noopener,noreferrer')
+  }
+
+  const handleIframeLoad = () => {
+    if (!iframeRef.current || !compiler) return
+    // Retry a few times — OneCompiler needs listenToEvents ready
+    const code = compiler.preparedCode
+    const iframe = iframeRef.current
+    populateOneCompilerEmbed(iframe, code)
+    window.setTimeout(() => populateOneCompilerEmbed(iframe, code), 500)
+    window.setTimeout(() => populateOneCompilerEmbed(iframe, code), 1200)
+  }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -143,7 +186,7 @@ export function ExampleSourceDialog({ repoPath, open, onOpenChange }: ExampleSou
                         {example.runCommand}
                       </code>
                       <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-                        <Button variant="outline" className="min-h-10 w-full sm:w-auto" onClick={handleCopy}>
+                        <Button variant="outline" className="min-h-10 w-full sm:w-auto" onClick={handleCopyCommand}>
                           {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
                           Copy command
                         </Button>
@@ -182,46 +225,57 @@ export function ExampleSourceDialog({ repoPath, open, onOpenChange }: ExampleSou
 
                     {/* Mobile: full-tab CTA (iframe is too small to use) */}
                     <div className="flex flex-col gap-3 sm:hidden">
-                      <Button className="min-h-12 w-full text-base" asChild>
-                        <a href={compiler?.fullTabUrl} target="_blank" rel="noopener noreferrer">
-                          <Play className="h-4 w-4" />
-                          Open in OneCompiler
-                        </a>
+                      <Button className="min-h-12 w-full text-base" onClick={handleOpenFullTab}>
+                        <Play className="h-4 w-4" />
+                        Open in OneCompiler
                       </Button>
-                      <Button variant="outline" className="min-h-10 w-full" onClick={handleCopy}>
+                      <p className="text-xs text-muted-foreground text-center">
+                        Ready-to-run code (Main class, no package) is copied to your clipboard — paste into the editor if needed.
+                      </p>
+                      <Button variant="outline" className="min-h-10 w-full" onClick={handleCopyReadyCode}>
+                        {copiedReady ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                        {copiedReady ? 'Copied ready-to-run code' : 'Copy ready-to-run code'}
+                      </Button>
+                      <Button variant="outline" className="min-h-10 w-full" onClick={handleCopyCommand}>
                         {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
                         Copy local run command
                       </Button>
                     </div>
 
-                    {/* Desktop: iframe embed when payload fits */}
+                    {/* Desktop: iframe embed via postMessage populateCode */}
                     <div className="hidden sm:flex flex-col flex-1 min-h-0 gap-3">
                       {compiler && !compiler.tooLargeForEmbed ? (
                         <iframe
+                          ref={iframeRef}
+                          id="oc-editor"
                           title="Java online compiler"
                           src={compiler.embedUrl}
+                          onLoad={handleIframeLoad}
                           className="w-full flex-1 min-h-[55vh] rounded-lg border border-border bg-muted"
                         />
                       ) : (
                         <div className="flex flex-1 min-h-[40vh] items-center justify-center rounded-lg border border-dashed border-border p-6 text-center">
                           <div className="space-y-3 max-w-md">
                             <p className="text-sm text-muted-foreground">
-                              This example is large for an in-page embed. Open it in a full OneCompiler tab instead.
+                              This example is large for an in-page embed. Open it in a full OneCompiler tab instead
+                              (ready-to-run code is copied first).
                             </p>
-                            <Button asChild>
-                              <a href={compiler?.fullTabUrl} target="_blank" rel="noopener noreferrer">
-                                <ExternalLink className="h-4 w-4" />
-                                Open in OneCompiler
-                              </a>
+                            <Button onClick={handleOpenFullTab}>
+                              <ExternalLink className="h-4 w-4" />
+                              Open in OneCompiler
                             </Button>
                           </div>
                         </div>
                       )}
-                      <Button variant="link" className="h-auto p-0 self-start" asChild>
-                        <a href={compiler?.fullTabUrl} target="_blank" rel="noopener noreferrer">
+                      <div className="flex flex-wrap gap-3 items-center">
+                        <Button variant="link" className="h-auto p-0" onClick={handleOpenFullTab}>
                           Open in OneCompiler (full tab)
-                        </a>
-                      </Button>
+                        </Button>
+                        <Button variant="outline" size="sm" className="min-h-9" onClick={handleCopyReadyCode}>
+                          {copiedReady ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+                          {copiedReady ? 'Copied' : 'Copy ready-to-run code'}
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 )}

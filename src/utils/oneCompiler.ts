@@ -15,17 +15,45 @@ export function prepareOneCompilerSource(source: string): string {
   return code.trim()
 }
 
+/** Soft limit: very large query strings are unreliable; prefer postMessage / clipboard. */
 const ONECOMPILER_QUERY_SOFT_LIMIT = 12000
 
 export function buildOneCompilerUrls(source: string): {
+  /** Prepared source (no package, public class Main) */
+  preparedCode: string
+  /** Embed iframe — use with postMessage populateCode (listenToEvents=true). */
   embedUrl: string
+  /** Full-tab URL; code= is best-effort and often ignored for large/complex sources. */
   fullTabUrl: string
   tooLargeForEmbed: boolean
 } {
-  const code = prepareOneCompilerSource(source)
-  const encoded = encodeURIComponent(code)
+  const preparedCode = prepareOneCompilerSource(source)
+  const encoded = encodeURIComponent(preparedCode)
   const tooLargeForEmbed = encoded.length > ONECOMPILER_QUERY_SOFT_LIMIT
-  const fullTabUrl = `https://onecompiler.com/java?code=${encoded}`
-  const embedUrl = `https://onecompiler.com/embed/java?code=${encoded}&theme=dark`
-  return { embedUrl, fullTabUrl, tooLargeForEmbed }
+
+  // Official embed API: listenToEvents + postMessage populateCode (not ?code=).
+  const embedUrl =
+    'https://onecompiler.com/embed/java?theme=dark&listenToEvents=true&hideNew=true&hideLanguageSelection=true'
+
+  // Best-effort full-tab deep link; browsers/OneCompiler may still open default Hello World.
+  const fullTabUrl = tooLargeForEmbed
+    ? 'https://onecompiler.com/java'
+    : `https://onecompiler.com/java?code=${encoded}`
+
+  return { preparedCode, embedUrl, fullTabUrl, tooLargeForEmbed }
+}
+
+/** Inject prepared Java into a OneCompiler embed iframe (requires listenToEvents=true). */
+export function populateOneCompilerEmbed(
+  iframe: HTMLIFrameElement,
+  preparedCode: string
+): void {
+  iframe.contentWindow?.postMessage(
+    {
+      eventType: 'populateCode',
+      language: 'java',
+      files: [{ name: 'Main.java', content: preparedCode }],
+    },
+    '*'
+  )
 }

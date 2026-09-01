@@ -52,8 +52,7 @@ export function isExampleReference(text: string): boolean {
 /** Whether a markdown line introduces runnable example refs (▶️ or corrupted ?? prefix). */
 export function isExampleRunLine(line: string): boolean {
   const trimmed = line.trim()
-  if (trimmed.includes('▶')) return true
-  if (/^\?\?\s+`/.test(trimmed)) {
+  if (trimmed.includes('▶') || /^\?\?\s+`/.test(trimmed)) {
     return splitExampleLine(trimmed).some(isExampleReference)
   }
   return false

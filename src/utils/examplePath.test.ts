@@ -35,6 +35,22 @@ describe('isExampleRunLine', () => {
   it('rejects corrupted ?? callout lines', () => {
     expect(isExampleRunLine('?? **Dynamic dispatch:** JVM calls')).toBe(false)
   })
+
+  it('accepts ▶️ lines with backtick example refs', () => {
+    expect(isExampleRunLine('▶️ `java pkg1core/core2Variables.java` · `java pkg1core/core3DataTypes.java`')).toBe(
+      true
+    )
+  })
+
+  it('rejects ▶️ callout lines without example refs', () => {
+    expect(isExampleRunLine('▶️ **Dynamic dispatch:** JVM calls the **actual object\'s** method')).toBe(
+      false
+    )
+    expect(isExampleRunLine('▶️ **Run the project version:**')).toBe(false)
+    expect(isExampleRunLine('▶️ **Never deserialize untrusted Java native serialization** · remote code execution risk.')).toBe(
+      false
+    )
+  })
 })
 
 describe('parseRunCommand', () => {
